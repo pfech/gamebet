@@ -1,0 +1,11 @@
+@(list: List[Gameday])
+@import play.i18n._
+@main(Messages.get("views.gameday.list.title")) {
+<div class="row">
+	<ul>
+	@for(item <- list) {
+		<li><a href="@routes.Gamedays.show(item.id)">@item.label</a></li>
+	}
+	</ul>
+</div>
+}

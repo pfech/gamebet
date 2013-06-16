@@ -1,0 +1,64 @@
+meetings:
+    - !!models.Meeting &m1
+        name: Bundesliga 2012/2013
+    
+    - !!models.Meeting &m2
+        name: Bundesliga 2013/2014
+
+teams:
+    - !!models.Team &t1
+        name: Bayern München
+        meetings:
+            - *m1
+            - *m2
+    
+    - !!models.Team &t2
+        name: Borussia Dortmund
+        meetings:
+            - *m1
+            - *m2
+    
+    - !!models.Team &t3
+        name: Hertha Bsc
+        meetings:
+            - *m2
+        
+gamedays:
+    - !!models.Gameday &gd1
+        label: Spieltag 1
+        meeting: *m1
+    
+    - !!models.Gameday &gd2
+        label: Spieltag 2
+        meeting: *m1
+        
+    - !!models.Gameday &gd3
+        label: Spieltag 3
+        meeting: *m1
+        
+    - !!models.Gameday &gd4
+        label: Spieltag 1
+        meeting: *m2
+
+games:
+    - !!models.Game &g1
+        home: *t1
+        away: *t2
+        gameday: *gd1
+
+    - !!models.Game &g2
+        home: *t2
+        away: *t1
+        gameday: *gd3
+    
+    - !!models.Game &g3
+        home: *t3
+        away: *t1
+        gameday: *gd4
+
+results:
+    - !!models.Result
+        home: 1
+        away: 0
+        game: *g1
+            

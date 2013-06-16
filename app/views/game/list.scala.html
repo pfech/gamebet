@@ -1,0 +1,11 @@
+@(list: List[Game])(implicit lang: Lang)
+@import play.i18n._
+@main(Messages.get("views.game.list.title")) {
+<div class="row">
+	<ul>
+	@for(item <- list) {
+		<li><a href="@routes.Games.show(item.id)">@item.home.name - @item.away.name</a></li>
+	}
+	</ul>
+</div>
+}

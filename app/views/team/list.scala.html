@@ -1,0 +1,11 @@
+@(list: List[Team])
+@import play.i18n._
+@main(Messages.get("views.team.list.title")) {
+<div class="row">
+	<ul>
+	@for(item <- list) {
+		<li>@item.name</li>
+	}
+	</ul>
+</div>
+}

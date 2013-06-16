@@ -1,0 +1,18 @@
+@(item: Gameday)
+@import play.i18n._
+@main(Messages.get("views.gameday.show.title")) {
+<div class="row">
+	<div class="well well-small">
+		<legend>
+			@Messages.get("views.gameday.show.legend", item.label)
+		</legend>
+		<div class="row">
+			<ul>
+			@for(game <- item.games) {
+				<li><a href="@routes.Games.show(game.id)">@game.getEncounterString</a></li>
+			}
+			</ul>
+		</div>
+	</div>
+</div>
+}
