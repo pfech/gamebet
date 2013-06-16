@@ -5,3 +5,36 @@ view.navbar.teams.link=Teams
 
 
 view.index.title=Gamebet
+
+# views.meeting pages
+views.meeting.create.title=Create Meeting
+views.meeting.create.legend=Create
+views.meeting.create.form.button.submit=Create
+
+views.meeting.edit.title=Edit Meeting
+views.meeting.edit.legend=Edit {0}
+views.meeting.edit.form.button.submit=Save
+
+views.meeting.list.title=Meetings
+
+views.meeting.show.title=Meeting
+views.meeting.show.legend=Meeting {0}
+
+views.meeting.name.label=Name
+
+
+# views.gameday pages
+views.gameday.create.title=Create Gameday
+views.gameday.create.legend=Create
+views.gameday.create.form.button.submit=Create
+
+views.gameday.edit.title=Edit Gameday
+views.gameday.edit.legend=Edit {0}
+views.gameday.edit.form.button.submit=Save
+
+views.gameday.list.title=Gamedays
+
+views.gameday.show.title=Gameday
+views.gameday.show.legend=Gameday {0}
+
+views.gameday.name.label=Name

@@ -4,7 +4,7 @@
 <div class="row">
 	<ul>
 	@for(item <- list) {
-		<li><a href="@routes.Gamedays.show(item.id)">@item.label</a></li>
+		<li><a href="@routes.Gamedays.show(item.id)">@item.name</a></li>
 	}
 	</ul>
 </div>

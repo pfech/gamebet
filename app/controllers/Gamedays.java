@@ -6,6 +6,7 @@ package controllers;
 import java.util.List;
 
 import models.Gameday;
+import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
 
@@ -37,11 +38,14 @@ public class Gamedays extends Controller {
 		return TODO;
 	}
 	
-	public static Result edit() {
-		return TODO;
+	public static Result edit(Long id) {
+		Gameday item = Gameday.find.byId(id);
+		Form<Gameday> form = Form.form(Gameday.class).fill(item);
+		return ok(views.html.gameday.edit.render(true, item, form));
 	}
 
 	public static Result createNew() {
-		return TODO;
+		Form<Gameday> form = Form.form(Gameday.class);
+		return ok(views.html.gameday.edit.render(false, null, form));
 	}
 }

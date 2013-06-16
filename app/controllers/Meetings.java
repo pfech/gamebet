@@ -4,6 +4,7 @@
 package controllers;
 
 import models.Meeting;
+import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
 
@@ -34,11 +35,15 @@ public class Meetings extends Controller {
 		return TODO;
 	}
 	
-	public static Result edit() {
-		return TODO;
+	public static Result edit(Long id) {
+		Meeting item = Meeting.find.byId(id);
+		Form<Meeting> form = Form.form(Meeting.class).fill(item);
+		return ok(views.html.meeting.edit.render(true, item, form));
 	}
 
 	public static Result createNew() {
-		return TODO;
+		Form<Meeting> form = Form.form(Meeting.class);
+		return ok(views.html.meeting.edit.render(false, null, form));
 	}
 }
+ 

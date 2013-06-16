@@ -25,19 +25,19 @@ teams:
         
 gamedays:
     - !!models.Gameday &gd1
-        label: Spieltag 1
+        name: Spieltag 1
         meeting: *m1
     
     - !!models.Gameday &gd2
-        label: Spieltag 2
+        name: Spieltag 2
         meeting: *m1
         
     - !!models.Gameday &gd3
-        label: Spieltag 3
+        name: Spieltag 3
         meeting: *m1
         
     - !!models.Gameday &gd4
-        label: Spieltag 1
+        name: Spieltag 1
         meeting: *m2
 
 games:

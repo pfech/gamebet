@@ -9,10 +9,20 @@ GET     /                           controllers.Application.index()
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
 GET		/meeting/list				controllers.Meetings.list()
+GET		/meeting/new				controllers.Meetings.createNew()
+GET		/meeting/:id/edit			controllers.Meetings.edit(id:Long)
 GET		/meeting/:id				controllers.Meetings.show(id:Long)
+POST	/meeting/create				controllers.Meetings.create()
+POST	/meeting/:id/update			controllers.Meetings.update(id:Long)
+POST	/meeting/:id/delete			controllers.Meetings.delete(id:Long)
 
 GET		/gameday/list				controllers.Gamedays.list()
+GET		/gameday/new				controllers.Gamedays.createNew()
+GET		/gameday/:id/edit			controllers.Gamedays.edit(id:Long)
 GET		/gameday/:id				controllers.Gamedays.show(id:Long)
+POST	/gameday/create				controllers.Gamedays.create()
+POST	/gameday/:id/update			controllers.Gamedays.update(id:Long)
+POST	/gameday/:id/delete			controllers.Gamedays.delete(id:Long)
 
 
 GET		/game/list					controllers.Games.list()

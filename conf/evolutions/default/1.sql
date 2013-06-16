@@ -13,7 +13,7 @@ create table game (
 
 create table gameday (
   id                        bigint not null,
-  label                     varchar(255),
+  name                      varchar(255),
   meeting_id                bigint,
   constraint pk_gameday primary key (id))
 ;

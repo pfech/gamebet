@@ -9,7 +9,7 @@
 		<div class="row">
 			<ul>
 				@for(gameday <- item.gamedays) {
-					<li><a href="@routes.Gamedays.show(gameday.id)">@gameday.label</a></li>
+					<li><a href="@routes.Gamedays.show(gameday.id)">@gameday.name</a></li>
 				}
 			</ul>
 		</div>

@@ -1,0 +1,27 @@
+@(edit: Boolean, item: Gameday, gamedayForm: Form[Gameday])
+@import play.i18n._
+@title = @{
+	if(edit) Messages.get("views.gameday.edit.title")
+	else Messages.get("views.gameday.create.title")
+}
+@action = @{
+	if(edit) 	routes.Gamedays.update(item.id)
+	else		routes.Gamedays.create()
+}
+@main(title) {
+<div class="row">
+
+@helper.form(action) {
+	<div class="well well-small">
+		<legend>
+			@if(edit) { @Messages.get("views.gameday.edit.legend", item.name) 
+			} else { @Messages.get("views.gameday.create.legend") }
+			<button class="btn btn-success pull-right" type="submit">@if(edit) { @Messages.get("views.gameday.edit.form.button.submit") 
+			} else { @Messages.get("views.gameday.create.form.button.submit") }</button>
+		</legend>
+		@helper.inputText(gamedayForm("name"), '_label -> Messages.get("views.gameday.name.label"))
+	</div>
+}
+
+</div>
+}

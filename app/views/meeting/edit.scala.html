@@ -1,0 +1,27 @@
+@(edit: Boolean, item: Meeting, meetingForm: Form[Meeting])
+@import play.i18n._
+@title = @{
+	if(edit) Messages.get("views.meeting.edit.title")
+	else Messages.get("views.meeting.create.title")
+}
+@action = @{
+	if(edit) 	routes.Meetings.update(item.id)
+	else		routes.Meetings.create()
+}
+@main(title) {
+<div class="row">
+
+@helper.form(action) {
+	<div class="well well-small">
+		<legend>
+			@if(edit) { @Messages.get("views.meeting.edit.legend", item.name) 
+			} else { @Messages.get("views.meeting.create.legend") }
+			<button class="btn btn-success pull-right" type="submit">@if(edit) { @Messages.get("views.meeting.edit.form.button.submit") 
+			} else { @Messages.get("views.meeting.create.form.button.submit") }</button>
+		</legend>
+		@helper.inputText(meetingForm("name"), '_label -> Messages.get("views.meeting.name.label"))
+	</div>
+}
+
+</div>
+}

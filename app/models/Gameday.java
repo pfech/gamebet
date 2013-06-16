@@ -32,7 +32,7 @@ public class Gameday extends Model {
 	public Long id;
 	
 	@Required
-	public String label;
+	public String name;
 	
 	@OneToMany(mappedBy="gameday")
 	public List<Game> games = new ArrayList<Game>();
