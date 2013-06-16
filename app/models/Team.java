@@ -41,4 +41,9 @@ public class Team extends Model {
 	public static Finder<Long, Team> find = 
 			new Finder<Long, Team>(Long.class, Team.class);
 
+	public static void delete(Team item) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

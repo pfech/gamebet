@@ -24,4 +24,24 @@ public class Gamedays extends Controller {
 		Gameday item = Gameday.find.byId(id);
 		return ok(views.html.gameday.show.render(item));
 	}
+	
+	public static Result update(Long id) {
+		return TODO;
+	}
+		
+	public static Result create() {
+		return TODO;
+	}
+	
+	public static Result delete(Long id) {
+		return TODO;
+	}
+	
+	public static Result edit() {
+		return TODO;
+	}
+
+	public static Result createNew() {
+		return TODO;
+	}
 }

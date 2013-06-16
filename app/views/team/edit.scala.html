@@ -1,0 +1,27 @@
+@(edit: Boolean, item: Team, teamForm: Form[Team])
+@import play.i18n._
+@title = @{
+	if(edit) Messages.get("views.team.edit.title")
+	else Messages.get("views.team.create.title")
+}
+@action = @{
+	if(edit) 	routes.Teams.update(item.id)
+	else		routes.Teams.create()
+}
+@main(title) {
+<div class="row">
+
+@helper.form(action) {
+	<div class="well well-small">
+		<legend>
+			@if(edit) { @Messages.get("views.team.edit.legend", item.name) 
+			} else { @Messages.get("views.team.create.legend") }
+			<button class="btn btn-success pull-right" type="submit">@if(edit) { @Messages.get("views.team.edit.form.button.submit") 
+			} else { @Messages.get("views.team.create.form.button.submit") }</button>
+		</legend>
+		@helper.inputText(teamForm("name"), '_label -> Messages.get("views.team.name.label"))
+	</div>
+}
+
+</div>
+}
