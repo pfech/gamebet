@@ -7,13 +7,14 @@
 			@Messages.get("views.meeting.show.legend", item.name)
 		</legend>
 		<div class="row">
-			<ul>
-				@for(gameday <- item.gamedays) {
-					<li><a href="@routes.Gamedays.show(gameday.id)">@gameday.name</a></li>
-				}
-			</ul>
+			<div class="span12">
+				<ul>
+					@for(gameday <- item.gamedays) {
+						<li><a href="@routes.Gamedays.show(gameday.id)">@gameday.name</a></li>
+					}
+				</ul>
+			</div>
 		</div>
-		
 	</div>
 </div>
 }

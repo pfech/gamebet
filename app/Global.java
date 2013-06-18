@@ -23,7 +23,9 @@ public class Global extends GlobalSettings {
 	public void onStart(Application app) {
 		if(Game.find.findRowCount() == 0) {
 			Map<String, List<Object>> map = (Map<String, List<Object>>)Yaml.load("initial-data.yaml");
-			
+			Ebean.save(map.get("groupRoles"));
+			Ebean.save(map.get("users"));
+			Ebean.save(map.get("passwords"));
 			Ebean.save(map.get("meetings"));
 			Ebean.save(map.get("teams"));
 			

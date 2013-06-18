@@ -1,10 +1,19 @@
-view.application.name=Gamebet
+views.application.name=Gamebet
 
-view.navbar.games.link=Games
-view.navbar.teams.link=Teams
+views.navbar.games.label=Games
+views.navbar.meetings.label=Meetings
+views.navbar.teams.label=Teams
+views.navbar.login.label=Login
+views.navbar.logout.label=Logout
 
+views.index.title=Gamebet
 
-view.index.title=Gamebet
+views.login.title=Login
+views.login.login.label=Email
+views.login.password.label=Password
+views.login.button.submit=Login
+views.login.badLogin=Email or password wrong
+views.login.form.notValid=You need to enter a valid email and password
 
 # views.meeting pages
 views.meeting.create.title=Create Meeting

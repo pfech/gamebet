@@ -1,0 +1,34 @@
+@(loginForm: Form[web.LoginData])
+@import play.i18n._
+@import helper._
+
+@implicitField = @{ FieldConstructor(myFieldConstructor.f) }
+
+@main(Messages.get("views.login.title")) {
+<div class="row">
+	<div class="span8 offset2">
+@form(routes.Application.authenticate()) {
+	<div class="well well-small">
+		<div class="row">
+			<div class="span6 offset1"> 
+		@inputText(loginForm("login"), '_label -> Messages.get("views.login.login.label"))
+			</div>
+		</div>
+		<div class="row">
+			<div class="span6 offset1"> 
+		@inputText(loginForm("password"), '_label -> Messages.get("views.login.password.label"))
+			</div>
+		</div>
+		@if(loginForm.hasGlobalErrors) {
+			<div class="row">
+				<span class="span6 offset1 text-error" style="margin-bottom:20px;">@loginForm.globalErrors.mkString</span>
+			</div>
+		}
+		<div class="row">
+			<button class="btn btn-primary span2 offset3" type="submit">@Messages.get("views.login.button.submit")</button>
+		</div>
+	</div>
+}
+	</div>
+</div>
+}

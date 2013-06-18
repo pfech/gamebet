@@ -1,11 +1,9 @@
 @(list: List[Meeting])
 @import play.i18n._
 @main(Messages.get("views.meeting.list.title")) {
-<div class="row">
-	<ul>
-	@for(item <- list) {
-		<li><a href="@routes.Meetings.show(item.id)">@item.name</a></li>
-	}
-	</ul>
-</div>
+<ul>
+@for(item <- list) {
+	<li><a href="@routes.Meetings.show(item.id)">@item.name</a></li>
+}
+</ul>
 }

@@ -1,7 +1,50 @@
-view.application.name=Gamebet
+views.application.name=Gamebet
 
-view.navbar.games.link=Spiele
-view.navbar.teams.link=Mannschaften
+views.navbar.games.label=Spiele
+views.navbar.meetings.label=Veranstaltungen
+views.navbar.teams.label=Mannschaften
+views.navbar.login.label=Login
+views.navbar.logout.label=Logout
 
 
-view.index.title=Gamebet
+views.index.title=Gamebet
+
+views.login.title=Login
+views.login.login.label=Email
+views.login.password.label=Passwort
+views.login.button.submit=Login
+views.login.badLogin=Email oder Passwort falsch
+views.login.form.notValid=Sie müssen eine gültige Email und ein gültiges Passwort eingeben
+
+# views.meeting pages
+views.meeting.create.title=Veranstaltung erstellen
+views.meeting.create.legend=Erstellen
+views.meeting.create.form.button.submit=Erstellen
+
+views.meeting.edit.title=Veranstaltung bearbeiten
+views.meeting.edit.legend=Bearbeite {0}
+views.meeting.edit.form.button.submit=Speichern
+
+views.meeting.list.title=Veranstaltungen
+
+views.meeting.show.title=Veranstltung
+views.meeting.show.legend=Veranstaltung {0}
+
+views.meeting.name.label=Name
+
+
+# views.gameday pages
+views.gameday.create.title=Spieltag erstellen
+views.gameday.create.legend=Erstellen
+views.gameday.create.form.button.submit=Erstellen
+
+views.gameday.edit.title=Spieltag bearbeiten
+views.gameday.edit.legend=Bearbeite {0}
+views.gameday.edit.form.button.submit=Speichern
+
+views.gameday.list.title=Spieltage
+
+views.gameday.show.title=Spieltag
+views.gameday.show.legend=Spieltag {0}
+
+views.gameday.name.label=Name

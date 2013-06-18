@@ -1,0 +1,10 @@
+@(elements: helper.FieldElements)
+
+<div class="row @if(elements.hasErrors) {error}">
+    <label class="span2" for="@elements.id">@elements.label</label>
+	@elements.input
+	<div class="help-block offset2">
+		@if(elements.hasErrors) {<span class="text-error">@elements.errors.mkString(", ") </span>}
+		<span class="text-warning">@elements.infos.mkString(", ")</span>
+	</div> 
+</div>

@@ -1,9 +1,63 @@
+groupRoles:
+    - !!models.GroupRole &admin
+        name: admins
+        
+    - !!models.GroupRole &meetingManager
+        name: meetingManagers
+        
+    - !!models.GroupRole &user
+        name: users
+        
+users:
+    - !!models.User &adminUser
+        email: admin
+        username: admin
+        roles:
+            - *admin
+            - *meetingManager
+            - *user
+            
+    - !!models.User &user1
+        email: test@test.de
+        username: user1
+        roles:
+            - *meetingManager
+            - *user
+    
+    - !!models.User &user2
+        email: user2@foo.bar
+        username: user2
+        roles:
+            - *user
+        
+passwords:
+    - !!models.Password
+        user: *adminUser
+        password: admin
+    
+    - !!models.Password
+        user: *user1
+        password: 1234
+        
+    - !!models.Password
+        user: *user2
+        password: 1234
+
 meetings:
     - !!models.Meeting &m1
         name: Bundesliga 2012/2013
+        manager: *user1
+        members:
+            - *user1
+            - *adminUser
     
     - !!models.Meeting &m2
         name: Bundesliga 2013/2014
+        manager: *user1
+        members:
+            - *user1
+            - *user2
+            - *adminUser
 
 teams:
     - !!models.Team &t1
