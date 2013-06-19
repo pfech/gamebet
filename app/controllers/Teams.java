@@ -14,7 +14,7 @@ import play.mvc.Result;
  * @author pascal
  *
  */
-public class Teams extends Controller {
+public class Teams extends AbstractAuthorizedController {
 
 	public static Result list() {
 		List<Team> list = Team.find.all();

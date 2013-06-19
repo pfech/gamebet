@@ -1,0 +1,48 @@
+html, body{
+	height: 100%;
+
+}
+
+.empty-space-height-20 {
+	min-height: 20px;
+}
+
+.fill {
+	min-height: 100%;
+	height: 100%;
+	#padding-bottom: 32000px;
+	#margin-bottom: -32000px;
+}
+
+.sidebar {
+	padding-bottom: 32000px;
+	margin-bottom: -32000px;
+}
+
+#fix{
+    height:            60px;
+    clear:             both;
+}
+
+#footer{
+    height:            60px;
+    background:        #222;
+    margin-top:       -60px;
+}
+
+body {
+   # padding-top:40px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.list-item {
+	min-height: 35px;
+	display: block;
+	line-height: 20px;
+	list-style: none;
+	padding: 5px 5px;
+	background: #999;
+	margin-bottom: 5px;
+}

@@ -1,9 +1,44 @@
-@(list: List[Meeting])
+@(user: User)
 @import play.i18n._
-@main(Messages.get("views.meeting.list.title")) {
-<ul>
-@for(item <- list) {
-	<li><a href="@routes.Meetings.show(item.id)">@item.name</a></li>
-}
-</ul>
-}
+@import appPage._
+
+	@q = @{
+		import scala.collection.mutable.Queue
+		
+		var queue : Queue[Tuple3[String, String, Boolean]] = Queue()
+		queue.enqueue(("#", "Test1", false))
+		queue.enqueue(("#", "Test2", false))
+		queue.enqueue(("#", "Test3", true))
+		
+		queue
+	}
+
+@applicationPage(Messages.get("views.meeting.list.title")) {
+	@*header*@
+	@header(q)
+} { 
+@* sidebar navigation *@
+@sidebar()
+} {
+@* main content for this page *@
+<legend>
+	@Messages.get("views.meeting.list.legend")
+</legend>
+<div class="row-fluid">
+	<div class="span12">
+		<ul>
+		@for(item <- user.meetings) {
+			<li class="list-item">
+				<span>
+					<a href="@routes.Meetings.show(item.id)">@item.name</a>
+					@if(user.managerOfMeetings.contains(item)) {
+					<a class="btn btn-primary pull-right" href="#">Edit</a>
+					}
+				</span>
+			</li>
+		}
+		</ul>
+	</div>
+</div>
+
+} 

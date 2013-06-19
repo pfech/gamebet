@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
 import play.db.ebean.Model;
 
@@ -39,6 +40,12 @@ public class User extends Model implements Subject {
 	
 	@ManyToMany
 	public List<GroupRole> roles = new ArrayList<GroupRole>();
+	
+	@OneToMany(mappedBy="manager")
+	public List<Meeting> managerOfMeetings = new ArrayList<Meeting>();
+	
+	@ManyToMany(mappedBy="members")
+	public List<Meeting> meetings = new ArrayList<Meeting>();
 	
 	public String getLogin() {
 		return this.email;

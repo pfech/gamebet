@@ -14,7 +14,7 @@ import play.mvc.Result;
  * @author pascal
  *
  */
-public class Gamedays extends Controller {
+public class Gamedays extends AbstractAuthorizedController {
 
 	public static Result list() {
 		List<Gameday> list = Gameday.find.all();

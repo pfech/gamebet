@@ -4,6 +4,7 @@
 package security;
 
 import models.User;
+import play.mvc.Controller;
 import play.mvc.Http.Context;
 import play.mvc.Result;
 import be.objectify.deadbolt.core.models.Subject;
@@ -17,7 +18,6 @@ public class MyDeadboltHandler implements DeadboltHandler {
 
 	@Override
 	public Result beforeAuthCheck(Context context) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -28,13 +28,11 @@ public class MyDeadboltHandler implements DeadboltHandler {
 
 	@Override
 	public Result onAuthFailure(Context context, String content) {
-		// TODO Auto-generated method stub
-		return null;
+		return Controller.redirect(controllers.routes.Application.login());
 	}
 
 	@Override
 	public DynamicResourceHandler getDynamicResourceHandler(Context context) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

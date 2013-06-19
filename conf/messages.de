@@ -5,6 +5,9 @@ views.navbar.meetings.label=Veranstaltungen
 views.navbar.teams.label=Mannschaften
 views.navbar.login.label=Login
 views.navbar.logout.label=Logout
+views.navbar.index.label=Home
+views.navbar.settings.user.label=Benutzereinstellungen
+
 
 
 views.index.title=Gamebet
@@ -27,7 +30,7 @@ views.meeting.edit.form.button.submit=Speichern
 
 views.meeting.list.title=Veranstaltungen
 
-views.meeting.show.title=Veranstltung
+views.meeting.show.title=Veranstaltung
 views.meeting.show.legend=Veranstaltung {0}
 
 views.meeting.name.label=Name

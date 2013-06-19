@@ -1,7 +1,20 @@
 @(message: String)
 @import play.i18n._
-@main(Messages.get("views.index.title")) {
-<div class="row">
+@import be.objectify.deadbolt.java.views.html._
+@import appPage._
+@subjectPresentOr() {
+	@applicationPage(Messages.get("views.index.title")) {
+		@* header *@
+		@header(scala.collection.mutable.Queue(("#", "Home", true)))
+	} {
+		@* sidebar *@
+		@sidebar()
+	} {
+		@* content *@
+		<p>Welcome to your index page</p>
+	}
+} { 
+	@main(Messages.get("views.index.title")) {
 	<p>Index test page</p>
-</div>    
+	}
 }

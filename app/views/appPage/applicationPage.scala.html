@@ -1,0 +1,30 @@
+@(title: String = "")(headerContent: Html)(sidebarContent: Html)(mainContent: Html)
+@main(title) {
+<div class="container-fluid">
+	<div class="well well-small">
+		<legend>
+			<div class="row-fluid">
+				<div class="span12">
+					<div class="application-page-header">
+						@headerContent
+					</div>
+				</div>
+			</div>
+		</legend>
+		<div class="row-fluid">
+			<div class="span2 ">
+				@sidebarContent
+			</div>
+			<div class="span10">
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="well well-small">
+							@mainContent
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+}

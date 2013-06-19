@@ -3,19 +3,22 @@
  */
 package controllers;
 
+import java.util.List;
+
 import models.Meeting;
+import models.User;
 import play.data.Form;
-import play.mvc.Controller;
 import play.mvc.Result;
 
 /**
  * @author pascal
  *
  */
-public class Meetings extends Controller {
+public class Meetings extends AbstractAuthorizedController {
 
 	public static Result list() {
-		return ok(views.html.meeting.list.render(Meeting.find.all()));
+		User user = getLoggedInUser();
+		return ok(views.html.meeting.list.render(user));
 	}
 	
 	public static Result show(Long id) {

@@ -18,7 +18,7 @@ users:
             - *user
             
     - !!models.User &user1
-        email: test@test.de
+        email: user1@foo.bar
         username: user1
         roles:
             - *meetingManager
@@ -28,7 +28,51 @@ users:
         email: user2@foo.bar
         username: user2
         roles:
+            - *meetingManager
             - *user
+
+    - !!models.User &user3
+        email: user3@foo.bar
+        username: user3
+        roles:
+            - *user
+            - *meetingManager
+        
+    - !!models.User &user4
+        email: user4@foo.bar
+        username: user4
+        roles:
+            - *user
+            - *meetingManager
+        
+    - !!models.User &user5
+        email: user5@foo.bar
+        username: user5
+        roles:
+            - *user
+            - *meetingManager
+        
+    - !!models.User &user6
+        email: user6@foo.bar
+        username: user6
+        roles:
+            - *user
+            - *meetingManager
+        
+    - !!models.User &user7
+        email: user7@foo.bar
+        username: user7
+        roles:
+            - *user
+            - *meetingManager
+        
+    - !!models.User &user8
+        email: user8@foo.bar
+        username: user8
+        roles:
+            - *user
+            - *meetingManager
+        
         
 passwords:
     - !!models.Password
@@ -42,6 +86,31 @@ passwords:
     - !!models.Password
         user: *user2
         password: 1234
+
+    - !!models.Password
+        user: *user3
+        password: 1234
+
+    - !!models.Password
+        user: *user4
+        password: 1234
+
+    - !!models.Password
+        user: *user5
+        password: 1234
+
+    - !!models.Password
+        user: *user6
+        password: 1234
+
+    - !!models.Password
+        user: *user7
+        password: 1234
+
+    - !!models.Password
+        user: *user8
+        password: 1234
+
 
 meetings:
     - !!models.Meeting &m1
@@ -58,6 +127,36 @@ meetings:
             - *user1
             - *user2
             - *adminUser
+
+    - !!models.Meeting &m3
+        name: Bundesliga m3
+        manager: *user2
+        members:
+            - *user1
+            - *user2
+
+    - !!models.Meeting &m4
+        name: Bundesliga m4
+        manager: *user6
+        members:
+            - *user7
+            - *user6
+
+    - !!models.Meeting &m5
+        name: Bundesliga m5
+        manager: *user1
+        members:
+            - *user1
+            - *user2
+
+    - !!models.Meeting &m6
+        name: Bundesliga m6
+        manager: *user2
+        members:
+            - *user4
+            - *user1
+            - *user2
+
 
 teams:
     - !!models.Team &t1

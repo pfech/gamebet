@@ -3,46 +3,39 @@
 @import be.objectify.deadbolt.java.views.html._
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>@title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
-	<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.min.css")">
-	<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
-	<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap-responsive.min.css")">
-
-  	<script src="@routes.Assets.at("javascripts/jquery-1.10.1.min.js")" type="text/javascript"></script>
-  	<script src="@routes.Assets.at("javascripts/bootstrap.min.js")" type="text/javascript"></script>
-
-  </head>
-  <body>
-	<div class="navbar navbar-static-top">
-		<div class="navbar-inner">
-			<a class="brand" href="@routes.Application.index()">@Messages.get("views.application.name")</a>
-			<ul class="nav">
-				<li><a href="@routes.Meetings.list()">@Messages.get("views.navbar.meetings.label")</a></li>
-				<li><a href="@routes.Games.list()">@Messages.get("views.navbar.games.label")</a></li>
-				<li><a href="@routes.Teams.list()">@Messages.get("views.navbar.teams.label")</a></li>
-				@subjectPresentOr() {
-					<li><a class="pull-right " href="@routes.Application.logout()">@Messages.get("views.navbar.logout.label")</a></li>
+	<head>
+		<title>@title</title>
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+		<link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+		<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.min.css")">
+		<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+		<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap-responsive.min.css")">
+		
+		<script src="@routes.Assets.at("javascripts/jquery-1.10.1.min.js")" type="text/javascript"></script>
+		<script src="@routes.Assets.at("javascripts/bootstrap.min.js")" type="text/javascript"></script>	
+	</head>
+	<body>
+		<div class="navbar navbar-static-top">
+			<div class="navbar-inner">
+				<a class="brand" href="@routes.Application.index()">@Messages.get("views.application.name")</a>
+				<ul class="nav pull-right">
+					@subjectPresentOr() {
+					<li><a class="" href="@routes.Application.logout()">@Messages.get("views.navbar.logout.label")</a></li>
 					}{
-					<li><a class="pull-right " href="@routes.Application.login()">@Messages.get("views.navbar.login.label")</a></li>
+					<li><a class="" href="@routes.Application.login()">@Messages.get("views.navbar.login.label")</a></li>
 					}
-			</ul>
-		</div>
-  	</div>
-	<div class="container">
-		<div class="row">
-	  	  	<div class="hero-unit">
-		  		<h1>@title</h1>
-		  	</div>
-		</div>
-		<div class="row">
-			<div class="span12">
-				@content
+				</ul>
 			</div>
-	  	</div>
-	</div>
-  	
-  </body>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+					<div class="hero-unit">
+						<h1>@title</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		@content
+	</body>
 </html>

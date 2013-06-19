@@ -1,0 +1,22 @@
+@(breadcrumb: scala.collection.mutable.Queue[Tuple3[String,String,Boolean]])
+@import play.i18n._
+<div class="inline">
+	<ul class="breadcrumb">
+	@for(bcTuple <- breadcrumb) {
+		@if(bcTuple._3) {
+		<li class="active">@bcTuple._2</li>
+		} else {
+		<li><a href="@bcTuple._1">@bcTuple._2</a> <span class="divider">/</span></li>
+		}
+	}
+	</ul>
+@*	<div class="pagination pagination-centered">
+		<ul>
+			<li>Prev</li>
+			<li>1</li>
+			<li>2</li>
+			<li>Next</li>
+		</ul>
+	</div>
+*@
+</div>

@@ -10,7 +10,7 @@ import play.mvc.Result;
  * @author pascal
  *
  */
-public class Games extends Controller {
+public class Games extends AbstractAuthorizedController {
 
 	public static Result list() {
 		return TODO;

@@ -5,6 +5,8 @@ views.navbar.meetings.label=Meetings
 views.navbar.teams.label=Teams
 views.navbar.login.label=Login
 views.navbar.logout.label=Logout
+views.navbar.index.label=Home
+views.navbar.settings.user.label=User Settings
 
 views.index.title=Gamebet
 

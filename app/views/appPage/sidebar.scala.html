@@ -1,0 +1,17 @@
+@(active: String = "")
+@import play.i18n._
+<div class="well well-small ">
+	<ul class="nav nav-list fill">
+		<li class="nav-header">Links</li>
+		<li class="active"><a href="@routes.Application.index()">@Messages.get("views.navbar.index.label")</a></li>
+		<li><a href="@routes.Meetings.list()">@Messages.get("views.navbar.meetings.label")</a></li>
+		<li><a href="@routes.Games.list()">@Messages.get("views.navbar.games.label")</a></li>
+		<li><a href="@routes.Teams.list()">@Messages.get("views.navbar.teams.label")</a></li>
+		<li class="empty-space-height-20"></li>
+		<li class="empty-space-height-20"></li>
+		<li class="empty-space-height-20"></li>
+		<li class="divider"></li>
+		<li class="nav-header">My Settings</li>
+		<li><a href="#">@Messages.get("views.navbar.settings.user.label")</a></li>
+	</ul>
+</div>

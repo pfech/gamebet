@@ -12,22 +12,38 @@ import views.html.*;
 
 public class Application extends Controller {
   
+	/**
+	 * 
+	 * @return
+	 */
     public static Result index() {
         return ok(index.render("Your new application is ready."));
     }
   
     
+    /**
+     * 
+     * @return
+     */
     public static Result login() {
     	Form<LoginData> form = Form.form(LoginData.class);
     	
     	return ok(views.html.login.render(form));
     }
     
+    /**
+     * 
+     * @return
+     */
     public static Result logout() {
     	Authenticator.logout(Context.current());
     	return redirect(routes.Application.index());
     }
     
+    /**
+     * 
+     * @return
+     */
     public static Result authenticate() {
     	Form<LoginData> form = Form.form(LoginData.class).bindFromRequest();
     	if(form.hasErrors())
