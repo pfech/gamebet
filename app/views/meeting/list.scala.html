@@ -32,7 +32,7 @@
 				<span>
 					<a href="@routes.Meetings.show(item.id)">@item.name</a>
 					@if(user.managerOfMeetings.contains(item)) {
-					<a class="btn btn-primary pull-right" href="#">Edit</a>
+					<a class="btn btn-primary pull-right" href="@routes.Meetings.edit(item.id)">Edit</a>
 					}
 				</span>
 			</li>

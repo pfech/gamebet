@@ -1,27 +1,35 @@
-@(edit: Boolean, item: Meeting, meetingForm: Form[Meeting])
+@(user: User, item: Meeting, meetingForm: Form[Meeting])
 @import play.i18n._
-@title = @{
-	if(edit) Messages.get("views.meeting.edit.title")
-	else Messages.get("views.meeting.create.title")
-}
-@action = @{
-	if(edit) 	routes.Meetings.update(item.id)
-	else		routes.Meetings.create()
-}
-@main(title) {
-<div class="row">
+@import appPage._
 
-@helper.form(action) {
-	<div class="well well-small">
-		<legend>
-			@if(edit) { @Messages.get("views.meeting.edit.legend", item.name) 
-			} else { @Messages.get("views.meeting.create.legend") }
-			<button class="btn btn-success pull-right" type="submit">@if(edit) { @Messages.get("views.meeting.edit.form.button.submit") 
-			} else { @Messages.get("views.meeting.create.form.button.submit") }</button>
-		</legend>
-		@helper.inputText(meetingForm("name"), '_label -> Messages.get("views.meeting.name.label"))
+@q = @{
+	import scala.collection.mutable.Queue
+	
+	var queue : Queue[Tuple3[String, String, Boolean]] = Queue()
+	queue.enqueue(("#", "Veranstaltungen", false))
+	queue.enqueue(("#", item.name, false))
+	queue.enqueue(("#", "Bearbeiten", true))
+	
+	queue
+}
+@applicationPage(Messages.get("views.meeting.edit.title")) {
+	@* header *@
+	@header(q)
+} {
+	@* sidebar *@
+	@sidebar()
+} {
+	@* content *@
+	@helper.form(routes.Meetings.update(item.id)) {
+	<legend>
+		@Messages.get("views.meeting.edit.legend", item.name)
+		<button class="btn btn-success pull-right" type="submit">@Messages.get("views.meeting.edit.form.button.submit")</button> 
+		
+	</legend>
+	<div class="row-fluid">
+		<div class="span12">
+			@helper.inputText(meetingForm("name"), '_label -> Messages.get("views.meeting.name.label"))
+		</div>
 	</div>
-}
-
-</div>
+	}
 }

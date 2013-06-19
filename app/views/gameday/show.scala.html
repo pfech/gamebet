@@ -1,18 +1,35 @@
-@(item: Gameday)
+@(user: User, item: Gameday)
 @import play.i18n._
-@main(Messages.get("views.gameday.show.title")) {
-<div class="row">
-	<div class="well well-small">
-		<legend>
-			@Messages.get("views.gameday.show.legend", item.name)
-		</legend>
-		<div class="row">
-			<ul>
-			@for(game <- item.games) {
-				<li><a href="@routes.Games.show(game.id)">@game.getEncounterString</a></li>
-			}
-			</ul>
-		</div>
+@import appPage._
+
+@q = @{
+	import scala.collection.mutable.Queue
+	
+	var queue : Queue[Tuple3[String, String, Boolean]] = Queue()
+	queue.enqueue(("#", item.meeting.name, false))
+	queue.enqueue(("#", item.name, true))
+	
+	queue
+}
+
+@applicationPage(Messages.get("views.meeting.show.title")) {
+	@*header*@
+	@header(q)
+} { 
+@* sidebar navigation *@
+@sidebar()
+} {
+@* main content for this page *@
+<legend>
+	@Messages.get("views.gameday.show.legend", item.name)
+</legend>
+<div class="row-fluid">
+	<div class="span12">
+		<ul>
+		@for(game <- item.games) {
+			<li><a href="@routes.Games.show(game.id)">@game.getEncounterString</a></li>
+		}
+		</ul>
 	</div>
 </div>
 }

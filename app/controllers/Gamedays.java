@@ -6,6 +6,7 @@ package controllers;
 import java.util.List;
 
 import models.Gameday;
+import models.User;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -23,7 +24,8 @@ public class Gamedays extends AbstractAuthorizedController {
 	
 	public static Result show(Long id) {
 		Gameday item = Gameday.find.byId(id);
-		return ok(views.html.gameday.show.render(item));
+		User user = getLoggedInUser();
+		return ok(views.html.gameday.show.render(user, item));
 	}
 	
 	public static Result update(Long id) {

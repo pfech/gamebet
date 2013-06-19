@@ -23,11 +23,22 @@ public class Meetings extends AbstractAuthorizedController {
 	
 	public static Result show(Long id) {
 		Meeting item = Meeting.find.byId(id);
-		return ok(views.html.meeting.show.render(item));
+		User user = getLoggedInUser();
+		return ok(views.html.meeting.show.render(user, item));
 	}
 	
 	public static Result update(Long id) {
-		return TODO;
+		Meeting item = Meeting.find.byId(id);
+		User user = getLoggedInUser();
+		
+		Form<Meeting> form = Form.form(Meeting.class).bindFromRequest();
+		if(form.hasErrors()) {
+			return badRequest(views.html.meeting.edit.render(user, item, form));
+		}
+		Meeting toUpdate = form.get();
+		toUpdate.update(id);
+		
+		return show(toUpdate.id);
 	}
 		
 	public static Result create() {
@@ -40,13 +51,16 @@ public class Meetings extends AbstractAuthorizedController {
 	
 	public static Result edit(Long id) {
 		Meeting item = Meeting.find.byId(id);
+		User user = getLoggedInUser();
+		
 		Form<Meeting> form = Form.form(Meeting.class).fill(item);
-		return ok(views.html.meeting.edit.render(true, item, form));
+		return ok(views.html.meeting.edit.render(user, item, form));
 	}
 
 	public static Result createNew() {
-		Form<Meeting> form = Form.form(Meeting.class);
-		return ok(views.html.meeting.edit.render(false, null, form));
+//		Form<Meeting> form = Form.form(Meeting.class);
+//		return ok(views.html.meeting.edit.render(false, null, form));
+		return TODO;
 	}
 }
  
