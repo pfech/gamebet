@@ -1,0 +1,161 @@
+- !!models.Team &t1
+    name: FC Bayern München
+	meetings:
+		- *m1
+		- *m2
+		- *m3
+		- *m4
+		- *m5
+
+- !!models.Team &t2
+    name: Borussia Dortmund
+	meetings:
+		- *m1
+		- *m2
+		- *m3
+		- *m4
+		- *m5
+ 
+- !!models.Team &t3
+    name: Bayer 04 Leverkusen
+	meetings:
+		- *m1
+		- *m2
+		- *m3
+		- *m4
+		- *m5
+
+- !!models.Team &t4
+    name: FC Schalke 04
+	meetings:
+		- *m1
+		- *m2
+		- *m3
+		- *m4
+		- *m5
+ 
+- !!models.Team &t5
+    name: SC Freiburg
+	meetings:
+		- *m1
+		- *m2
+		- *m3
+		- *m4
+		- *m5
+ 
+- !!models.Team &t6
+    name: Eintracht Frankfurt
+	meetings:
+		- *m1
+		- *m2
+		- *m3
+		- *m4
+		- *m5
+ 
+- !!models.Team &t7
+    name: Hamburger SV
+	meetings:
+		- *m1
+		- *m2
+		- *m3
+		- *m4
+		- *m5
+
+- !!models.Team &t8
+    name: Borussia M'gladbach
+	meetings:
+		- *m1
+		- *m2
+		- *m3
+		- *m4
+		- *m5
+ 
+- !!models.Team &t9
+    name: Hannover 96
+	meetings:
+		- *m1
+		- *m2
+		- *m3
+		- *m4
+		- *m5
+ 
+- !!models.Team &t10
+    name: 1.FC Nürnberg
+	meetings:
+		- *m1
+		- *m2
+		- *m3
+		- *m4
+		- *m5
+ 
+- !!models.Team &t11
+    name: VfL Wolfsburg	
+	meetings:
+		- *m1
+		- *m2
+		- *m3
+		- *m4
+		- *m5
+ 
+- !!models.Team &t12
+    name: VfB Stuttgart
+	meetings:
+		- *m1
+		- *m2
+		- *m3
+		- *m4
+		- *m5
+ 
+- !!models.Team &t13
+    name: 1.FSV Mainz 05
+	meetings:
+		- *m1
+		- *m2
+		- *m3
+		- *m4
+		- *m5
+ 
+- !!models.Team &t14
+    name: SV Werder Bremen
+	meetings:
+		- *m1
+		- *m2
+		- *m3
+		- *m4
+		- *m5
+ 
+- !!models.Team &t15
+    name: FC Augsburg
+	meetings:
+		- *m1
+		- *m2
+		- *m3
+		- *m4
+		- *m5
+ 
+- !!models.Team &t16
+    name: 1899 Hoffenheim
+	meetings:
+		- *m1
+		- *m2
+		- *m3
+		- *m4
+		- *m5
+ 
+- !!models.Team &t17
+    name: Fortuna Düsseldorf
+	meetings:
+		- *m1
+		- *m2
+		- *m3
+		- *m4
+		- *m5
+ 
+- !!models.Team &t18
+    name: SpVgg Greuther Fürth
+	meetings:
+		- *m1
+		- *m2
+		- *m3
+		- *m4
+		- *m5

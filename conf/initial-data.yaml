@@ -193,6 +193,11 @@ gamedays:
         name: Spieltag 1
         meeting: *m2
 
+    - !!models.Gameday &season_12_13_gameday_1
+        name: 1. Spieltag, 24.08.2012 - 26.08.2012
+        meeting: *m1
+
+
 games:
     - !!models.Game &g1
         home: *t1
@@ -209,9 +214,20 @@ games:
         away: *t1
         gameday: *gd4
 
+    - !!models.Game &game1
+        home: *t1
+        away: *t2    
+        gameday: *season_12_13_gameday_1
+
 results:
     - !!models.Result
         home: 1
         away: 0
         game: *g1
+    - !!models.Result
+        home: 2 
+        away: 1 
+        game: *game1
+
+        
             

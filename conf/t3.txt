@@ -1,0 +1,82 @@
+- !!models.Result
+    game: *game1
+    home: 2
+    away: 1
+- !!models.Result
+    game: *game2
+    home: 2
+    away: 1
+- !!models.Result
+    game: *game3
+    home: 1
+    away: 1
+- !!models.Result
+    game: *game4
+    home: 0
+    away: 2
+- !!models.Result
+    game: *game5
+    home: 0
+    away: 1
+- !!models.Result
+    game: *game6
+    home: 0
+    away: 3
+- !!models.Result
+    game: *game7
+    home: 2
+    away: 1
+- !!models.Result
+    game: *game8
+    home: 0
+    away: 1
+- !!models.Result
+    game: *game9
+    home: 2
+    away: 2
+- !!models.Result
+    game: *game10
+    home: 0
+	away: 1
+- !!models.Result
+    game: *game11
+    home: 3
+	away: 1
+- !!models.Result
+    game: *game12
+    home: 2
+	away: 0
+- !!models.Result
+    game: *game13
+    home: 2
+	away: 0
+- !!models.Result
+    game: *game14
+    home: 1
+	away: 1
+- !!models.Result
+    game: *game15
+    home: 0
+	away: 4
+- !!models.Result
+    game: *game16
+    home: 0
+	away: 0
+- !!models.Result
+    game: *game17
+    home: 0
+	away: 4
+- !!models.Result
+    game: *game18
+    home: 6
+	away: 1
+
+
+
+
+
+
+
+
+
+
