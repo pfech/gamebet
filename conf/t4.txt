@@ -1,0 +1,87 @@
+- !!models.Gameday &season_12_13_gameday_1
+	name: 1. Spieltag, 24.08.2012 - 26.08.2012
+	meeting: *m1
+- !!models.Gameday &season_12_13_gameday_2
+	name: 2. Spieltag, 31.08.2012 - 02.09.2012
+- !!models.Gameday &season_12_13_gameday_3
+	name: 3. Spieltag, 14.09.2012 - 16.09.2012
+- !!models.Gameday &season_12_13_gameday_4
+	name: 4. Spieltag, 21.09.2012 - 23.09.2012
+- !!models.Gameday &season_12_13_gameday_5
+	name: 5. Spieltag, 25.09.2012 - 26.09.2012
+- !!models.Gameday &season_12_13_gameday_6
+	name: 6. Spieltag, 28.09.2012 - 30.09.2012
+- !!models.Gameday &season_12_13_gameday_7
+	name: 7. Spieltag, 05.10.2012 - 07.10.2012
+- !!models.Gameday &season_12_13_gameday_8
+	name: 8. Spieltag, 19.10.2012 - 21.10.2012
+- !!models.Gameday &season_12_13_gameday_9
+	name: 9. Spieltag, 26.10.2012 - 28.10.2012
+- !!models.Gameday &season_12_13_gameday_10
+	name: 10. Spieltag, 02.11.2012 - 04.11.2012
+- !!models.Gameday &season_12_13_gameday_11
+	name: 11. Spieltag, 09.11.2012 - 11.11.2012
+- !!models.Gameday &season_12_13_gameday_12
+	name: 12. Spieltag, 17.11.2012 - 18.11.2012
+- !!models.Gameday &season_12_13_gameday_13
+	name: 13. Spieltag, 23.11.2012 - 25.11.2012
+- !!models.Gameday &season_12_13_gameday_14
+	name: 14. Spieltag, 27.11.2012 - 28.11.2012
+- !!models.Gameday &season_12_13_gameday_15
+	name: 15. Spieltag, 30.11.2012 - 02.12.2012
+- !!models.Gameday &season_12_13_gameday_16
+	name: 16. Spieltag, 07.12.2012 - 09.12.2012
+- !!models.Gameday &season_12_13_gameday_17
+	name: 17. Spieltag, 14.12.2012 - 16.12.2012
+- !!models.Gameday &season_12_13_gameday_18
+	name: 18. Spieltag, 18.01.2013 - 20.01.2013
+- !!models.Gameday &season_12_13_gameday_19
+	name: 19. Spieltag, 25.01.2013 - 27.01.2013
+- !!models.Gameday &season_12_13_gameday_20
+	name: 20. Spieltag, 01.02.2013 - 03.02.2013
+- !!models.Gameday &season_12_13_gameday_21
+	name: 21. Spieltag, 09.02.2013 - 10.02.2013
+- !!models.Gameday &season_12_13_gameday_22
+	name: 22. Spieltag, 15.02.2013 - 17.02.2013
+- !!models.Gameday &season_12_13_gameday_23
+	name: 23. Spieltag, 22.02.2013 - 24.02.2013
+- !!models.Gameday &season_12_13_gameday_24
+	name: 24. Spieltag, 01.03.2013 - 03.03.2013
+- !!models.Gameday &season_12_13_gameday_25
+	name: 25. Spieltag, 08.03.2013 - 10.03.2013
+- !!models.Gameday &season_12_13_gameday_26
+	name: 26. Spieltag, 15.03.2013 - 17.03.2013
+- !!models.Gameday &season_12_13_gameday_27
+	name: 27. Spieltag, 30.03.2013 - 01.04.2013
+- !!models.Gameday &season_12_13_gameday_28
+	name: 28. Spieltag, 05.04.2013 - 07.04.2013
+- !!models.Gameday &season_12_13_gameday_29
+	name: 29. Spieltag, 12.04.2013 - 14.04.2013
+- !!models.Gameday &season_12_13_gameday_30
+	name: 30. Spieltag, 19.04.2013 - 21.04.2013
+- !!models.Gameday &season_12_13_gameday_31
+	name: 31. Spieltag, 26.04.2013 - 28.04.2013
+- !!models.Gameday &season_12_13_gameday_32
+	name: 32. Spieltag, 03.05.2013 - 05.05.2013
+- !!models.Gameday &season_12_13_gameday_33
+	name: 33. Spieltag, 11.05.2013 - 11.05.2013
+- !!models.Gameday &season_12_13_gameday_34
+	name: 34. Spieltag, 18.05.2013 - 18.05.2013
+- !!models.Gameday &season_12_13_relegation
+	name: Relegation, 23.05.2013 - 27.05.2013
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

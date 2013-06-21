@@ -3,6 +3,8 @@
  */
 package models;
 
+import java.util.Date;
+
 import javax.annotation.Nullable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -46,6 +48,7 @@ public class Game extends Model {
 	public Gameday gameday;
 	
 	
+	public Date startDate;
 	
 	public String getEncounterString() {
 		StringBuilder sb = new StringBuilder();

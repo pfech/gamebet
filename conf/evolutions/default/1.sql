@@ -8,6 +8,7 @@ create table game (
   home_id                   bigint,
   away_id                   bigint,
   gameday_id                bigint,
+  start_date                timestamp,
   constraint pk_game primary key (id))
 ;
 

@@ -1,5 +1,5 @@
 - !!models.Team &t1
-    name: FC Bayern München
+    name: FC Bayern MÃ¼nchen
 	meetings:
 		- *m1
 		- *m2
@@ -80,7 +80,7 @@
 		- *m5
  
 - !!models.Team &t10
-    name: 1.FC Nürnberg
+    name: 1.FC NÃ¼rnberg
 	meetings:
 		- *m1
 		- *m2
@@ -143,7 +143,7 @@
 		- *m5
  
 - !!models.Team &t17
-    name: Fortuna Düsseldorf
+    name: Fortuna DÃ¼sseldorf
 	meetings:
 		- *m1
 		- *m2
@@ -152,7 +152,16 @@
 		- *m5
  
 - !!models.Team &t18
-    name: SpVgg Greuther Fürth
+    name: SpVgg Greuther FÃ¼rth
+	meetings:
+		- *m1
+		- *m2
+		- *m3
+		- *m4
+		- *m5
+
+- !!models.Team &t19
+    name: 1.FC Kaiserslautern
 	meetings:
 		- *m1
 		- *m2

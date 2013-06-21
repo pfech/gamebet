@@ -1,1399 +1,1542 @@
-- !!models.Gameday &season_12_13_gameday_1
-	name: 1. Spieltag, 24.08.2012 - 26.08.2012
-	meeting: *m1
-
 - !!models.Game &game1
-	startDate: 24.08.2012 - 20:30	
-	home: Borussia Dortmund	
-	away: SV Werder Bremen	
+	startDate: 24.08.2012 20:30	
+	home: *t2	
+	away: *t14	
 	gameday: *season_12_13_gameday_1
 - !!models.Game &game2
-	startDate: 25.08.2012 - 15:30	
-	home: Borussia M'gladbach	
-	away: 1899 Hoffenheim
+	startDate: 25.08.2012 15:30	
+	home: *t8	
+	away: *t16
 	gameday: *season_12_13_gameday_1
 - !!models.Game &game3
-	startDate: 25.08.2012 - 15:30	
-	home: SC Freiburg	
-	away: 1.FSV Mainz 05
+	startDate: 25.08.2012 15:30	
+	home: *t5	
+	away: *t13
 	gameday: *season_12_13_gameday_1
 - !!models.Game &game4
-	startDate: 25.08.2012 - 15:30	
-	home: FC Augsburg	
-	away: Fortuna Düsseldorf
+	startDate: 25.08.2012 15:30	
+	home: *t15	
+	away: *t17
 	gameday: *season_12_13_gameday_1
 - !!models.Game &game5
-	startDate: 25.08.2012 - 15:30	
-	home: Hamburger SV	
-	away: 1.FC Nürnberg
+	startDate: 25.08.2012 15:30	
+	home: *t7	
+	away: *t10
 	gameday: *season_12_13_gameday_1
 - !!models.Game &game6
-	startDate: 25.08.2012 - 15:30	
-	home: SpVgg Greuther Fürth	
-	away: FC Bayern München
+	startDate: 25.08.2012 15:30	
+	home: *t18	
+	away: *t1
 	gameday: *season_12_13_gameday_1
 - !!models.Game &game7
-	startDate: 25.08.2012 - 18:30	
-	home: Eintracht Frankfurt	
-	away: Bayer 04 Leverkusen
+	startDate: 25.08.2012 18:30	
+	home: *t6	
+	away: *t3
 	gameday: *season_12_13_gameday_1
 - !!models.Game &game8
-	startDate: 25.08.2012 - 20:45	
-	home: VfB Stuttgart	
-	away: VfL Wolfsburg
+	startDate: 25.08.2012 20:45	
+	home: *t12	
+	away: *t11
 	gameday: *season_12_13_gameday_1
 - !!models.Game &game9
-	startDate: 26.08.2012 - 17:30	
-	home: Hannover 96	
-	away: FC Schalke 04
+	startDate: 26.08.2012 17:30	
+	home: *t9	
+	away: *t4
 	gameday: *season_12_13_gameday_1
-
-- !!models.Gameday &season_12_13_gameday_2
-	name: 2. Spieltag, 31.08.2012 - 02.09.2012
-
-
 - !!models.Game &game10
-	startDate: 31.08.2012 - 20:30	
-	home: 1.FSV Mainz 05	
-	away: SpVgg Greuther Fürth
+	startDate: 31.08.2012 20:30	
+	home: *t13	
+	away: *t18
 	meeting: *season_12_13_gameday_2
 - !!models.Game &game11
-	startDate: 01.09.2012 - 15:30	
-	home: FC Schalke 04	
-	away: FC Augsburg
+	startDate: 01.09.2012 15:30	
+	home: *t4	
+	away: *t15
 	meeting: *season_12_13_gameday_2
 - !!models.Game &game12
-	startDate: 01.09.2012 - 15:30	
-	home: Bayer 04 Leverkusen	
-	away: SC Freiburg
+	startDate: 01.09.2012 15:30	
+	home: *t3	
+	away: *t5
 	meeting: *season_12_13_gameday_2
 - !!models.Game &game13
-	startDate: 01.09.2012 - 15:30	
-	home: SV Werder Bremen	
-	away: Hamburger SV
+	startDate: 01.09.2012 15:30	
+	home: *t14	
+	away: *t7
 	meeting: *season_12_13_gameday_2
 - !!models.Game &game14
-	startDate: 01.09.2012 - 15:30	
-	home: 1.FC Nürnberg	
-	away: Borussia Dortmund
+	startDate: 01.09.2012 15:30	
+	home: *t10	
+	away: *t2
 	meeting: *season_12_13_gameday_2
 - !!models.Game &game15
-	startDate: 01.09.2012 - 15:30	
-	home: 1899 Hoffenheim	
-	away: Eintracht Frankfurt
+	startDate: 01.09.2012 15:30	
+	home: *t16	
+	away: *t6
 	meeting: *season_12_13_gameday_2
 - !!models.Game &game16
-	startDate: 01.09.2012 - 18:30	
-	home: Fortuna Düsseldorf	
-	away: Borussia M'gladbach
+	startDate: 01.09.2012 18:30	
+	home: *t17	
+	away: *t8
 	meeting: *season_12_13_gameday_2
 - !!models.Game &game17
-	startDate: 02.09.2012 - 15:30	
-	home: VfL Wolfsburg	
-	away: Hannover 96
+	startDate: 02.09.2012 15:30	
+	home: *t11	
+	away: *t9
 	meeting: *season_12_13_gameday_2
 - !!models.Game &game18
-	startDate: 02.09.2012 - 17:30	
-	home: FC Bayern München	
-	away: VfB Stuttgart
+	startDate: 02.09.2012 17:30	
+	home: *t1	
+	away: *t12
 	meeting: *season_12_13_gameday_2
-
-	
-- !!models.Gameday &season_12_13_gameday_3
-	name: 3. Spieltag, 14.09.2012 - 16.09.2012
-
 - !!models.Game &game19
-	startDate: 14.09.2012 - 20:30	
-	home: FC Augsburg	
-	away: VfL Wolfsburg	0 : 0	mehr zum Spiel
+	startDate: 14.09.2012 20:30	
+	home: *t15	
+	away: *t11
+	meeting: *season_12_13_gameday_3
 - !!models.Game &game20
-	startDate: 15.09.2012 - 15:30	
-	home: Borussia Dortmund	
-	away: Bayer 04 Leverkusen	3 : 0 (2 : 0)	mehr zum Spiel
+	startDate: 15.09.2012 15:30	
+	home: *t2	
+	away: *t3
+	meeting: *season_12_13_gameday_3
 - !!models.Game &game21
-	startDate: 15.09.2012 - 15:30	
-	home: FC Bayern München	
-	away: 1.FSV Mainz 05	3 : 1 (2 : 0)	mehr zum Spiel
+	startDate: 15.09.2012 15:30	
+	home: *t1	
+	away: *t13
+	meeting: *season_12_13_gameday_3
 - !!models.Game &game22
-	startDate: 15.09.2012 - 15:30	
-	home: Borussia M'gladbach	
-	away: 1.FC Nürnberg	2 : 3 (1 : 2)	mehr zum Spiel
+	startDate: 15.09.2012 15:30	
+	home: *t8	
+	away: *t10
+	meeting: *season_12_13_gameday_3
 - !!models.Game &game23
-	startDate: 15.09.2012 - 15:30	
-	home: VfB Stuttgart	
-	away: Fortuna Düsseldorf	0 : 0	mehr zum Spiel
+	startDate: 15.09.2012 15:30	
+	home: *t12	
+	away: *t17
+	meeting: *season_12_13_gameday_3
 - !!models.Game &game24
-	startDate: 15.09.2012 - 15:30	
-	home: Hannover 96	
-	away: SV Werder Bremen	3 : 2 (2 : 1)	mehr zum Spiel
+	startDate: 15.09.2012 15:30	
+	home: *t9	
+	away: *t14
+	meeting: *season_12_13_gameday_3
 - !!models.Game &game25
-	startDate: 15.09.2012 - 18:30	
-	home: SpVgg Greuther Fürth	
-	away: FC Schalke 04	0 : 2 (0 : 0)	mehr zum Spiel
+	startDate: 15.09.2012 18:30	
+	home: *t18	
+	away: *t4
+	meeting: *season_12_13_gameday_3
 - !!models.Game &game26
-	startDate: 16.09.2012 - 15:30	
-	home: SC Freiburg	
-	away: 1899 Hoffenheim	5 : 3 (2 : 1)	mehr zum Spiel
+	startDate: 16.09.2012 15:30	
+	home: *t5	
+	away: *t16
+	meeting: *season_12_13_gameday_3
 - !!models.Game &game27
-	startDate: 16.09.2012 - 17:30	
-	home: Eintracht Frankfurt	
-	away: Hamburger SV	3 : 2 (2 : 1)	mehr zum Spiel
-
-- !!models.Gameday &season_12_13_gameday_4
-	name: 4. Spieltag, 21.09.2012 - 23.09.2012
-
+	startDate: 16.09.2012 17:30	
+	home: *t6	
+	away: *t7
+	meeting: *season_12_13_gameday_3
 - !!models.Game &game28
-	startDate: 21.09.2012 - 20:30	
-	home: 1.FC Nürnberg	
-	away: Eintracht Frankfurt	1 : 2 (0 : 1)	mehr zum Spiel
+	startDate: 21.09.2012 20:30	
+	home: *t10	
+	away: *t6
+	meeting: *season_12_13_gameday_4
 - !!models.Game &game29
-	startDate: 22.09.2012 - 15:30	
-	home: FC Schalke 04	
-	away: FC Bayern München	0 : 2 (0 : 0)	mehr zum Spiel
+	startDate: 22.09.2012 15:30	
+	home: *t4	
+	away: *t1
+	meeting: *season_12_13_gameday_4
 - !!models.Game &game30
-	startDate: 22.09.2012 - 15:30	
-	home: VfL Wolfsburg	
-	away: SpVgg Greuther Fürth	1 : 1 (1 : 1)	mehr zum Spiel
+	startDate: 22.09.2012 15:30	
+	home: *t11	
+	away: *t18
+	meeting: *season_12_13_gameday_4
 - !!models.Game &game31
-	startDate: 22.09.2012 - 15:30	
-	home: 1.FSV Mainz 05	
-	away: FC Augsburg	2 : 0 (2 : 0)	mehr zum Spiel
+	startDate: 22.09.2012 15:30	
+	home: *t13	
+	away: *t15
+	meeting: *season_12_13_gameday_4
 - !!models.Game &game32
-	startDate: 22.09.2012 - 15:30	
-	home: Hamburger SV	
-	away: Borussia Dortmund	3 : 2 (1 : 0)	mehr zum Spiel
+	startDate: 22.09.2012 15:30	
+	home: *t7	
+	away: *t2
+	meeting: *season_12_13_gameday_4
 - !!models.Game &game33
-	startDate: 22.09.2012 - 15:30	
-	home: Fortuna Düsseldorf	
-	away: SC Freiburg	0 : 0	mehr zum Spiel
+	startDate: 22.09.2012 15:30	
+	home: *t17	
+	away: *t5
+	meeting: *season_12_13_gameday_4
 - !!models.Game &game34
-	startDate: 23.09.2012 - 15:30	
-	home: Bayer 04 Leverkusen	
-	away: Borussia M'gladbach	1 : 1 (1 : 1)	mehr zum Spiel
+	startDate: 23.09.2012 15:30	
+	home: *t3	
+	away: *t8
+	meeting: *season_12_13_gameday_4
 - !!models.Game &game35
-	startDate: 23.09.2012 - 17:30	
-	home: SV Werder Bremen	
-	away: VfB Stuttgart	2 : 2 (2 : 0)	mehr zum Spiel
+	startDate: 23.09.2012 17:30	
+	home: *t14	
+	away: *t12
+	meeting: *season_12_13_gameday_4
 - !!models.Game &game36
-	startDate: 23.09.2012 - 17:30	
-	home: 1899 Hoffenheim	
-	away: Hannover 96	3 : 1 (1 : 1)	mehr zum Spiel
-
-- !!models.Gameday &season_12_13_gameday_5
-	name: 5. Spieltag, 25.09.2012 - 26.09.2012
-
+	startDate: 23.09.2012 17:30	
+	home: *t16	
+	away: *t9
+	meeting: *season_12_13_gameday_4
 - !!models.Game &game37
-	startDate: 25.09.2012 - 20:00	
-	home: FC Bayern München	
-	away: VfL Wolfsburg	3 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 25.09.2012 20:00	
+	home: *t1	
+	away: *t11
+	meeting: *season_12_13_gameday_5
 - !!models.Game &game38
-	startDate: 25.09.2012 - 20:00	
-	home: FC Schalke 04	
-	away: 1.FSV Mainz 05	3 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 25.09.2012 20:00	
+	home: *t4	
+	away: *t13
+	meeting: *season_12_13_gameday_5
 - !!models.Game &game39
-	startDate: 25.09.2012 - 20:00	
-	home: SpVgg Greuther Fürth	
-	away: Fortuna Düsseldorf	0 : 2 (0 : 2)	mehr zum Spiel
+	startDate: 25.09.2012 20:00	
+	home: *t18	
+	away: *t17
+	meeting: *season_12_13_gameday_5
 - !!models.Game &game40
-	startDate: 25.09.2012 - 20:00	
-	home: Eintracht Frankfurt	
-	away: Borussia Dortmund	3 : 3 (0 : 2)	mehr zum Spiel
+	startDate: 25.09.2012 20:00	
+	home: *t6	
+	away: *t2
+	meeting: *season_12_13_gameday_5
 - !!models.Game &game41
-	startDate: 26.09.2012 - 20:00	
-	home: Borussia M'gladbach	
-	away: Hamburger SV	2 : 2 (1 : 2)	mehr zum Spiel
+	startDate: 26.09.2012 20:00	
+	home: *t8	
+	away: *t7
+	meeting: *season_12_13_gameday_5
 - !!models.Game &game42
-	startDate: 26.09.2012 - 20:00	
-	home: VfB Stuttgart	
-	away: 1899 Hoffenheim	0 : 3 (0 : 1)	mehr zum Spiel
+	startDate: 26.09.2012 20:00	
+	home: *t12	
+	away: *t16
+	meeting: *season_12_13_gameday_5
 - !!models.Game &game43
-	startDate: 26.09.2012 - 20:00	
-	home: Hannover 96	
-	away: 1.FC Nürnberg	4 : 1 (2 : 0)	mehr zum Spiel
+	startDate: 26.09.2012 20:00	
+	home: *t9	
+	away: *t10
+	meeting: *season_12_13_gameday_5
 - !!models.Game &game44
-	startDate: 26.09.2012 - 20:00	
-	home: SC Freiburg	
-	away: SV Werder Bremen	1 : 2 (1 : 0)	mehr zum Spiel
+	startDate: 26.09.2012 20:00	
+	home: *t5	
+	away: *t14
+	meeting: *season_12_13_gameday_5
 - !!models.Game &game45
-	startDate: 26.09.2012 - 20:00	
-	home: FC Augsburg	
-	away: Bayer 04 Leverkusen	1 : 3 (0 : 3)	mehr zum Spiel
-
-- !!models.Gameday &season_12_13_gameday_6
-	name: 6. Spieltag, 28.09.2012 - 30.09.2012
-
+	startDate: 26.09.2012 20:00	
+	home: *t15	
+	away: *t3
+	meeting: *season_12_13_gameday_5
 - !!models.Game &game46
-	startDate: 28.09.2012 - 20:30	
-	home: Fortuna Düsseldorf	
-	away: FC Schalke 04	2 : 2 (0 : 2)	mehr zum Spiel
+	startDate: 28.09.2012 20:30	
+	home: *t17	
+	away: *t4
+	meeting: *season_12_13_gameday_6
 - !!models.Game &game47
-	startDate: 29.09.2012 - 15:30	
-	home: Bayer 04 Leverkusen	
-	away: SpVgg Greuther Fürth	2 : 0 (0 : 0)	mehr zum Spiel
+	startDate: 29.09.2012 15:30	
+	home: *t3	
+	away: *t18
+	meeting: *season_12_13_gameday_6
 - !!models.Game &game48
-	startDate: 29.09.2012 - 15:30	
-	home: SV Werder Bremen	
-	away: FC Bayern München	0 : 2 (0 : 0)	mehr zum Spiel
+	startDate: 29.09.2012 15:30	
+	home: *t14	
+	away: *t1
+	meeting: *season_12_13_gameday_6
 - !!models.Game &game49
-	startDate: 29.09.2012 - 15:30	
-	home: 1.FC Nürnberg	
-	away: VfB Stuttgart	0 : 2 (0 : 1)	mehr zum Spiel
+	startDate: 29.09.2012 15:30	
+	home: *t10	
+	away: *t12
+	meeting: *season_12_13_gameday_6
 - !!models.Game &game50
-	startDate: 29.09.2012 - 15:30	
-	home: 1899 Hoffenheim	
-	away: FC Augsburg	0 : 0	mehr zum Spiel
+	startDate: 29.09.2012 15:30	
+	home: *t16	
+	away: *t15
+	meeting: *season_12_13_gameday_6
 - !!models.Game &game51
-	startDate: 29.09.2012 - 15:30	
-	home: Hamburger SV	
-	away: Hannover 96	1 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 29.09.2012 15:30	
+	home: *t7	
+	away: *t9
+	meeting: *season_12_13_gameday_6
 - !!models.Game &game52
-	startDate: 29.09.2012 - 18:30	
-	home: Borussia Dortmund	
-	away: Borussia M'gladbach	5 : 0 (2 : 0)	mehr zum Spiel
+	startDate: 29.09.2012 18:30	
+	home: *t2	
+	away: *t8
+	meeting: *season_12_13_gameday_6
 - !!models.Game &game53
-	startDate: 30.09.2012 - 15:30	
-	home: Eintracht Frankfurt	
-	away: SC Freiburg	2 : 1 (0 : 0)	mehr zum Spiel
+	startDate: 30.09.2012 15:30	
+	home: *t6	
+	away: *t5
+	meeting: *season_12_13_gameday_6
 - !!models.Game &game54
-	startDate: 30.09.2012 - 17:30	
-	home: VfL Wolfsburg	
-	away: 1.FSV Mainz 05	0 : 2 (0 : 2)	mehr zum Spiel
-
-- !!models.Gameday &season_12_13_gameday_7
-	name: 7. Spieltag, 05.10.2012 - 07.10.2012
-
+	startDate: 30.09.2012 17:30	
+	home: *t11	
+	away: *t13
+	meeting: *season_12_13_gameday_6
 - !!models.Game &game55
-	startDate: 05.10.2012 - 20:30	
-	home: FC Augsburg	
-	away: SV Werder Bremen	3 : 1 (2 : 1)	mehr zum Spiel
+	startDate: 05.10.2012 20:30	
+	home: *t15	
+	away: *t14
+	meeting: *season_12_13_gameday_7
 - !!models.Game &game56
-	startDate: 06.10.2012 - 15:30	
-	home: FC Bayern München	
-	away: 1899 Hoffenheim	2 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 06.10.2012 15:30	
+	home: *t1	
+	away: *t16
+	meeting: *season_12_13_gameday_7
 - !!models.Game &game57
-	startDate: 06.10.2012 - 15:30	
-	home: FC Schalke 04	
-	away: VfL Wolfsburg	3 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 06.10.2012 15:30	
+	home: *t4	
+	away: *t11
+	meeting: *season_12_13_gameday_7
 - !!models.Game &game58
-	startDate: 06.10.2012 - 15:30	
-	home: SC Freiburg	
-	away: 1.FC Nürnberg	3 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 06.10.2012 15:30	
+	home: *t5	
+	away: *t10
+	meeting: *season_12_13_gameday_7
 - !!models.Game &game59
-	startDate: 06.10.2012 - 15:30	
-	home: 1.FSV Mainz 05	
-	away: Fortuna Düsseldorf	1 : 0 (0 : 0)	mehr zum Spiel
+	startDate: 06.10.2012 15:30	
+	home: *t13	
+	away: *t17
+	meeting: *season_12_13_gameday_7
 - !!models.Game &game60
-	startDate: 06.10.2012 - 15:30	
-	home: SpVgg Greuther Fürth	
-	away: Hamburger SV	0 : 1 (0 : 1)	mehr zum Spiel
+	startDate: 06.10.2012 15:30	
+	home: *t18	
+	away: *t7
+	meeting: *season_12_13_gameday_7
 - !!models.Game &game61
-	startDate: 07.10.2012 - 15:30	
-	home: Borussia M'gladbach	
-	away: Eintracht Frankfurt	2 : 0 (2 : 0)	mehr zum Spiel
+	startDate: 07.10.2012 15:30	
+	home: *t8	
+	away: *t6
+	meeting: *season_12_13_gameday_7
 - !!models.Game &game62
-	startDate: 07.10.2012 - 17:30	
-	home: VfB Stuttgart	
-	away: Bayer 04 Leverkusen	2 : 2 (1 : 1)	mehr zum Spiel
+	startDate: 07.10.2012 17:30	
+	home: *t12	
+	away: *t3
+	meeting: *season_12_13_gameday_7
 - !!models.Game &game63
-	startDate: 07.10.2012 - 17:30	
-	home: Hannover 96	
-	away: Borussia Dortmund	1 : 1 (0 : 1)	mehr zum Spiel
-
-- !!models.Gameday &season_12_13_gameday_8
-	name: 8. Spieltag, 19.10.2012 - 21.10.2012
-
+	startDate: 07.10.2012 17:30	
+	home: *t9	
+	away: *t2
+	meeting: *season_12_13_gameday_7
 - !!models.Game &game64
-	startDate: 19.10.2012 - 20:30	
-	home: 1899 Hoffenheim	
-	away: SpVgg Greuther Fürth	3 : 3 (1 : 1)	mehr zum Spiel
+	startDate: 19.10.2012 20:30	
+	home: *t16	
+	away: *t18
+	meeting: *season_12_13_gameday_8
 - !!models.Game &game65
-	startDate: 20.10.2012 - 15:30	
-	home: Borussia Dortmund	
-	away: FC Schalke 04	1 : 2 (0 : 1)	mehr zum Spiel
+	startDate: 20.10.2012 15:30	
+	home: *t2	
+	away: *t4
+	meeting: *season_12_13_gameday_8
 - !!models.Game &game66
-	startDate: 20.10.2012 - 15:30	
-	home: Bayer 04 Leverkusen	
-	away: 1.FSV Mainz 05	2 : 2 (1 : 0)	mehr zum Spiel
+	startDate: 20.10.2012 15:30	
+	home: *t3	
+	away: *t13
+	meeting: *season_12_13_gameday_8
 - !!models.Game &game67
-	startDate: 20.10.2012 - 15:30	
-	home: VfL Wolfsburg	
-	away: SC Freiburg	0 : 2 (0 : 1)	mehr zum Spiel
+	startDate: 20.10.2012 15:30	
+	home: *t11	
+	away: *t5
+	meeting: *season_12_13_gameday_8
 - !!models.Game &game68
-	startDate: 20.10.2012 - 15:30	
-	home: Eintracht Frankfurt	
-	away: Hannover 96	3 : 1 (2 : 1)	mehr zum Spiel
+	startDate: 20.10.2012 15:30	
+	home: *t6	
+	away: *t9
+	meeting: *season_12_13_gameday_8
 - !!models.Game &game69
-	startDate: 20.10.2012 - 15:30	
-	home: Fortuna Düsseldorf	
-	away: FC Bayern München	0 : 5 (0 : 2)	mehr zum Spiel
+	startDate: 20.10.2012 15:30	
+	home: *t17	
+	away: *t1
+	meeting: *season_12_13_gameday_8
 - !!models.Game &game70
-	startDate: 20.10.2012 - 18:30	
-	home: SV Werder Bremen	
-	away: Borussia M'gladbach	4 : 0 (2 : 0)	mehr zum Spiel
+	startDate: 20.10.2012 18:30	
+	home: *t14	
+	away: *t8
+	meeting: *season_12_13_gameday_8
 - !!models.Game &game71
-	startDate: 21.10.2012 - 15:30	
-	home: 1.FC Nürnberg	
-	away: FC Augsburg	0 : 0	mehr zum Spiel
+	startDate: 21.10.2012 15:30	
+	home: *t10	
+	away: *t15
+	meeting: *season_12_13_gameday_8
 - !!models.Game &game72
-	startDate: 21.10.2012 - 17:30	
-	home: Hamburger SV	
-	away: VfB Stuttgart	0 : 1 (0 : 1)	mehr zum Spiel
-
-
-- !!models.Gameday &season_12_13_gameday_9
-	name: 9. Spieltag, 26.10.2012 - 28.10.2012
-
+	startDate: 21.10.2012 17:30	
+	home: *t7	
+	away: *t12
+	meeting: *season_12_13_gameday_8
 - !!models.Game &game73
-	startDate: 26.10.2012 - 20:30	
-	home: FC Augsburg	
-	away: Hamburger SV	0 : 2 (0 : 1)	mehr zum Spiel
+	startDate: 26.10.2012 20:30	
+	home: *t15	
+	away: *t7
+	meeting: *season_12_13_gameday_9
 - !!models.Game &game74
-	startDate: 27.10.2012 - 15:30	
-	home: FC Schalke 04	
-	away: 1.FC Nürnberg	1 : 0 (0 : 0)	mehr zum Spiel
+	startDate: 27.10.2012 15:30	
+	home: *t4	
+	away: *t10
+	meeting: *season_12_13_gameday_9
 - !!models.Game &game75
-	startDate: 27.10.2012 - 15:30	
-	home: SC Freiburg	
-	away: Borussia Dortmund	0 : 2 (0 : 0)	mehr zum Spiel
+	startDate: 27.10.2012 15:30	
+	home: *t5	
+	away: *t2
+	meeting: *season_12_13_gameday_9
 - !!models.Game &game76
-	startDate: 27.10.2012 - 15:30	
-	home: 1.FSV Mainz 05	
-	away: 1899 Hoffenheim	3 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 27.10.2012 15:30	
+	home: *t13	
+	away: *t16
+	meeting: *season_12_13_gameday_9
 - !!models.Game &game77
-	startDate: 27.10.2012 - 15:30	
-	home: SpVgg Greuther Fürth	
-	away: SV Werder Bremen	1 : 1 (1 : 1)	mehr zum Spiel
+	startDate: 27.10.2012 15:30	
+	home: *t18	
+	away: *t14
+	meeting: *season_12_13_gameday_9
 - !!models.Game &game78
-	startDate: 27.10.2012 - 15:30	
-	home: Fortuna Düsseldorf	
-	away: VfL Wolfsburg	1 : 4 (0 : 0)	mehr zum Spiel
+	startDate: 27.10.2012 15:30	
+	home: *t17	
+	away: *t11
+	meeting: *season_12_13_gameday_9
 - !!models.Game &game79
-	startDate: 28.10.2012 - 15:30	
-	home: VfB Stuttgart	
-	away: Eintracht Frankfurt	2 : 1 (1 : 0)	mehr zum Spiel
+	startDate: 28.10.2012 15:30	
+	home: *t12	
+	away: *t6
+	meeting: *season_12_13_gameday_9
 - !!models.Game &game80
-	startDate: 28.10.2012 - 17:30	
-	home: FC Bayern München	
-	away: Bayer 04 Leverkusen	1 : 2 (0 : 1)	mehr zum Spiel
+	startDate: 28.10.2012 17:30	
+	home: *t1	
+	away: *t3
+	meeting: *season_12_13_gameday_9
 - !!models.Game &game81
-	startDate: 28.10.2012 - 17:30	
-	home: Hannover 96	
-	away: Borussia M'gladbach	2 : 3 (0 : 0)	mehr zum Spiel
-
-- !!models.Gameday &season_12_13_gameday_10
-	name: 10. Spieltag, 02.11.2012 - 04.11.2012
-
+	startDate: 28.10.2012 17:30	
+	home: *t9	
+	away: *t8
+	meeting: *season_12_13_gameday_9
 - !!models.Game &game82
-	startDate: 02.11.2012 - 20:30	
-	home: Eintracht Frankfurt	
-	away: SpVgg Greuther Fürth	1 : 1 (1 : 0)	mehr zum Spiel
+	startDate: 02.11.2012 20:30	
+	home: *t6	
+	away: *t18
+	meeting: *season_12_13_gameday_10
 - !!models.Game &game83
-	startDate: 03.11.2012 - 15:30	
-	home: Borussia Dortmund	
-	away: VfB Stuttgart	0 : 0	mehr zum Spiel
+	startDate: 03.11.2012 15:30	
+	home: *t2	
+	away: *t12
+	meeting: *season_12_13_gameday_10
 - !!models.Game &game84
-	startDate: 03.11.2012 - 15:30	
-	home: Borussia M'gladbach	
-	away: SC Freiburg	1 : 1 (0 : 0)	mehr zum Spiel
+	startDate: 03.11.2012 15:30	
+	home: *t8	
+	away: *t5
+	meeting: *season_12_13_gameday_10
 - !!models.Game &game85
-	startDate: 03.11.2012 - 15:30	
-	home: Hannover 96	
-	away: FC Augsburg	2 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 03.11.2012 15:30	
+	home: *t9	
+	away: *t15
+	meeting: *season_12_13_gameday_10
 - !!models.Game &game86
-	startDate: 03.11.2012 - 15:30	
-	home: 1.FC Nürnberg	
-	away: VfL Wolfsburg	1 : 0 (0 : 0)	mehr zum Spiel
+	startDate: 03.11.2012 15:30	
+	home: *t10	
+	away: *t11
+	meeting: *season_12_13_gameday_10
 - !!models.Game &game87
-	startDate: 03.11.2012 - 15:30	
-	home: 1899 Hoffenheim	
-	away: FC Schalke 04	3 : 2 (1 : 1)	mehr zum Spiel
+	startDate: 03.11.2012 15:30	
+	home: *t16	
+	away: *t4
+	meeting: *season_12_13_gameday_10
 - !!models.Game &game88
-	startDate: 03.11.2012 - 18:30	
-	home: Hamburger SV	
-	away: FC Bayern München	0 : 3 (0 : 1)	mehr zum Spiel
+	startDate: 03.11.2012 18:30	
+	home: *t7	
+	away: *t1
+	meeting: *season_12_13_gameday_10
 - !!models.Game &game89
-	startDate: 04.11.2012 - 15:30	
-	home: Bayer 04 Leverkusen	
-	away: Fortuna Düsseldorf	3 : 2 (2 : 1)	mehr zum Spiel
+	startDate: 04.11.2012 15:30	
+	home: *t3	
+	away: *t17
+	meeting: *season_12_13_gameday_10
 - !!models.Game &game90
-	startDate: 04.11.2012 - 17:30	
-	home: SV Werder Bremen	
-	away: 1.FSV Mainz 05	2 : 1 (1 : 0)	mehr zum Spiel
-
-- !!models.Gameday &season_12_13_gameday_11
-	name: 11. Spieltag, 09.11.2012 - 11.11.2012
-
+	startDate: 04.11.2012 17:30	
+	home: *t14	
+	away: *t13
+	meeting: *season_12_13_gameday_10
 - !!models.Game &game91
-	startDate: 09.11.2012 - 20:30	
-	home: 1.FSV Mainz 05	
-	away: 1.FC Nürnberg	2 : 1 (2 : 1)	mehr zum Spiel
+	startDate: 09.11.2012 20:30	
+	home: *t13	
+	away: *t10
+	meeting: *season_12_13_gameday_11
 - !!models.Game &game92
-	startDate: 10.11.2012 - 15:30	
-	home: FC Bayern München	
-	away: Eintracht Frankfurt	2 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 10.11.2012 15:30	
+	home: *t1	
+	away: *t6
+	meeting: *season_12_13_gameday_11
 - !!models.Game &game93
-	startDate: 10.11.2012 - 15:30	
-	home: FC Schalke 04	
-	away: SV Werder Bremen	2 : 1 (0 : 1)	mehr zum Spiel
+	startDate: 10.11.2012 15:30	
+	home: *t4	
+	away: *t14
+	meeting: *season_12_13_gameday_11
 - !!models.Game &game94
-	startDate: 10.11.2012 - 15:30	
-	home: SC Freiburg	
-	away: Hamburger SV	0 : 0	mehr zum Spiel
+	startDate: 10.11.2012 15:30	
+	home: *t5	
+	away: *t7
+	meeting: *season_12_13_gameday_11
 - !!models.Game &game95
-	startDate: 10.11.2012 - 15:30	
-	home: FC Augsburg	
-	away: Borussia Dortmund	1 : 3 (0 : 1)	mehr zum Spiel
+	startDate: 10.11.2012 15:30	
+	home: *t15	
+	away: *t2
+	meeting: *season_12_13_gameday_11
 - !!models.Game &game96
-	startDate: 10.11.2012 - 15:30	
-	home: Fortuna Düsseldorf	
-	away: 1899 Hoffenheim	1 : 1 (1 : 1)	mehr zum Spiel
+	startDate: 10.11.2012 15:30	
+	home: *t17	
+	away: *t16
+	meeting: *season_12_13_gameday_11
 - !!models.Game &game97
-	startDate: 11.11.2012 - 15:30	
-	home: VfL Wolfsburg	
-	away: Bayer 04 Leverkusen	3 : 1 (3 : 0)	mehr zum Spiel
+	startDate: 11.11.2012 15:30	
+	home: *t11	
+	away: *t3
+	meeting: *season_12_13_gameday_11
 - !!models.Game &game98
-	startDate: 11.11.2012 - 17:30	
-	home: VfB Stuttgart	
-	away: Hannover 96	2 : 4 (2 : 0)	mehr zum Spiel
+	startDate: 11.11.2012 17:30	
+	home: *t12	
+	away: *t9
+	meeting: *season_12_13_gameday_11
 - !!models.Game &game99
-	startDate: 11.11.2012 - 17:30	
-	home: SpVgg Greuther Fürth	
-	away: Borussia M'gladbach	2 : 4 (2 : 1)	mehr zum Spiel
-
-- !!models.Gameday &season_12_13_gameday_12
-	name: 12. Spieltag, 17.11.2012 - 18.11.2012
-
+	startDate: 11.11.2012 17:30	
+	home: *t18	
+	away: *t8
+	meeting: *season_12_13_gameday_11
 - !!models.Game &game100
-	startDate: 17.11.2012 - 15:30	
-	home: Borussia Dortmund	
-	away: SpVgg Greuther Fürth	3 : 1 (3 : 1)	mehr zum Spiel
+	startDate: 17.11.2012 15:30	
+	home: *t2	
+	away: *t18
+	meeting: *season_12_13_gameday_12
 - !!models.Game &game101
-	startDate: 17.11.2012 - 15:30	
-	home: Borussia M'gladbach	
-	away: VfB Stuttgart	1 : 2 (1 : 1)	mehr zum Spiel
+	startDate: 17.11.2012 15:30	
+	home: *t8	
+	away: *t12
+	meeting: *season_12_13_gameday_12
 - !!models.Game &game102
-	startDate: 17.11.2012 - 15:30	
-	home: Hannover 96	
-	away: SC Freiburg	1 : 2 (1 : 1)	mehr zum Spiel
+	startDate: 17.11.2012 15:30	
+	home: *t9	
+	away: *t5
+	meeting: *season_12_13_gameday_12
 - !!models.Game &game103
-	startDate: 17.11.2012 - 15:30	
-	home: 1.FC Nürnberg	
-	away: FC Bayern München	1 : 1 (0 : 1)	mehr zum Spiel
+	startDate: 17.11.2012 15:30	
+	home: *t10	
+	away: *t1
+	meeting: *season_12_13_gameday_12
 - !!models.Game &game104
-	startDate: 17.11.2012 - 15:30	
-	home: Hamburger SV	
-	away: 1.FSV Mainz 05	1 : 0 (0 : 0)	mehr zum Spiel
+	startDate: 17.11.2012 15:30	
+	home: *t7	
+	away: *t13
+	meeting: *season_12_13_gameday_12
 - !!models.Game &game105
-	startDate: 17.11.2012 - 15:30	
-	home: Eintracht Frankfurt	
-	away: FC Augsburg	4 : 2 (2 : 1)	mehr zum Spiel
+	startDate: 17.11.2012 15:30	
+	home: *t6	
+	away: *t15
+	meeting: *season_12_13_gameday_12
 - !!models.Game &game106
-	startDate: 17.11.2012 - 18:30	
-	home: Bayer 04 Leverkusen	
-	away: FC Schalke 04	2 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 17.11.2012 18:30	
+	home: *t3	
+	away: *t4
+	meeting: *season_12_13_gameday_12
 - !!models.Game &game107
-	startDate: 18.11.2012 - 15:30	
-	home: SV Werder Bremen	
-	away: Fortuna Düsseldorf	2 : 1 (0 : 1)	mehr zum Spiel
+	startDate: 18.11.2012 15:30	
+	home: *t14	
+	away: *t17
+	meeting: *season_12_13_gameday_12
 - !!models.Game &game108
-	startDate: 18.11.2012 - 17:30	
-	home: 1899 Hoffenheim	
-	away: VfL Wolfsburg	1 : 3 (0 : 2)	mehr zum Spiel
-
-- !!models.Gameday &season_12_13_gameday_13
-	name: 13. Spieltag, 23.11.2012 - 25.11.2012
-
+	startDate: 18.11.2012 17:30	
+	home: *t16	
+	away: *t11
+	meeting: *season_12_13_gameday_12
 - !!models.Game &game109
-	startDate: 23.11.2012 - 20:30	
-	home: Fortuna Düsseldorf	
-	away: Hamburger SV	2 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 23.11.2012 20:30	
+	home: *t17	
+	away: *t7
+	meeting: *season_12_13_gameday_13
 - !!models.Game &game110
-	startDate: 24.11.2012 - 15:30	
-	home: FC Bayern München	
-	away: Hannover 96	5 : 0 (3 : 0)	mehr zum Spiel
+	startDate: 24.11.2012 15:30	
+	home: *t1	
+	away: *t9
+	meeting: *season_12_13_gameday_13
 - !!models.Game &game111
-	startDate: 24.11.2012 - 15:30	
-	home: FC Schalke 04	
-	away: Eintracht Frankfurt	1 : 1 (1 : 1)	mehr zum Spiel
+	startDate: 24.11.2012 15:30	
+	home: *t4	
+	away: *t6
+	meeting: *season_12_13_gameday_13
 - !!models.Game &game112
-	startDate: 24.11.2012 - 15:30	
-	home: VfL Wolfsburg	
-	away: SV Werder Bremen	1 : 1 (0 : 1)	mehr zum Spiel
+	startDate: 24.11.2012 15:30	
+	home: *t11	
+	away: *t14
+	meeting: *season_12_13_gameday_13
 - !!models.Game &game113
-	startDate: 24.11.2012 - 15:30	
-	home: 1.FSV Mainz 05	
-	away: Borussia Dortmund	1 : 2 (1 : 2)	mehr zum Spiel
+	startDate: 24.11.2012 15:30	
+	home: *t13	
+	away: *t2
+	meeting: *season_12_13_gameday_13
 - !!models.Game &game114
-	startDate: 24.11.2012 - 15:30	
-	home: SpVgg Greuther Fürth	
-	away: 1.FC Nürnberg	0 : 0	mehr zum Spiel
+	startDate: 24.11.2012 15:30	
+	home: *t18	
+	away: *t10
+	meeting: *season_12_13_gameday_13
 - !!models.Game &game115
-	startDate: 25.11.2012 - 15:30	
-	home: SC Freiburg	
-	away: VfB Stuttgart	3 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 25.11.2012 15:30	
+	home: *t5	
+	away: *t12
+	meeting: *season_12_13_gameday_13
 - !!models.Game &game116
-	startDate: 25.11.2012 - 17:30	
-	home: 1899 Hoffenheim	
-	away: Bayer 04 Leverkusen	1 : 2 (0 : 2)	mehr zum Spiel
+	startDate: 25.11.2012 17:30	
+	home: *t16	
+	away: *t3
+	meeting: *season_12_13_gameday_13
 - !!models.Game &game117
-	startDate: 25.11.2012 - 17:30	
-	home: FC Augsburg	
-	away: Borussia M'gladbach	1 : 1 (1 : 0)	mehr zum Spiel
-
-
-- !!models.Gameday &season_12_13_gameday_14
-	name: 14. Spieltag, 27.11.2012 - 28.11.2012
-
+	startDate: 25.11.2012 17:30	
+	home: *t15	
+	away: *t8
+	meeting: *season_12_13_gameday_13
 - !!models.Game &game118
-	startDate: 27.11.2012 - 20:00	
-	home: Borussia Dortmund	
-	away: Fortuna Düsseldorf	1 : 1 (1 : 0)	mehr zum Spiel
+	startDate: 27.11.2012 20:00	
+	home: *t2	
+	away: *t17
+	meeting: *season_12_13_gameday_14
 - !!models.Game &game119
-	startDate: 27.11.2012 - 20:00	
-	home: Hannover 96	
-	away: SpVgg Greuther Fürth	2 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 27.11.2012 20:00	
+	home: *t9	
+	away: *t18
+	meeting: *season_12_13_gameday_14
 - !!models.Game &game120
-	startDate: 27.11.2012 - 20:00	
-	home: Hamburger SV	
-	away: FC Schalke 04	3 : 1 (0 : 0)	mehr zum Spiel
+	startDate: 27.11.2012 20:00	
+	home: *t7	
+	away: *t4
+	meeting: *season_12_13_gameday_14
 - !!models.Game &game121
-	startDate: 27.11.2012 - 20:00	
-	home: Eintracht Frankfurt	
-	away: 1.FSV Mainz 05	1 : 3 (0 : 2)	mehr zum Spiel
+	startDate: 27.11.2012 20:00	
+	home: *t6	
+	away: *t13
+	meeting: *season_12_13_gameday_14
 - !!models.Game &game122
-	startDate: 28.11.2012 - 20:00	
-	home: Borussia M'gladbach	
-	away: VfL Wolfsburg	2 : 0 (2 : 0)	mehr zum Spiel
+	startDate: 28.11.2012 20:00	
+	home: *t8	
+	away: *t11
+	meeting: *season_12_13_gameday_14
 - !!models.Game &game123
-	startDate: 28.11.2012 - 20:00	
-	home: VfB Stuttgart	
-	away: FC Augsburg	2 : 1 (1 : 1)	mehr zum Spiel
+	startDate: 28.11.2012 20:00	
+	home: *t12	
+	away: *t15
+	meeting: *season_12_13_gameday_14
 - !!models.Game &game124
-	startDate: 28.11.2012 - 20:00	
-	home: SV Werder Bremen	
-	away: Bayer 04 Leverkusen	1 : 4 (0 : 1)	mehr zum Spiel
+	startDate: 28.11.2012 20:00	
+	home: *t14	
+	away: *t3
+	meeting: *season_12_13_gameday_14
 - !!models.Game &game125
-	startDate: 28.11.2012 - 20:00	
-	home: SC Freiburg	
-	away: FC Bayern München	0 : 2 (0 : 1)	mehr zum Spiel
+	startDate: 28.11.2012 20:00	
+	home: *t5	
+	away: *t1
+	meeting: *season_12_13_gameday_14
 - !!models.Game &game126
-	startDate: 28.11.2012 - 20:45	
-	home: 1.FC Nürnberg	
-	away: 1899 Hoffenheim	4 : 2 (2 : 1)	mehr zum Spiel
-
-
-- !!models.Gameday &season_12_13_gameday_15
-	name: 15. Spieltag, 30.11.2012 - 02.12.2012
-
+	startDate: 28.11.2012 20:45	
+	home: *t10	
+	away: *t16
+	meeting: *season_12_13_gameday_14
 - !!models.Game &game127
-	startDate: 30.11.2012 - 20:30	
-	home: Fortuna Düsseldorf	
-	away: Eintracht Frankfurt	4 : 0 (2 : 0)	mehr zum Spiel
+	startDate: 30.11.2012 20:30	
+	home: *t17	
+	away: *t6
+	meeting: *season_12_13_gameday_15
 - !!models.Game &game128
-	startDate: 01.12.2012 - 15:30	
-	home: FC Schalke 04	
-	away: Borussia M'gladbach	1 : 1 (0 : 0)	mehr zum Spiel
+	startDate: 01.12.2012 15:30	
+	home: *t4	
+	away: *t8
+	meeting: *season_12_13_gameday_15
 - !!models.Game &game129
-	startDate: 01.12.2012 - 15:30	
-	home: Bayer 04 Leverkusen	
-	away: 1.FC Nürnberg	1 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 01.12.2012 15:30	
+	home: *t3	
+	away: *t10
+	meeting: *season_12_13_gameday_15
 - !!models.Game &game130
-	startDate: 01.12.2012 - 15:30	
-	home: 1.FSV Mainz 05	
-	away: Hannover 96	2 : 1 (1 : 1)	mehr zum Spiel
+	startDate: 01.12.2012 15:30	
+	home: *t13	
+	away: *t9
+	meeting: *season_12_13_gameday_15
 - !!models.Game &game131
-	startDate: 01.12.2012 - 15:30	
-	home: FC Augsburg	
-	away: SC Freiburg	1 : 1 (1 : 1)	mehr zum Spiel
+	startDate: 01.12.2012 15:30	
+	home: *t15	
+	away: *t5
+	meeting: *season_12_13_gameday_15
 - !!models.Game &game132
-	startDate: 01.12.2012 - 15:30	
-	home: SpVgg Greuther Fürth	
-	away: VfB Stuttgart	0 : 1 (0 : 1)	mehr zum Spiel
+	startDate: 01.12.2012 15:30	
+	home: *t18	
+	away: *t12
+	meeting: *season_12_13_gameday_15
 - !!models.Game &game133
-	startDate: 01.12.2012 - 18:30	
-	home: FC Bayern München	
-	away: Borussia Dortmund	1 : 1 (0 : 0)	mehr zum Spiel
+	startDate: 01.12.2012 18:30	
+	home: *t1	
+	away: *t2
+	meeting: *season_12_13_gameday_15
 - !!models.Game &game134
-	startDate: 02.12.2012 - 15:30	
-	home: 1899 Hoffenheim	
-	away: SV Werder Bremen	1 : 4 (0 : 2)	mehr zum Spiel
+	startDate: 02.12.2012 15:30	
+	home: *t16	
+	away: *t14
+	meeting: *season_12_13_gameday_15
 - !!models.Game &game135
-	startDate: 02.12.2012 - 17:30	
-	home: VfL Wolfsburg	
-	away: Hamburger SV	1 : 1 (0 : 1)	mehr zum Spiel
-
-- !!models.Gameday &season_12_13_gameday_16
-	name: 16. Spieltag, 07.12.2012 - 09.12.2012
-
+	startDate: 02.12.2012 17:30	
+	home: *t11	
+	away: *t7
+	meeting: *season_12_13_gameday_15
 - !!models.Game &game136
-	startDate: 07.12.2012 - 20:30	
-	home: Hamburger SV	
-	away: 1899 Hoffenheim	2 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 07.12.2012 20:30	
+	home: *t7	
+	away: *t16
+	meeting: *season_12_13_gameday_16
 - !!models.Game &game137
-	startDate: 08.12.2012 - 15:30	
-	home: Borussia Dortmund	
-	away: VfL Wolfsburg	2 : 3 (1 : 2)	mehr zum Spiel
+	startDate: 08.12.2012 15:30	
+	home: *t2	
+	away: *t11
+	meeting: *season_12_13_gameday_16
 - !!models.Game &game138
-	startDate: 08.12.2012 - 15:30	
-	home: VfB Stuttgart	
-	away: FC Schalke 04	3 : 1 (2 : 1)	mehr zum Spiel
+	startDate: 08.12.2012 15:30	
+	home: *t12	
+	away: *t4
+	meeting: *season_12_13_gameday_16
 - !!models.Game &game139
-	startDate: 08.12.2012 - 15:30	
-	home: 1.FC Nürnberg	
-	away: Fortuna Düsseldorf	2 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 08.12.2012 15:30	
+	home: *t10	
+	away: *t17
+	meeting: *season_12_13_gameday_16
 - !!models.Game &game140
-	startDate: 08.12.2012 - 15:30	
-	home: SC Freiburg	
-	away: SpVgg Greuther Fürth	1 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 08.12.2012 15:30	
+	home: *t5	
+	away: *t18
+	meeting: *season_12_13_gameday_16
 - !!models.Game &game141
-	startDate: 08.12.2012 - 15:30	
-	home: FC Augsburg	
-	away: FC Bayern München	0 : 2 (0 : 1)	mehr zum Spiel
+	startDate: 08.12.2012 15:30	
+	home: *t15	
+	away: *t1
+	meeting: *season_12_13_gameday_16
 - !!models.Game &game142
-	startDate: 08.12.2012 - 18:30	
-	home: Eintracht Frankfurt	
-	away: SV Werder Bremen	4 : 1 (0 : 0)	mehr zum Spiel
+	startDate: 08.12.2012 18:30	
+	home: *t6	
+	away: *t14
+	meeting: *season_12_13_gameday_16
 - !!models.Game &game143
-	startDate: 09.12.2012 - 15:30	
-	home: Borussia M'gladbach	
-	away: 1.FSV Mainz 05	2 : 0 (0 : 0)	mehr zum Spiel
+	startDate: 09.12.2012 15:30	
+	home: *t8	
+	away: *t13
+	meeting: *season_12_13_gameday_16
 - !!models.Game &game144
-	startDate: 09.12.2012 - 17:30	
-	home: Hannover 96	
-	away: Bayer 04 Leverkusen	3 : 2 (1 : 1)	mehr zum Spiel
-
-- !!models.Gameday &season_12_13_gameday_17
-	name: 17. Spieltag, 14.12.2012 - 16.12.2012
-
+	startDate: 09.12.2012 17:30	
+	home: *t9	
+	away: *t3
+	meeting: *season_12_13_gameday_16
 - !!models.Game &game145
-	startDate: 14.12.2012 - 20:30	
-	home: FC Bayern München	
-	away: Borussia M'gladbach	1 : 1 (0 : 1)	mehr zum Spiel
+	startDate: 14.12.2012 20:30	
+	home: *t1	
+	away: *t8
+	meeting: *season_12_13_gameday_17
 - !!models.Game &game146
-	startDate: 15.12.2012 - 15:30	
-	home: Bayer 04 Leverkusen	
-	away: Hamburger SV	3 : 0 (2 : 0)	mehr zum Spiel
+	startDate: 15.12.2012 15:30	
+	home: *t3	
+	away: *t7
+	meeting: *season_12_13_gameday_17
 - !!models.Game &game147
-	startDate: 15.12.2012 - 15:30	
-	home: VfL Wolfsburg	
-	away: Eintracht Frankfurt	0 : 2 (0 : 2)	mehr zum Spiel
+	startDate: 15.12.2012 15:30	
+	home: *t11	
+	away: *t6
+	meeting: *season_12_13_gameday_17
 - !!models.Game &game148
-	startDate: 15.12.2012 - 15:30	
-	home: 1.FSV Mainz 05	
-	away: VfB Stuttgart	3 : 1 (0 : 0)	mehr zum Spiel
+	startDate: 15.12.2012 15:30	
+	home: *t13	
+	away: *t12
+	meeting: *season_12_13_gameday_17
 - !!models.Game &game149
-	startDate: 15.12.2012 - 15:30	
-	home: SpVgg Greuther Fürth	
-	away: FC Augsburg	1 : 1 (0 : 1)	mehr zum Spiel
+	startDate: 15.12.2012 15:30	
+	home: *t18	
+	away: *t15
+	meeting: *season_12_13_gameday_17
 - !!models.Game &game150
-	startDate: 15.12.2012 - 15:30	
-	home: Fortuna Düsseldorf	
-	away: Hannover 96	2 : 1 (1 : 0)	mehr zum Spiel
+	startDate: 15.12.2012 15:30	
+	home: *t17	
+	away: *t9
+	meeting: *season_12_13_gameday_17
 - !!models.Game &game151
-	startDate: 15.12.2012 - 18:30	
-	home: FC Schalke 04	
-	away: SC Freiburg	1 : 3 (1 : 2)	mehr zum Spiel
+	startDate: 15.12.2012 18:30	
+	home: *t4	
+	away: *t5
+	meeting: *season_12_13_gameday_17
 - !!models.Game &game152
-	startDate: 16.12.2012 - 15:30	
-	home: 1899 Hoffenheim	
-	away: Borussia Dortmund	1 : 3 (1 : 1)	mehr zum Spiel
+	startDate: 16.12.2012 15:30	
+	home: *t16	
+	away: *t2
+	meeting: *season_12_13_gameday_17
 - !!models.Game &game153
-	startDate: 16.12.2012 - 17:30	
-	home: SV Werder Bremen	
-	away: 1.FC Nürnberg	1 : 1 (0 : 0)	mehr zum Spiel
-
-- !!models.Gameday &season_12_13_gameday_18
-	name: 18. Spieltag, 18.01.2013 - 20.01.2013
-
+	startDate: 16.12.2012 17:30	
+	home: *t14	
+	away: *t10
+	meeting: *season_12_13_gameday_17
 - !!models.Game &game154
-	startDate: 18.01.2013 - 20:30	
-	home: FC Schalke 04	
-	away: Hannover 96	5 : 4 (1 : 0)	mehr zum Spiel
+	startDate: 18.01.2013 20:30	
+	home: *t4	
+	away: *t9
+	meeting: *season_12_13_gameday_18
 - !!models.Game &game155
-	startDate: 19.01.2013 - 15:30	
-	home: Bayer 04 Leverkusen	
-	away: Eintracht Frankfurt	3 : 1 (2 : 0)	mehr zum Spiel
+	startDate: 19.01.2013 15:30	
+	home: *t3	
+	away: *t6
+	meeting: *season_12_13_gameday_18
 - !!models.Game &game156
-	startDate: 19.01.2013 - 15:30	
-	home: 1899 Hoffenheim	
-	away: Borussia M'gladbach	0 : 0	mehr zum Spiel
+	startDate: 19.01.2013 15:30	
+	home: *t16	
+	away: *t8
+	meeting: *season_12_13_gameday_18
 - !!models.Game &game157
-	startDate: 19.01.2013 - 15:30	
-	home: VfL Wolfsburg	
-	away: VfB Stuttgart	2 : 0 (0 : 0)	mehr zum Spiel
+	startDate: 19.01.2013 15:30	
+	home: *t11	
+	away: *t12
+	meeting: *season_12_13_gameday_18
 - !!models.Game &game158
-	startDate: 19.01.2013 - 15:30	
-	home: 1.FSV Mainz 05	
-	away: SC Freiburg	0 : 0	mehr zum Spiel
+	startDate: 19.01.2013 15:30	
+	home: *t13	
+	away: *t5
+	meeting: *season_12_13_gameday_18
 - !!models.Game &game159
-	startDate: 19.01.2013 - 15:30	
-	home: FC Bayern München	
-	away: SpVgg Greuther Fürth	2 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 19.01.2013 15:30	
+	home: *t1	
+	away: *t18
+	meeting: *season_12_13_gameday_18
 - !!models.Game &game160
-	startDate: 19.01.2013 - 18:30	
-	home: SV Werder Bremen	
-	away: Borussia Dortmund	0 : 5 (0 : 2)	mehr zum Spiel
+	startDate: 19.01.2013 18:30	
+	home: *t14	
+	away: *t2
+	meeting: *season_12_13_gameday_18
 - !!models.Game &game161
-	startDate: 20.01.2013 - 15:30	
-	home: 1.FC Nürnberg	
-	away: Hamburger SV	1 : 1 (0 : 0)	mehr zum Spiel
+	startDate: 20.01.2013 15:30	
+	home: *t10	
+	away: *t7
+	meeting: *season_12_13_gameday_18
 - !!models.Game &game162
-	startDate: 20.01.2013 - 17:30	
-	home: Fortuna Düsseldorf	
-	away: FC Augsburg	2 : 3 (0 : 2)	mehr zum Spiel
-
-
-- !!models.Gameday &season_12_13_gameday_19
-	name: 19. Spieltag, 25.01.2013 - 27.01.2013
-
+	startDate: 20.01.2013 17:30	
+	home: *t17	
+	away: *t15
+	meeting: *season_12_13_gameday_18
 - !!models.Game &game163
-	startDate: 25.01.2013 - 20:30	
-	home: Borussia Dortmund	
-	away: 1.FC Nürnberg	3 : 0 (2 : 0)	mehr zum Spiel
+	startDate: 25.01.2013 20:30	
+	home: *t2	
+	away: *t10
+	meeting: *season_12_13_gameday_19
 - !!models.Game &game164
-	startDate: 26.01.2013 - 15:30	
-	home: SpVgg Greuther Fürth	
-	away: 1.FSV Mainz 05	0 : 3 (0 : 0)	mehr zum Spiel
+	startDate: 26.01.2013 15:30	
+	home: *t18	
+	away: *t13
+	meeting: *season_12_13_gameday_19
 - !!models.Game &game165
-	startDate: 26.01.2013 - 15:30	
-	home: Borussia M'gladbach	
-	away: Fortuna Düsseldorf	2 : 1 (2 : 0)	mehr zum Spiel
+	startDate: 26.01.2013 15:30	
+	home: *t8	
+	away: *t17
+	meeting: *season_12_13_gameday_19
 - !!models.Game &game166
-	startDate: 26.01.2013 - 15:30	
-	home: FC Augsburg	
-	away: FC Schalke 04	0 : 0	mehr zum Spiel
+	startDate: 26.01.2013 15:30	
+	home: *t15	
+	away: *t4
+	meeting: *season_12_13_gameday_19
 - !!models.Game &game167
-	startDate: 26.01.2013 - 15:30	
-	home: Hannover 96	
-	away: VfL Wolfsburg	2 : 1 (2 : 0)	mehr zum Spiel
+	startDate: 26.01.2013 15:30	
+	home: *t9	
+	away: *t11
+	meeting: *season_12_13_gameday_19
 - !!models.Game &game168
-	startDate: 26.01.2013 - 15:30	
-	home: Eintracht Frankfurt	
-	away: 1899 Hoffenheim	2 : 1 (1 : 0)	mehr zum Spiel
+	startDate: 26.01.2013 15:30	
+	home: *t6	
+	away: *t16
+	meeting: *season_12_13_gameday_19
 - !!models.Game &game169
-	startDate: 26.01.2013 - 18:30	
-	home: SC Freiburg	
-	away: Bayer 04 Leverkusen	0 : 0	mehr zum Spiel
+	startDate: 26.01.2013 18:30	
+	home: *t5	
+	away: *t3
+	meeting: *season_12_13_gameday_19
 - !!models.Game &game170
-	startDate: 27.01.2013 - 15:30	
-	home: Hamburger SV	
-	away: SV Werder Bremen	3 : 2 (1 : 1)	mehr zum Spiel
+	startDate: 27.01.2013 15:30	
+	home: *t7	
+	away: *t14
+	meeting: *season_12_13_gameday_19
 - !!models.Game &game171
-	startDate: 27.01.2013 - 17:30	
-	home: VfB Stuttgart	
-	away: FC Bayern München	0 : 2 (0 : 0)	mehr zum Spiel
-
-- !!models.Gameday &season_12_13_gameday_20
-	name: 20. Spieltag, 01.02.2013 - 03.02.2013
-
+	startDate: 27.01.2013 17:30	
+	home: *t12	
+	away: *t1
+	meeting: *season_12_13_gameday_19
 - !!models.Game &game172
-	startDate: 01.02.2013 - 20:30	
-	home: SV Werder Bremen	
-	away: Hannover 96	2 : 0 (0 : 0)	mehr zum Spiel
+	startDate: 01.02.2013 20:30	
+	home: *t14	
+	away: *t9
+	meeting: *season_12_13_gameday_20
 - !!models.Game &game173
-	startDate: 02.02.2013 - 15:30	
-	home: VfL Wolfsburg	
-	away: FC Augsburg	1 : 1 (1 : 1)	mehr zum Spiel
+	startDate: 02.02.2013 15:30	
+	home: *t11	
+	away: *t15
+	meeting: *season_12_13_gameday_20
 - !!models.Game &game174
-	startDate: 02.02.2013 - 15:30	
-	home: FC Schalke 04	
-	away: SpVgg Greuther Fürth	1 : 2 (0 : 0)	mehr zum Spiel
+	startDate: 02.02.2013 15:30	
+	home: *t4	
+	away: *t18
+	meeting: *season_12_13_gameday_20
 - !!models.Game &game175
-	startDate: 02.02.2013 - 15:30	
-	home: 1.FSV Mainz 05	
-	away: FC Bayern München	0 : 3 (0 : 1)	mehr zum Spiel
+	startDate: 02.02.2013 15:30	
+	home: *t13	
+	away: *t1
+	meeting: *season_12_13_gameday_20
 - !!models.Game &game176
-	startDate: 02.02.2013 - 15:30	
-	home: Fortuna Düsseldorf	
-	away: VfB Stuttgart	3 : 1 (2 : 0)	mehr zum Spiel
+	startDate: 02.02.2013 15:30	
+	home: *t17	
+	away: *t12
+	meeting: *season_12_13_gameday_20
 - !!models.Game &game177
-	startDate: 02.02.2013 - 15:30	
-	home: 1899 Hoffenheim	
-	away: SC Freiburg	2 : 1 (2 : 1)	mehr zum Spiel
+	startDate: 02.02.2013 15:30	
+	home: *t16	
+	away: *t5
+	meeting: *season_12_13_gameday_20
 - !!models.Game &game178
-	startDate: 02.02.2013 - 18:30	
-	home: Hamburger SV	
-	away: Eintracht Frankfurt	0 : 2 (0 : 2)	mehr zum Spiel
+	startDate: 02.02.2013 18:30	
+	home: *t7	
+	away: *t6
+	meeting: *season_12_13_gameday_20
 - !!models.Game &game179
-	startDate: 03.02.2013 - 15:30	
-	home: 1.FC Nürnberg	
-	away: Borussia M'gladbach	2 : 1 (2 : 0)	mehr zum Spiel
+	startDate: 03.02.2013 15:30	
+	home: *t10	
+	away: *t8
+	meeting: *season_12_13_gameday_20
 - !!models.Game &game180
-	startDate: 03.02.2013 - 17:30	
-	home: Bayer 04 Leverkusen	
-	away: Borussia Dortmund	2 : 3 (0 : 2)	mehr zum Spiel
-
-
-- !!models.Gameday &season_12_13_gameday_21
-	name: 21. Spieltag, 09.02.2013 - 10.02.2013
-
+	startDate: 03.02.2013 17:30	
+	home: *t3	
+	away: *t2
+	meeting: *season_12_13_gameday_20
 - !!models.Game &game181
-	startDate: 09.02.2013 - 15:30	
-	home: Hannover 96	
-	away: 1899 Hoffenheim	1 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 09.02.2013 15:30	
+	home: *t9	
+	away: *t16
+	meeting: *season_12_13_gameday_21
 - !!models.Game &game182
-	startDate: 09.02.2013 - 15:30	
-	home: Borussia Dortmund	
-	away: Hamburger SV	1 : 4 (1 : 2)	mehr zum Spiel
+	startDate: 09.02.2013 15:30	
+	home: *t2	
+	away: *t7
+	meeting: *season_12_13_gameday_21
 - !!models.Game &game183
-	startDate: 09.02.2013 - 15:30	
-	home: Borussia M'gladbach	
-	away: Bayer 04 Leverkusen	3 : 3 (1 : 0)	mehr zum Spiel
+	startDate: 09.02.2013 15:30	
+	home: *t8	
+	away: *t3
+	meeting: *season_12_13_gameday_21
 - !!models.Game &game184
-	startDate: 09.02.2013 - 15:30	
-	home: SpVgg Greuther Fürth	
-	away: VfL Wolfsburg	0 : 1 (0 : 1)	mehr zum Spiel
+	startDate: 09.02.2013 15:30	
+	home: *t18	
+	away: *t11
+	meeting: *season_12_13_gameday_21
 - !!models.Game &game185
-	startDate: 09.02.2013 - 15:30	
-	home: VfB Stuttgart	
-	away: SV Werder Bremen	1 : 4 (0 : 1)	mehr zum Spiel
+	startDate: 09.02.2013 15:30	
+	home: *t12	
+	away: *t14
+	meeting: *season_12_13_gameday_21
 - !!models.Game &game186
-	startDate: 09.02.2013 - 15:30	
-	home: Eintracht Frankfurt	
-	away: 1.FC Nürnberg	0 : 0	mehr zum Spiel
+	startDate: 09.02.2013 15:30	
+	home: *t6	
+	away: *t10
+	meeting: *season_12_13_gameday_21
 - !!models.Game &game187
-	startDate: 09.02.2013 - 18:30	
-	home: FC Bayern München	
-	away: FC Schalke 04	4 : 0 (2 : 0)	mehr zum Spiel
+	startDate: 09.02.2013 18:30	
+	home: *t1	
+	away: *t4
+	meeting: *season_12_13_gameday_21
 - !!models.Game &game188
-	startDate: 10.02.2013 - 15:30	
-	home: FC Augsburg	
-	away: 1.FSV Mainz 05	1 : 1 (0 : 1)	mehr zum Spiel
+	startDate: 10.02.2013 15:30	
+	home: *t15	
+	away: *t13
+	meeting: *season_12_13_gameday_21
 - !!models.Game &game189
-	startDate: 10.02.2013 - 17:30	
-	home: SC Freiburg	
-	away: Fortuna Düsseldorf	1 : 0 (0 : 0)	mehr zum Spiel
-
-- !!models.Gameday &season_12_13_gameday_22
-	name: 22. Spieltag, 15.02.2013 - 17.02.2013
-
+	startDate: 10.02.2013 17:30	
+	home: *t5	
+	away: *t17
+	meeting: *season_12_13_gameday_21
 - !!models.Game &game190
-	startDate: 15.02.2013 - 20:30	
-	home: VfL Wolfsburg	
-	away: FC Bayern München	0 : 2 (0 : 1)	mehr zum Spiel
+	startDate: 15.02.2013 20:30	
+	home: *t11	
+	away: *t1
+	meeting: *season_12_13_gameday_22
 - !!models.Game &game191
-	startDate: 16.02.2013 - 15:30	
-	home: SV Werder Bremen	
-	away: SC Freiburg	2 : 3 (1 : 1)	mehr zum Spiel
+	startDate: 16.02.2013 15:30	
+	home: *t14	
+	away: *t5
+	meeting: *season_12_13_gameday_22
 - !!models.Game &game192
-	startDate: 16.02.2013 - 15:30	
-	home: Bayer 04 Leverkusen	
-	away: FC Augsburg	2 : 1 (1 : 0)	mehr zum Spiel
+	startDate: 16.02.2013 15:30	
+	home: *t3	
+	away: *t15
+	meeting: *season_12_13_gameday_22
 - !!models.Game &game193
-	startDate: 16.02.2013 - 15:30	
-	home: Fortuna Düsseldorf	
-	away: SpVgg Greuther Fürth	1 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 16.02.2013 15:30	
+	home: *t17	
+	away: *t18
+	meeting: *season_12_13_gameday_22
 - !!models.Game &game194
-	startDate: 16.02.2013 - 15:30	
-	home: 1.FSV Mainz 05	
-	away: FC Schalke 04	2 : 2 (1 : 1)	mehr zum Spiel
+	startDate: 16.02.2013 15:30	
+	home: *t13	
+	away: *t4
+	meeting: *season_12_13_gameday_22
 - !!models.Game &game195
-	startDate: 16.02.2013 - 15:30	
-	home: Hamburger SV	
-	away: Borussia M'gladbach	1 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 16.02.2013 15:30	
+	home: *t7	
+	away: *t8
+	meeting: *season_12_13_gameday_22
 - !!models.Game &game196
-	startDate: 16.02.2013 - 18:30	
-	home: Borussia Dortmund	
-	away: Eintracht Frankfurt	3 : 0 (2 : 0)	mehr zum Spiel
+	startDate: 16.02.2013 18:30	
+	home: *t2	
+	away: *t6
+	meeting: *season_12_13_gameday_22
 - !!models.Game &game197
-	startDate: 17.02.2013 - 15:30	
-	home: 1.FC Nürnberg	
-	away: Hannover 96	2 : 2 (0 : 1)	mehr zum Spiel
+	startDate: 17.02.2013 15:30	
+	home: *t10	
+	away: *t9
+	meeting: *season_12_13_gameday_22
 - !!models.Game &game198
-	startDate: 17.02.2013 - 17:30	
-	home: 1899 Hoffenheim	
-	away: VfB Stuttgart	0 : 1 (0 : 1)	mehr zum Spiel
-
-- !!models.Gameday &season_12_13_gameday_23
-	name: 23. Spieltag, 22.02.2013 - 24.02.2013
-
+	startDate: 17.02.2013 17:30	
+	home: *t16	
+	away: *t12
+	meeting: *season_12_13_gameday_22
 - !!models.Game &game199
-	startDate: 22.02.2013 - 20:30	
-	home: SC Freiburg	
-	away: Eintracht Frankfurt	0 : 0	mehr zum Spiel
+	startDate: 22.02.2013 20:30	
+	home: *t5	
+	away: *t6
+	meeting: *season_12_13_gameday_23
 - !!models.Game &game200
-	startDate: 23.02.2013 - 15:30	
-	home: FC Bayern München	
-	away: SV Werder Bremen	6 : 1 (2 : 0)	mehr zum Spiel
+	startDate: 23.02.2013 15:30	
+	home: *t1	
+	away: *t14
+	meeting: *season_12_13_gameday_23
 - !!models.Game &game201
-	startDate: 23.02.2013 - 15:30	
-	home: VfB Stuttgart	
-	away: 1.FC Nürnberg	1 : 1 (0 : 0)	mehr zum Spiel
+	startDate: 23.02.2013 15:30	
+	home: *t12	
+	away: *t10
+	meeting: *season_12_13_gameday_23
 - !!models.Game &game202
-	startDate: 23.02.2013 - 15:30	
-	home: FC Augsburg	
-	away: 1899 Hoffenheim	2 : 1 (1 : 0)	mehr zum Spiel
+	startDate: 23.02.2013 15:30	
+	home: *t15	
+	away: *t16
+	meeting: *season_12_13_gameday_23
 - !!models.Game &game203
-	startDate: 23.02.2013 - 15:30	
-	home: Hannover 96	
-	away: Hamburger SV	5 : 1 (3 : 1)	mehr zum Spiel
+	startDate: 23.02.2013 15:30	
+	home: *t9	
+	away: *t7
+	meeting: *season_12_13_gameday_23
 - !!models.Game &game204
-	startDate: 23.02.2013 - 15:30	
-	home: 1.FSV Mainz 05	
-	away: VfL Wolfsburg	1 : 1 (1 : 1)	mehr zum Spiel
+	startDate: 23.02.2013 15:30	
+	home: *t13	
+	away: *t11
+	meeting: *season_12_13_gameday_23
 - !!models.Game &game205
-	startDate: 23.02.2013 - 18:30	
-	home: FC Schalke 04	
-	away: Fortuna Düsseldorf	2 : 1 (1 : 0)	mehr zum Spiel
+	startDate: 23.02.2013 18:30	
+	home: *t4	
+	away: *t17
+	meeting: *season_12_13_gameday_23
 - !!models.Game &game206
-	startDate: 24.02.2013 - 15:30	
-	home: Borussia M'gladbach	
-	away: Borussia Dortmund	1 : 1 (0 : 1)	mehr zum Spiel
+	startDate: 24.02.2013 15:30	
+	home: *t8	
+	away: *t2
+	meeting: *season_12_13_gameday_23
 - !!models.Game &game207
-	startDate: 24.02.2013 - 17:30	
-	home: SpVgg Greuther Fürth	
-	away: Bayer 04 Leverkusen	0 : 0	mehr zum Spiel
-
-- !!models.Gameday &season_12_13_gameday_24
-	name: 24. Spieltag, 01.03.2013 - 03.03.2013
-
+	startDate: 24.02.2013 17:30	
+	home: *t18	
+	away: *t3
+	meeting: *season_12_13_gameday_23
 - !!models.Game &game208
-	startDate: 01.03.2013 - 20:30	
-	home: Eintracht Frankfurt	
-	away: Borussia M'gladbach	0 : 1 (0 : 1)	mehr zum Spiel
+	startDate: 01.03.2013 20:30	
+	home: *t6	
+	away: *t8
+	meeting: *season_12_13_gameday_24
 - !!models.Game &game209
-	startDate: 02.03.2013 - 15:30	
-	home: Borussia Dortmund	
-	away: Hannover 96	3 : 1 (2 : 1)	mehr zum Spiel
+	startDate: 02.03.2013 15:30	
+	home: *t2	
+	away: *t9
+	meeting: *season_12_13_gameday_24
 - !!models.Game &game210
-	startDate: 02.03.2013 - 15:30	
-	home: 1.FC Nürnberg	
-	away: SC Freiburg	1 : 1 (1 : 0)	mehr zum Spiel
+	startDate: 02.03.2013 15:30	
+	home: *t10	
+	away: *t5
+	meeting: *season_12_13_gameday_24
 - !!models.Game &game211
-	startDate: 02.03.2013 - 15:30	
-	home: SV Werder Bremen	
-	away: FC Augsburg	0 : 1 (0 : 1)	mehr zum Spiel
+	startDate: 02.03.2013 15:30	
+	home: *t14	
+	away: *t15
+	meeting: *season_12_13_gameday_24
 - !!models.Game &game212
-	startDate: 02.03.2013 - 15:30	
-	home: Hamburger SV	
-	away: SpVgg Greuther Fürth	1 : 1 (1 : 1)	mehr zum Spiel
+	startDate: 02.03.2013 15:30	
+	home: *t7	
+	away: *t18
+	meeting: *season_12_13_gameday_24
 - !!models.Game &game213
-	startDate: 02.03.2013 - 15:30	
-	home: VfL Wolfsburg	
-	away: FC Schalke 04	1 : 4 (0 : 1)	mehr zum Spiel
+	startDate: 02.03.2013 15:30	
+	home: *t11	
+	away: *t4
+	meeting: *season_12_13_gameday_24
 - !!models.Game &game214
-	startDate: 02.03.2013 - 18:30	
-	home: Bayer 04 Leverkusen	
-	away: VfB Stuttgart	2 : 1 (0 : 1)	mehr zum Spiel
+	startDate: 02.03.2013 18:30	
+	home: *t3	
+	away: *t12
+	meeting: *season_12_13_gameday_24
 - !!models.Game &game215
-	startDate: 03.03.2013 - 15:30	
-	home: 1899 Hoffenheim	
-	away: FC Bayern München	0 : 1 (0 : 1)	mehr zum Spiel
+	startDate: 03.03.2013 15:30	
+	home: *t16	
+	away: *t1
+	meeting: *season_12_13_gameday_24
 - !!models.Game &game216
-	startDate: 03.03.2013 - 17:30	
-	home: Fortuna Düsseldorf	
-	away: 1.FSV Mainz 05	1 : 1 (1 : 1)	mehr zum Spiel
-
-- !!models.Gameday &season_12_13_gameday_25
-	name: 25. Spieltag, 08.03.2013 - 10.03.2013
-
+	startDate: 03.03.2013 17:30	
+	home: *t17	
+	away: *t13
+	meeting: *season_12_13_gameday_24
 - !!models.Game &game217
-	startDate: 08.03.2013 - 20:30	
-	home: FC Augsburg	
-	away: 1.FC Nürnberg	1 : 2 (1 : 1)	mehr zum Spiel
+	startDate: 08.03.2013 20:30	
+	home: *t15	
+	away: *t10
+	meeting: *season_12_13_gameday_25
 - !!models.Game &game218
-	startDate: 09.03.2013 - 15:30	
-	home: 1.FSV Mainz 05	
-	away: Bayer 04 Leverkusen	1 : 0 (0 : 0)	mehr zum Spiel
+	startDate: 09.03.2013 15:30	
+	home: *t13	
+	away: *t3
+	meeting: *season_12_13_gameday_25
 - !!models.Game &game219
-	startDate: 09.03.2013 - 15:30	
-	home: SC Freiburg	
-	away: VfL Wolfsburg	2 : 5 (1 : 3)	mehr zum Spiel
+	startDate: 09.03.2013 15:30	
+	home: *t5	
+	away: *t11
+	meeting: *season_12_13_gameday_25
 - !!models.Game &game220
-	startDate: 09.03.2013 - 15:30	
-	home: SpVgg Greuther Fürth	
-	away: 1899 Hoffenheim	0 : 3 (0 : 2)	mehr zum Spiel
+	startDate: 09.03.2013 15:30	
+	home: *t18	
+	away: *t16
+	meeting: *season_12_13_gameday_25
 - !!models.Game &game221
-	startDate: 09.03.2013 - 15:30	
-	home: FC Schalke 04	
-	away: Borussia Dortmund	2 : 1 (2 : 0)	mehr zum Spiel
+	startDate: 09.03.2013 15:30	
+	home: *t4	
+	away: *t2
+	meeting: *season_12_13_gameday_25
 - !!models.Game &game222
-	startDate: 09.03.2013 - 15:30	
-	home: FC Bayern München	
-	away: Fortuna Düsseldorf	3 : 2 (1 : 1)	mehr zum Spiel
+	startDate: 09.03.2013 15:30	
+	home: *t1	
+	away: *t17
+	meeting: *season_12_13_gameday_25
 - !!models.Game &game223
-	startDate: 09.03.2013 - 18:30	
-	home: Borussia M'gladbach	
-	away: SV Werder Bremen	1 : 1 (0 : 0)	mehr zum Spiel
+	startDate: 09.03.2013 18:30	
+	home: *t8	
+	away: *t14
+	meeting: *season_12_13_gameday_25
 - !!models.Game &game224
-	startDate: 10.03.2013 - 15:30	
-	home: Hannover 96	
-	away: Eintracht Frankfurt	0 : 0	mehr zum Spiel
+	startDate: 10.03.2013 15:30	
+	home: *t9	
+	away: *t6
+	meeting: *season_12_13_gameday_25
 - !!models.Game &game225
-	startDate: 10.03.2013 - 17:30	
-	home: VfB Stuttgart	
-	away: Hamburger SV	0 : 1 (0 : 0)	mehr zum Spiel
-
-- !!models.Gameday &season_12_13_gameday_26
-	name: 26. Spieltag, 15.03.2013 - 17.03.2013
-
+	startDate: 10.03.2013 17:30	
+	home: *t12	
+	away: *t7
+	meeting: *season_12_13_gameday_25
 - !!models.Game &game226
-	startDate: 15.03.2013 - 20:30	
-	home: VfL Wolfsburg	
-	away: Fortuna Düsseldorf	1 : 1 (0 : 1)	mehr zum Spiel
+	startDate: 15.03.2013 20:30	
+	home: *t11	
+	away: *t17
+	meeting: *season_12_13_gameday_26
 - !!models.Game &game227
-	startDate: 16.03.2013 - 15:30	
-	home: 1.FC Nürnberg	
-	away: FC Schalke 04	3 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 16.03.2013 15:30	
+	home: *t10	
+	away: *t4
+	meeting: *season_12_13_gameday_26
 - !!models.Game &game228
-	startDate: 16.03.2013 - 15:30	
-	home: Borussia Dortmund	
-	away: SC Freiburg	5 : 1 (3 : 1)	mehr zum Spiel
+	startDate: 16.03.2013 15:30	
+	home: *t2	
+	away: *t5
+	meeting: *season_12_13_gameday_26
 - !!models.Game &game229
-	startDate: 16.03.2013 - 15:30	
-	home: 1899 Hoffenheim	
-	away: 1.FSV Mainz 05	0 : 0	mehr zum Spiel
+	startDate: 16.03.2013 15:30	
+	home: *t16	
+	away: *t13
+	meeting: *season_12_13_gameday_26
 - !!models.Game &game230
-	startDate: 16.03.2013 - 15:30	
-	home: Hamburger SV	
-	away: FC Augsburg	0 : 1 (0 : 1)	mehr zum Spiel
+	startDate: 16.03.2013 15:30	
+	home: *t7	
+	away: *t15
+	meeting: *season_12_13_gameday_26
 - !!models.Game &game231
-	startDate: 16.03.2013 - 15:30	
-	home: SV Werder Bremen	
-	away: SpVgg Greuther Fürth	2 : 2 (0 : 0)	mehr zum Spiel
+	startDate: 16.03.2013 15:30	
+	home: *t14	
+	away: *t18
+	meeting: *season_12_13_gameday_26
 - !!models.Game &game232
-	startDate: 16.03.2013 - 18:30	
-	home: Bayer 04 Leverkusen	
-	away: FC Bayern München	1 : 2 (0 : 1)	mehr zum Spiel
+	startDate: 16.03.2013 18:30	
+	home: *t3	
+	away: *t1
+	meeting: *season_12_13_gameday_26
 - !!models.Game &game233
-	startDate: 17.03.2013 - 15:30	
-	home: Eintracht Frankfurt	
-	away: VfB Stuttgart	1 : 2 (1 : 0)	mehr zum Spiel
+	startDate: 17.03.2013 15:30	
+	home: *t6	
+	away: *t12
+	meeting: *season_12_13_gameday_26
 - !!models.Game &game234
-	startDate: 17.03.2013 - 17:30	
-	home: Borussia M'gladbach	
-	away: Hannover 96	1 : 0 (1 : 0)	mehr zum Spiel
-
-- !!models.Gameday &season_12_13_gameday_27
-	name: 27. Spieltag, 30.03.2013 - 01.04.2013
-
+	startDate: 17.03.2013 17:30	
+	home: *t8	
+	away: *t9
+	meeting: *season_12_13_gameday_26
 - !!models.Game &game235
-	startDate: 30.03.2013 - 15:30	
-	home: VfB Stuttgart	
-	away: Borussia Dortmund	1 : 2 (0 : 1)	mehr zum Spiel
+	startDate: 30.03.2013 15:30	
+	home: *t12	
+	away: *t2
+	meeting: *season_12_13_gameday_27
 - !!models.Game &game236
-	startDate: 30.03.2013 - 15:30	
-	home: SC Freiburg	
-	away: Borussia M'gladbach	2 : 0 (0 : 0)	mehr zum Spiel
+	startDate: 30.03.2013 15:30	
+	home: *t5	
+	away: *t8
+	meeting: *season_12_13_gameday_27
 - !!models.Game &game237
-	startDate: 30.03.2013 - 15:30	
-	home: Fortuna Düsseldorf	
-	away: Bayer 04 Leverkusen	1 : 4 (1 : 1)	mehr zum Spiel
+	startDate: 30.03.2013 15:30	
+	home: *t17	
+	away: *t3
+	meeting: *season_12_13_gameday_27
 - !!models.Game &game238
-	startDate: 30.03.2013 - 15:30	
-	home: FC Augsburg	
-	away: Hannover 96	0 : 2 (0 : 0)	mehr zum Spiel
+	startDate: 30.03.2013 15:30	
+	home: *t15	
+	away: *t9
+	meeting: *season_12_13_gameday_27
 - !!models.Game &game239
-	startDate: 30.03.2013 - 15:30	
-	home: 1.FSV Mainz 05	
-	away: SV Werder Bremen	1 : 1 (1 : 0)	mehr zum Spiel
+	startDate: 30.03.2013 15:30	
+	home: *t13	
+	away: *t14
+	meeting: *season_12_13_gameday_27
 - !!models.Game &game240
-	startDate: 30.03.2013 - 15:30	
-	home: FC Schalke 04	
-	away: 1899 Hoffenheim	3 : 0 (0 : 0)	mehr zum Spiel
+	startDate: 30.03.2013 15:30	
+	home: *t4	
+	away: *t16
+	meeting: *season_12_13_gameday_27
 - !!models.Game &game241
-	startDate: 30.03.2013 - 18:30	
-	home: FC Bayern München	
-	away: Hamburger SV	9 : 2 (5 : 0)	mehr zum Spiel
+	startDate: 30.03.2013 18:30	
+	home: *t1	
+	away: *t7
+	meeting: *season_12_13_gameday_27
 - !!models.Game &game242
-	startDate: 31.03.2013 - 15:30	
-	home: VfL Wolfsburg	
-	away: 1.FC Nürnberg	2 : 2 (2 : 0)	mehr zum Spiel
+	startDate: 31.03.2013 15:30	
+	home: *t11	
+	away: *t10
+	meeting: *season_12_13_gameday_27
 - !!models.Game &game243
-	startDate: 31.03.2013 - 17:30	
-	home: SpVgg Greuther Fürth	
-	away: Eintracht Frankfurt	2 : 3 (1 : 1)	mehr zum Spiel
-
-- !!models.Gameday &season_12_13_gameday_28
-	name: 28. Spieltag, 05.04.2013 - 07.04.2013
-
+	startDate: 31.03.2013 17:30	
+	home: *t18	
+	away: *t6
+	meeting: *season_12_13_gameday_27
 - !!models.Game &game244
-	startDate: 05.04.2013 - 20:30	
-	home: 1899 Hoffenheim	
-	away: Fortuna Düsseldorf	3 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 05.04.2013 20:30	
+	home: *t16	
+	away: *t17
+	meeting: *season_12_13_gameday_28
 - !!models.Game &game245
-	startDate: 06.04.2013 - 15:30	
-	home: Borussia Dortmund	
-	away: FC Augsburg	4 : 2 (1 : 2)	mehr zum Spiel
+	startDate: 06.04.2013 15:30	
+	home: *t2	
+	away: *t15
+	meeting: *season_12_13_gameday_28
 - !!models.Game &game246
-	startDate: 06.04.2013 - 15:30	
-	home: Borussia M'gladbach	
-	away: SpVgg Greuther Fürth	1 : 0 (0 : 0)	mehr zum Spiel
+	startDate: 06.04.2013 15:30	
+	home: *t8	
+	away: *t18
+	meeting: *season_12_13_gameday_28
 - !!models.Game &game247
-	startDate: 06.04.2013 - 15:30	
-	home: Eintracht Frankfurt	
-	away: FC Bayern München	0 : 1 (0 : 0)	mehr zum Spiel
+	startDate: 06.04.2013 15:30	
+	home: *t6	
+	away: *t1
+	meeting: *season_12_13_gameday_28
 - !!models.Game &game248
-	startDate: 06.04.2013 - 15:30	
-	home: SV Werder Bremen	
-	away: FC Schalke 04	0 : 2 (0 : 0)	mehr zum Spiel
+	startDate: 06.04.2013 15:30	
+	home: *t14	
+	away: *t4
+	meeting: *season_12_13_gameday_28
 - !!models.Game &game249
-	startDate: 06.04.2013 - 15:30	
-	home: Bayer 04 Leverkusen	
-	away: VfL Wolfsburg	1 : 1 (1 : 0)	mehr zum Spiel
+	startDate: 06.04.2013 15:30	
+	home: *t3	
+	away: *t11
+	meeting: *season_12_13_gameday_28
 - !!models.Game &game250
-	startDate: 06.04.2013 - 18:30	
-	home: Hamburger SV	
-	away: SC Freiburg	0 : 1 (0 : 0)	mehr zum Spiel
+	startDate: 06.04.2013 18:30	
+	home: *t7	
+	away: *t5
+	meeting: *season_12_13_gameday_28
 - !!models.Game &game251
-	startDate: 07.04.2013 - 15:30	
-	home: 1.FC Nürnberg	
-	away: 1.FSV Mainz 05	2 : 1 (0 : 0)	mehr zum Spiel
+	startDate: 07.04.2013 15:30	
+	home: *t10	
+	away: *t13
+	meeting: *season_12_13_gameday_28
 - !!models.Game &game252
-	startDate: 07.04.2013 - 17:30	
-	home: Hannover 96	
-	away: VfB Stuttgart	0 : 0	mehr zum Spiel
-
-- !!models.Gameday &season_12_13_gameday_29
-	name: 29. Spieltag, 12.04.2013 - 14.04.2013
-
+	startDate: 07.04.2013 17:30	
+	home: *t9	
+	away: *t12
+	meeting: *season_12_13_gameday_28
 - !!models.Game &game253
-	startDate: 12.04.2013 - 20:30	
-	home: SC Freiburg	
-	away: Hannover 96	3 : 1 (2 : 1)	mehr zum Spiel
+	startDate: 12.04.2013 20:30	
+	home: *t5	
+	away: *t9
+	meeting: *season_12_13_gameday_29
 - !!models.Game &game254
-	startDate: 13.04.2013 - 15:30	
-	home: FC Bayern München	
-	away: 1.FC Nürnberg	4 : 0 (3 : 0)	mehr zum Spiel
+	startDate: 13.04.2013 15:30	
+	home: *t1	
+	away: *t10
+	meeting: *season_12_13_gameday_29
 - !!models.Game &game255
-	startDate: 13.04.2013 - 15:30	
-	home: VfL Wolfsburg	
-	away: 1899 Hoffenheim	2 : 2 (1 : 1)	mehr zum Spiel
+	startDate: 13.04.2013 15:30	
+	home: *t11	
+	away: *t16
+	meeting: *season_12_13_gameday_29
 - !!models.Game &game256
-	startDate: 13.04.2013 - 15:30	
-	home: 1.FSV Mainz 05	
-	away: Hamburger SV	1 : 2 (0 : 0)	mehr zum Spiel
+	startDate: 13.04.2013 15:30	
+	home: *t13	
+	away: *t7
+	meeting: *season_12_13_gameday_29
 - !!models.Game &game257
-	startDate: 13.04.2013 - 15:30	
-	home: SpVgg Greuther Fürth	
-	away: Borussia Dortmund	1 : 6 (0 : 5)	mehr zum Spiel
+	startDate: 13.04.2013 15:30	
+	home: *t18	
+	away: *t2
+	meeting: *season_12_13_gameday_29
 - !!models.Game &game258
-	startDate: 13.04.2013 - 15:30	
-	home: Fortuna Düsseldorf	
-	away: SV Werder Bremen	2 : 2 (1 : 1)	mehr zum Spiel
+	startDate: 13.04.2013 15:30	
+	home: *t17	
+	away: *t14
+	meeting: *season_12_13_gameday_29
 - !!models.Game &game259
-	startDate: 13.04.2013 - 18:30	
-	home: FC Schalke 04	
-	away: Bayer 04 Leverkusen	2 : 2 (0 : 1)	mehr zum Spiel
+	startDate: 13.04.2013 18:30	
+	home: *t4	
+	away: *t3
+	meeting: *season_12_13_gameday_29
 - !!models.Game &game260
-	startDate: 14.04.2013 - 15:30	
-	home: VfB Stuttgart	
-	away: Borussia M'gladbach	2 : 0 (2 : 0)	mehr zum Spiel
+	startDate: 14.04.2013 15:30	
+	home: *t12	
+	away: *t8
+	meeting: *season_12_13_gameday_29
 - !!models.Game &game261
-	startDate: 14.04.2013 - 17:30	
-	home: FC Augsburg	
-	away: Eintracht Frankfurt	2 : 0 (1 : 0)	mehr zum Spiel
-
-- !!models.Gameday &season_12_13_gameday_30
-	name: 30. Spieltag, 19.04.2013 - 21.04.2013
-
+	startDate: 14.04.2013 17:30	
+	home: *t15	
+	away: *t6
+	meeting: *season_12_13_gameday_29
 - !!models.Game &game262
-	startDate: 19.04.2013 - 20:30	
-	home: Borussia M'gladbach	
-	away: FC Augsburg	1 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 19.04.2013 20:30	
+	home: *t8	
+	away: *t15
+	meeting: *season_12_13_gameday_30
 - !!models.Game &game263
-	startDate: 20.04.2013 - 15:30	
-	home: Borussia Dortmund	
-	away: 1.FSV Mainz 05	2 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 20.04.2013 15:30	
+	home: *t2	
+	away: *t13
+	meeting: *season_12_13_gameday_30
 - !!models.Game &game264
-	startDate: 20.04.2013 - 15:30	
-	home: Hannover 96	
-	away: FC Bayern München	1 : 6 (0 : 3)	mehr zum Spiel
+	startDate: 20.04.2013 15:30	
+	home: *t9	
+	away: *t1
+	meeting: *season_12_13_gameday_30
 - !!models.Game &game265
-	startDate: 20.04.2013 - 15:30	
-	home: Hamburger SV	
-	away: Fortuna Düsseldorf	2 : 1 (2 : 1)	mehr zum Spiel
+	startDate: 20.04.2013 15:30	
+	home: *t7	
+	away: *t17
+	meeting: *season_12_13_gameday_30
 - !!models.Game &game266
-	startDate: 20.04.2013 - 15:30	
-	home: Eintracht Frankfurt	
-	away: FC Schalke 04	1 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 20.04.2013 15:30	
+	home: *t6	
+	away: *t4
+	meeting: *season_12_13_gameday_30
 - !!models.Game &game267
-	startDate: 20.04.2013 - 15:30	
-	home: Bayer 04 Leverkusen	
-	away: 1899 Hoffenheim	5 : 0 (2 : 0)	mehr zum Spiel
+	startDate: 20.04.2013 15:30	
+	home: *t3	
+	away: *t16
+	meeting: *season_12_13_gameday_30
 - !!models.Game &game268
-	startDate: 20.04.2013 - 18:30	
-	home: SV Werder Bremen	
-	away: VfL Wolfsburg	0 : 3 (0 : 2)	mehr zum Spiel
+	startDate: 20.04.2013 18:30	
+	home: *t14	
+	away: *t11
+	meeting: *season_12_13_gameday_30
 - !!models.Game &game269
-	startDate: 21.04.2013 - 15:30	
-	home: VfB Stuttgart	
-	away: SC Freiburg	2 : 1 (2 : 0)	mehr zum Spiel
+	startDate: 21.04.2013 15:30	
+	home: *t12	
+	away: *t5
+	meeting: *season_12_13_gameday_30
 - !!models.Game &game270
-	startDate: 21.04.2013 - 17:30	
-	home: 1.FC Nürnberg	
-	away: SpVgg Greuther Fürth	0 : 1 (0 : 1)	mehr zum Spiel
-
-- !!models.Gameday &season_12_13_gameday_31
-	name: 31. Spieltag, 26.04.2013 - 28.04.2013
-
+	startDate: 21.04.2013 17:30	
+	home: *t10	
+	away: *t18
+	meeting: *season_12_13_gameday_30
 - !!models.Game &game271
-	startDate: 26.04.2013 - 20:30	
-	home: SpVgg Greuther Fürth	
-	away: Hannover 96	2 : 3 (1 : 1)	mehr zum Spiel
+	startDate: 26.04.2013 20:30	
+	home: *t18	
+	away: *t9
+	meeting: *season_12_13_gameday_31
 - !!models.Game &game272
-	startDate: 27.04.2013 - 15:30	
-	home: Bayer 04 Leverkusen	
-	away: SV Werder Bremen	1 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 27.04.2013 15:30	
+	home: *t3	
+	away: *t14
+	meeting: *season_12_13_gameday_31
 - !!models.Game &game273
-	startDate: 27.04.2013 - 15:30	
-	home: 1899 Hoffenheim	
-	away: 1.FC Nürnberg	2 : 1 (2 : 0)	mehr zum Spiel
+	startDate: 27.04.2013 15:30	
+	home: *t16	
+	away: *t10
+	meeting: *season_12_13_gameday_31
 - !!models.Game &game274
-	startDate: 27.04.2013 - 15:30	
-	home: FC Bayern München	
-	away: SC Freiburg	1 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 27.04.2013 15:30	
+	home: *t1	
+	away: *t5
+	meeting: *season_12_13_gameday_31
 - !!models.Game &game275
-	startDate: 27.04.2013 - 15:30	
-	home: VfL Wolfsburg	
-	away: Borussia M'gladbach	3 : 1 (1 : 0)	mehr zum Spiel
+	startDate: 27.04.2013 15:30	
+	home: *t11	
+	away: *t8
+	meeting: *season_12_13_gameday_31
 - !!models.Game &game276
-	startDate: 27.04.2013 - 15:30	
-	home: FC Augsburg	
-	away: VfB Stuttgart	3 : 0 (0 : 0)	mehr zum Spiel
+	startDate: 27.04.2013 15:30	
+	home: *t15	
+	away: *t12
+	meeting: *season_12_13_gameday_31
 - !!models.Game &game277
-	startDate: 27.04.2013 - 18:30	
-	home: Fortuna Düsseldorf	
-	away: Borussia Dortmund	1 : 2 (0 : 1)	mehr zum Spiel
+	startDate: 27.04.2013 18:30	
+	home: *t17	
+	away: *t2
+	meeting: *season_12_13_gameday_31
 - !!models.Game &game278
-	startDate: 28.04.2013 - 15:30	
-	home: 1.FSV Mainz 05	
-	away: Eintracht Frankfurt	0 : 0	mehr zum Spiel
+	startDate: 28.04.2013 15:30	
+	home: *t13	
+	away: *t6
+	meeting: *season_12_13_gameday_31
 - !!models.Game &game279
-	startDate: 28.04.2013 - 17:30	
-	home: FC Schalke 04	
-	away: Hamburger SV	4 : 1 (2 : 1)	mehr zum Spiel
-
-- !!models.Gameday &season_12_13_gameday_32
-	name: 32. Spieltag, 03.05.2013 - 05.05.2013
-
+	startDate: 28.04.2013 17:30	
+	home: *t4	
+	away: *t7
+	meeting: *season_12_13_gameday_31
 - !!models.Game &game280
-	startDate: 03.05.2013 - 20:30	
-	home: Borussia M'gladbach	
-	away: FC Schalke 04	0 : 1 (0 : 0)	mehr zum Spiel
+	startDate: 03.05.2013 20:30	
+	home: *t8	
+	away: *t4
+	meeting: *season_12_13_gameday_32
 - !!models.Game &game281
-	startDate: 04.05.2013 - 15:30	
-	home: 1.FC Nürnberg	
-	away: Bayer 04 Leverkusen	0 : 2 (0 : 1)	mehr zum Spiel
+	startDate: 04.05.2013 15:30	
+	home: *t10	
+	away: *t3
+	meeting: *season_12_13_gameday_32
 - !!models.Game &game282
-	startDate: 04.05.2013 - 15:30	
-	home: SV Werder Bremen	
-	away: 1899 Hoffenheim	2 : 2 (2 : 0)	mehr zum Spiel
+	startDate: 04.05.2013 15:30	
+	home: *t14	
+	away: *t16
+	meeting: *season_12_13_gameday_32
 - !!models.Game &game283
-	startDate: 04.05.2013 - 15:30	
-	home: Hannover 96	
-	away: 1.FSV Mainz 05	2 : 2 (1 : 1)	mehr zum Spiel
+	startDate: 04.05.2013 15:30	
+	home: *t9	
+	away: *t13
+	meeting: *season_12_13_gameday_32
 - !!models.Game &game284
-	startDate: 04.05.2013 - 15:30	
-	home: VfB Stuttgart	
-	away: SpVgg Greuther Fürth	0 : 2 (0 : 0)	mehr zum Spiel
+	startDate: 04.05.2013 15:30	
+	home: *t12	
+	away: *t18
+	meeting: *season_12_13_gameday_32
 - !!models.Game &game285
-	startDate: 04.05.2013 - 15:30	
-	home: Eintracht Frankfurt	
-	away: Fortuna Düsseldorf	3 : 1 (1 : 0)	mehr zum Spiel
+	startDate: 04.05.2013 15:30	
+	home: *t6	
+	away: *t17
+	meeting: *season_12_13_gameday_32
 - !!models.Game &game286
-	startDate: 04.05.2013 - 18:30	
-	home: Borussia Dortmund	
-	away: FC Bayern München	1 : 1 (1 : 1)	mehr zum Spiel
+	startDate: 04.05.2013 18:30	
+	home: *t2	
+	away: *t1
+	meeting: *season_12_13_gameday_32
 - !!models.Game &game287
-	startDate: 05.05.2013 - 15:30	
-	home: SC Freiburg	
-	away: FC Augsburg	2 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 05.05.2013 15:30	
+	home: *t5	
+	away: *t15
+	meeting: *season_12_13_gameday_32
 - !!models.Game &game288
-	startDate: 05.05.2013 - 17:30	
-	home: Hamburger SV	
-	away: VfL Wolfsburg	1 : 1 (1 : 0)	mehr zum Spiel
-
-- !!models.Gameday &season_12_13_gameday_33
-	name: 33. Spieltag, 11.05.2013 - 11.05.2013
-
+	startDate: 05.05.2013 17:30	
+	home: *t7	
+	away: *t11
+	meeting: *season_12_13_gameday_32
 - !!models.Game &game289
-	startDate: 11.05.2013 - 15:30	
-	home: 1.FSV Mainz 05	
-	away: Borussia M'gladbach	2 : 4 (1 : 1)	mehr zum Spiel
+	startDate: 11.05.2013 15:30	
+	home: *t13	
+	away: *t8
+	meeting: *season_12_13_gameday_33
 - !!models.Game &game290
-	startDate: 11.05.2013 - 15:30	
-	home: FC Schalke 04	
-	away: VfB Stuttgart	1 : 2 (0 : 1)	mehr zum Spiel
+	startDate: 11.05.2013 15:30	
+	home: *t4	
+	away: *t12
+	meeting: *season_12_13_gameday_33
 - !!models.Game &game291
-	startDate: 11.05.2013 - 15:30	
-	home: Bayer 04 Leverkusen	
-	away: Hannover 96	3 : 1 (2 : 0)	mehr zum Spiel
+	startDate: 11.05.2013 15:30	
+	home: *t3	
+	away: *t9
+	meeting: *season_12_13_gameday_33
 - !!models.Game &game292
-	startDate: 11.05.2013 - 15:30	
-	home: Fortuna Düsseldorf	
-	away: 1.FC Nürnberg	1 : 2 (1 : 0)	mehr zum Spiel
+	startDate: 11.05.2013 15:30	
+	home: *t17	
+	away: *t10
+	meeting: *season_12_13_gameday_33
 - !!models.Game &game293
-	startDate: 11.05.2013 - 15:30	
-	home: SpVgg Greuther Fürth	
-	away: SC Freiburg	1 : 2 (1 : 0)	mehr zum Spiel
+	startDate: 11.05.2013 15:30	
+	home: *t18	
+	away: *t5
+	meeting: *season_12_13_gameday_33
 - !!models.Game &game294
-	startDate: 11.05.2013 - 15:30	
-	home: FC Bayern München	
-	away: FC Augsburg	3 : 0 (0 : 0)	mehr zum Spiel
+	startDate: 11.05.2013 15:30	
+	home: *t1	
+	away: *t15
+	meeting: *season_12_13_gameday_33
 - !!models.Game &game295
-	startDate: 11.05.2013 - 15:30	
-	home: 1899 Hoffenheim	
-	away: Hamburger SV	1 : 4 (0 : 2)	mehr zum Spiel
+	startDate: 11.05.2013 15:30	
+	home: *t16	
+	away: *t7
+	meeting: *season_12_13_gameday_33
 - !!models.Game &game296
-	startDate: 11.05.2013 - 15:30	
-	home: VfL Wolfsburg	
-	away: Borussia Dortmund	3 : 3 (3 : 1)	mehr zum Spiel
+	startDate: 11.05.2013 15:30	
+	home: *t11	
+	away: *t2
+	meeting: *season_12_13_gameday_33
 - !!models.Game &game297
-	startDate: 11.05.2013 - 15:30	
-	home: SV Werder Bremen	
-	away: Eintracht Frankfurt	1 : 1 (1 : 0)	mehr zum Spiel
-
-- !!models.Gameday &season_12_13_gameday_34
-	name: 34. Spieltag, 18.05.2013 - 18.05.2013
-
+	startDate: 11.05.2013 15:30	
+	home: *t14	
+	away: *t6
+	meeting: *season_12_13_gameday_33
 - !!models.Game &game298
-	startDate: 18.05.2013 - 15:30	
-	home: Borussia M'gladbach	
-	away: FC Bayern München	3 : 4 (3 : 2)	mehr zum Spiel
+	startDate: 18.05.2013 15:30	
+	home: *t8	
+	away: *t1
+	meeting: *season_12_13_gameday_34
 - !!models.Game &game299
-	startDate: 18.05.2013 - 15:30	
-	home: Hannover 96	
-	away: Fortuna Düsseldorf	3 : 0 (1 : 0)	mehr zum Spiel
+	startDate: 18.05.2013 15:30	
+	home: *t9	
+	away: *t17
+	meeting: *season_12_13_gameday_34
 - !!models.Game &game300
-	startDate: 18.05.2013 - 15:30	
-	home: SC Freiburg	
-	away: FC Schalke 04	1 : 2 (0 : 1)	mehr zum Spiel
+	startDate: 18.05.2013 15:30	
+	home: *t5	
+	away: *t4
+	meeting: *season_12_13_gameday_34
 - !!models.Game &game301
-	startDate: 18.05.2013 - 15:30	
-	home: Hamburger SV	
-	away: Bayer 04 Leverkusen	0 : 1 (0 : 0)	mehr zum Spiel
+	startDate: 18.05.2013 15:30	
+	home: *t7	
+	away: *t3
+	meeting: *season_12_13_gameday_34
 - !!models.Game &game302
-	startDate: 18.05.2013 - 15:30	
-	home: Eintracht Frankfurt	
-	away: VfL Wolfsburg	2 : 2 (1 : 2)	mehr zum Spiel
+	startDate: 18.05.2013 15:30	
+	home: *t6	
+	away: *t11
+	meeting: *season_12_13_gameday_34
 - !!models.Game &game303
-	startDate: 18.05.2013 - 15:30	
-	home: 1.FC Nürnberg	
-	away: SV Werder Bremen	3 : 2 (0 : 1)	mehr zum Spiel
+	startDate: 18.05.2013 15:30	
+	home: *t10	
+	away: *t14
+	meeting: *season_12_13_gameday_34
 - !!models.Game &game304
-	startDate: 18.05.2013 - 15:30	
-	home: Borussia Dortmund	
-	away: 1899 Hoffenheim	1 : 2 (1 : 0)	mehr zum Spiel
+	startDate: 18.05.2013 15:30	
+	home: *t2	
+	away: *t16
+	meeting: *season_12_13_gameday_34
 - !!models.Game &game305
-	startDate: 18.05.2013 - 15:30	
-	home: VfB Stuttgart	
-	away: 1.FSV Mainz 05	2 : 2 (2 : 2)	mehr zum Spiel
+	startDate: 18.05.2013 15:30	
+	home: *t12	
+	away: *t13
+	meeting: *season_12_13_gameday_34
 - !!models.Game &game306
-	startDate: 18.05.2013 - 15:30	
-	home: FC Augsburg	
-	away: SpVgg Greuther Fürth	3 : 1 (1 : 0)	mehr zum Spiel
-
-- !!models.Gameday &season_12_13_relegation
-	name: Relegation, 23.05.2013 - 27.05.2013
-
+	startDate: 18.05.2013 15:30	
+	home: *t15	
+	away: *t18
+	meeting: *season_12_13_gameday_34
 - !!models.Game &game307
-	startDate: 23.05.2013 - 20:30	
-	home: 1899 Hoffenheim	
-	away: 1.FC Kaiserslautern	3 : 1 (2 : 0)	mehr zum Spiel
+	startDate: 23.05.2013 20:30	
+	home: *t16	
+	away: *t19
+	meeting: *season_12_13_relegation
 - !!models.Game &game308
-	startDate: 27.05.2013 - 20:30	
-	home: 1.FC Kaiserslautern	
-	away: 1899 Hoffenheim	1 : 2 (0 : 1)	mehr zum Spiel
+	startDate: 27.05.2013 20:30	
+	home: *t19	
+	away: *t16
+	meeting: *season_12_13_relegation
 
 

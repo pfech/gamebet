@@ -27,8 +27,8 @@ public class Result extends Model {
 	@GeneratedValue
 	public Long id;
 	
-	public int home;
-	public int away;
+	public Integer home;
+	public Integer away;
 	
 	@OneToOne
 	@Required
