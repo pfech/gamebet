@@ -62,7 +62,7 @@
 		- *m5
 
 - !!models.Team &t8
-    name: Borussia M'gladbach
+    name: Borussia Mönchengladbach
 	meetings:
 		- *m1
 		- *m2
@@ -146,7 +146,6 @@
     name: Fortuna Düsseldorf
 	meetings:
 		- *m1
-		- *m2
 		- *m3
 		- *m4
 		- *m5
@@ -155,7 +154,6 @@
     name: SpVgg Greuther Fürth
 	meetings:
 		- *m1
-		- *m2
 		- *m3
 		- *m4
 		- *m5
@@ -164,7 +162,17 @@
     name: 1.FC Kaiserslautern
 	meetings:
 		- *m1
-		- *m2
 		- *m3
 		- *m4
 		- *m5
+
+- !!models.Team &t20
+    name: Hertha BSC
+	meetings:
+		- *m2
+
+- !!models.Team &t21
+    name: Eintracht Braunschweig
+	meetings:
+		- *m2
+		

@@ -25,6 +25,7 @@ GET		/gameday/new				controllers.Gamedays.createNew()
 GET		/gameday/:id/edit			controllers.Gamedays.edit(id:Long)
 GET		/gameday/:id				controllers.Gamedays.show(id:Long)
 POST	/gameday/create				controllers.Gamedays.create()
+POST	/gameday/createfm/:id		controllers.Gamedays.createFromMeeting(id:Long)
 POST	/gameday/:id/update			controllers.Gamedays.update(id:Long)
 POST	/gameday/:id/delete			controllers.Gamedays.delete(id:Long)
 

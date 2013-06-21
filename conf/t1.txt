@@ -1540,3 +1540,149 @@
 	meeting: *season_12_13_relegation
 
 
+
+([0-9][0-9])\.([0-9][0-9]).([0-9][0-9][0-9][0-9]) ([0-9][0-9]):([0-9][0-9]) (.+) : (.+) -:-.+
+
+- !!models.Game &game\n\tstartDate: $3-$2-$1 $4:$5:00\n\thome: $6\n\taway: $7\n
+        startDate: 2012-08-24 20:30:00
+        home: *t2
+        away: *t14
+        gameday: *season_12_13_gameday_1
+
+        
+    - !!models.Gameday &season_13_14_gameday_1
+        meeting: *m2
+        name: 1. Spieltag, 09.08.2013 - 11.08.2013
+    - !!models.Gameday &season_13_14_gameday_2
+        meeting: *m2
+        name: 2. Spieltag, 17.08.2013 - 18.08.2013
+    - !!models.Gameday &season_13_14_gameday_3
+        meeting: *m2
+        name: 3. Spieltag, 23.08.2013 - 25.08.2013
+    - !!models.Gameday &season_13_14_gameday_4
+        meeting: *m2
+        name: 4. Spieltag, 27.08.2013 - 01.09.2013
+    - !!models.Gameday &season_13_14_gameday_5
+        meeting: *m2
+        name: 5. Spieltag, 13.09.2013 - 15.09.2013
+    - !!models.Gameday &season_13_14_gameday_6
+        meeting: *m2
+        name: 6. Spieltag, 20.09.2013 - 22.09.2013
+    - !!models.Gameday &season_13_14_gameday_7
+        meeting: *m2
+        name: 7. Spieltag, 27.09.2013 - 29.09.2013
+    - !!models.Gameday &season_13_14_gameday_8
+        meeting: *m2
+        name: 8. Spieltag, 04.10.2013 - 06.10.2013
+    - !!models.Gameday &season_13_14_gameday_9
+        meeting: *m2
+        name: 9. Spieltag, 18.10.2013 - 20.10.2013
+    - !!models.Gameday &season_13_14_gameday_10
+        meeting: *m2
+        name: 10. Spieltag, 25.10.2013 - 27.10.2013
+    - !!models.Gameday &season_13_14_gameday_11
+        meeting: *m2
+        name: 11. Spieltag, 01.11.2013 - 03.11.2013
+    - !!models.Gameday &season_13_14_gameday_12
+        meeting: *m2
+        name: 12. Spieltag, 08.11.2013 - 10.11.2013
+    - !!models.Gameday &season_13_14_gameday_13
+        meeting: *m2
+        name: 13. Spieltag, 22.11.2013 - 24.11.2013
+    - !!models.Gameday &season_13_14_gameday_14
+        meeting: *m2
+        name: 14. Spieltag, 29.11.2013 - 01.12.2013
+    - !!models.Gameday &season_13_14_gameday_15
+        meeting: *m2
+        name: 15. Spieltag, 06.12.2013 - 08.12.2013
+    - !!models.Gameday &season_13_14_gameday_16
+        meeting: *m2
+        name: 16. Spieltag, 13.12.2013 - 15.12.2013
+    - !!models.Gameday &season_13_14_gameday_17
+        meeting: *m2
+        name: 17. Spieltag, 20.12.2013 - 22.12.2013
+    - !!models.Gameday &season_13_14_gameday_18
+        meeting: *m2
+        name: 18. Spieltag, 24.01.2014 - 26.01.2014
+    - !!models.Gameday &season_13_14_gameday_19
+        meeting: *m2
+        name: 19. Spieltag, 31.01.2014 - 02.02.2014
+    - !!models.Gameday &season_13_14_gameday_20
+        meeting: *m2
+        name: 20. Spieltag, 07.02.2014 - 09.02.2014
+    - !!models.Gameday &season_13_14_gameday_21
+        meeting: *m2
+        name: 21. Spieltag, 14.02.2014 - 16.02.2014
+    - !!models.Gameday &season_13_14_gameday_22
+        meeting: *m2
+        name: 22. Spieltag, 21.02.2014 - 23.02.2014
+    - !!models.Gameday &season_13_14_gameday_23
+        meeting: *m2
+        name: 23. Spieltag, 28.02.2014 - 02.03.2014
+    - !!models.Gameday &season_13_14_gameday_24
+        meeting: *m2
+        name: 24. Spieltag, 08.03.2014 - 09.03.2014
+    - !!models.Gameday &season_13_14_gameday_25
+        meeting: *m2
+        name: 25. Spieltag, 14.03.2014 - 16.03.2014
+    - !!models.Gameday &season_13_14_gameday_26
+        meeting: *m2
+        name: 26. Spieltag, 21.03.2014 - 23.03.2014
+    - !!models.Gameday &season_13_14_gameday_27
+        meeting: *m2
+        name: 27. Spieltag, 25.03.2014 - 26.03.2014
+    - !!models.Gameday &season_13_14_gameday_28
+        meeting: *m2
+        name: 28. Spieltag, 28.03.2014 - 30.03.2014
+    - !!models.Gameday &season_13_14_gameday_29
+        meeting: *m2
+        name: 29. Spieltag, 04.04.2014 - 06.04.2014
+    - !!models.Gameday &season_13_14_gameday_30
+        meeting: *m2
+        name: 30. Spieltag, 11.04.2014 - 13.04.2014
+    - !!models.Gameday &season_13_14_gameday_31
+        meeting: *m2
+        name: 31. Spieltag, 17.04.2014 - 20.04.2014
+    - !!models.Gameday &season_13_14_gameday_32
+        meeting: *m2
+        name: 32. Spieltag, 25.04.2014 - 27.04.2014
+    - !!models.Gameday &season_13_14_gameday_33
+        meeting: *m2
+        name: 33. Spieltag, 03.05.2014 - 03.05.2014
+    - !!models.Gameday &season_13_14_gameday_34
+        meeting: *m2
+        name: 34. Spieltag, 10.05.2014 - 10.05.2014
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

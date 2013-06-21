@@ -5,6 +5,7 @@ package controllers;
 
 import java.util.List;
 
+import models.Gameday;
 import models.Meeting;
 import models.User;
 import play.data.Form;
@@ -32,8 +33,9 @@ public class Meetings extends AbstractAuthorizedController {
 		User user = getLoggedInUser();
 		
 		Form<Meeting> form = Form.form(Meeting.class).bindFromRequest();
+		Form<Gameday> gForm = Form.form(Gameday.class);
 		if(form.hasErrors()) {
-			return badRequest(views.html.meeting.edit.render(user, item, form));
+			return badRequest(views.html.meeting.edit.render(user, item, form, gForm));
 		}
 		Meeting toUpdate = form.get();
 		toUpdate.update(id);
@@ -54,7 +56,8 @@ public class Meetings extends AbstractAuthorizedController {
 		User user = getLoggedInUser();
 		
 		Form<Meeting> form = Form.form(Meeting.class).fill(item);
-		return ok(views.html.meeting.edit.render(user, item, form));
+		Form<Gameday> gForm = Form.form(Gameday.class);
+		return ok(views.html.meeting.edit.render(user, item, form, gForm));
 	}
 
 	public static Result createNew() {

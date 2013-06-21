@@ -1,4 +1,4 @@
-@(user: User, item: Meeting, meetingForm: Form[Meeting])
+@(user: User, item: Meeting, meetingForm: Form[Meeting], gamedayForm: Form[Gameday])
 @import play.i18n._
 @import appPage._
 
@@ -29,6 +29,27 @@
 	<div class="row-fluid">
 		<div class="span12">
 			@helper.inputText(meetingForm("name"), '_label -> Messages.get("views.meeting.name.label"))
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Bearbeiten/Speichern</th>
+					</tr>
+				</thead>
+				<tbody>
+					@for(gameday <- item.gamedays) {
+					<tr>
+						<td>@gameday.name</td>
+						<td><a href="@routes.Gamedays.edit(gameday.id)" class="btn btn-primary">Bearbeiten</a></td>
+					</tr>
+					}
+					
+					@helper.form(routes.Gamedays.createFromMeeting(item.id)) {
+					<tr>@helper.inputText(gamedayForm("name"))</tr>
+					<tr><button type="submit" class="btn btn-primary">Neu</button></tr>
+					}
+				</tbody>
+			</table>
 		</div>
 	</div>
 	}

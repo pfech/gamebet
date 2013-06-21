@@ -54,4 +54,8 @@ public class Meeting extends Model {
 	public static Finder<Long, Meeting> find = 
 			new Finder<Long, Meeting>(Long.class, Meeting.class);
 
+	public static Meeting fndById(Long meetingId) {
+		return find.byId(meetingId);
+	}
+
 }
