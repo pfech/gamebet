@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 
 import play.db.ebean.Model;
 
@@ -31,8 +32,8 @@ public class Team extends Model {
 	
 	public String name;
 
-	@ManyToMany
-	public List<Meeting> meetings = new ArrayList<Meeting>();
+	@ManyToOne
+	public Meeting meeting;
 	
 	/**
 	 * Finder object to search database for Team
@@ -41,6 +42,10 @@ public class Team extends Model {
 	public static Finder<Long, Team> find = 
 			new Finder<Long, Team>(Long.class, Team.class);
 
+	public static List<Team> findByMeeting(Long id) {
+		return find.where().eq("meeting.id", id).findList();
+	}
+	
 	public static void delete(Team item) {
 		// TODO Auto-generated method stub
 		

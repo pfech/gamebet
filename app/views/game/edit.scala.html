@@ -1,0 +1,78 @@
+@(user: User, item: Game, gameForm: Form[Game], resultForm: Form[models.Result])
+@import play.i18n._
+@import appPage._
+
+@q = @{
+	import scala.collection.mutable.Queue
+	
+	var queue : Queue[Tuple3[String, String, Boolean]] = Queue()
+	queue.enqueue((routes.Gamedays.show(item.gameday.id).toString(), item.gameday.name, false))
+	queue.enqueue((routes.Games.show(item.id).toString(), item.getViewName, false))
+	queue.enqueue(("#", Messages.get("views.game.edit.breadcrumb.edit"), true))
+	
+	queue
+}
+@teamSelect = @{
+	import scala.collection.mutable.Map
+	
+	var teamMap = Map[String, String]()
+	
+	for(team <- item.gameday.meeting.teams) {
+		teamMap += team.id.toString() -> team.name
+	}
+	teamMap.toSeq
+}
+@applicationPage(Messages.get("views.game.show.title")) {
+	@*header*@
+	@header(q)
+} { 
+@* sidebar navigation *@
+@sidebar()
+} {
+@* main content for this page *@
+@helper.form(routes.Games.update(item.id)) {
+<legend>
+	@Messages.get("views.game.edit.legend", item.getViewName)
+	<button type="submit" class="btn btn-primary pull-right">@Messages.get("views.save")</button>
+</legend>
+	@helper.select(gameForm("home.id"), teamSelect, '_label -> Messages.get("views.game.home.label"))
+	@helper.select(gameForm("away.id"), teamSelect, '_label -> Messages.get("views.game.away.label"))
+	<div id="datetimepicker1" class="input-append date">
+		<label for="startDate">@Messages.get("views.game.startDate.label")</label>
+    	<input class="input" id="startDate_field" name="startDate" data-format="MM/dd/yyyy hh:mm:ss" type="text" value="@item.startDate.format("MM/dd/yyyy hh:mm:ss")"></input>
+    	<span class="add-on">
+      		<i data-time-icon="icon-time" data-date-icon="icon-calendar">
+      		</i>
+    	</span>
+  	</div>
+  	<input type="text" class="hidden" value="@item.gameday.id" id="gameday_id_field" name="gameday.id">
+}
+@if(item.result == null) {
+	@helper.form(routes.Games.createResult()) {
+		<div><span>@Messages.get("views.game.result.label")</span></div>
+		<label for="home">@Messages.get("views.game.result.home.label")</label>
+		<input type="text" class="input-mini" id="home_field" name="home">
+		<label for="away">@Messages.get("views.game.result.home.label")</label>
+		<input type="text" class="input-mini" id="away_field" name="away">
+		<button type="submit" class="btn btn-primary">@Messages.get("views.create")</button>
+		<input type="text" class="hidden" id="game_id_field" name="game.id" value="@item.id">
+	}
+} else {
+	@helper.form(routes.Games.editResult(item.result.id)) {
+		<div><span>@Messages.get("views.game.result.label")</span></div>
+		<label for="home">@Messages.get("views.game.result.home.label")</label>
+		<input type="text" class="input-mini" id="home_field" name="home" value="@item.result.home">
+		<label for="away">@Messages.get("views.game.result.away.label")</label>
+		<input type="text" class="input-mini" id="away_field" name="away" value="@item.result.away">
+		<button type="submit" class="btn btn-primary">@Messages.get("views.save")</button>
+		<input type="text" class="hidden" id="game_id_field" name="game.id" value="@item.id">	
+	}
+}
+<script type="text/javascript">
+  $(function() {
+    $('#datetimepicker1').datetimepicker({
+      language: 'de'
+    });
+  });
+</script>
+}

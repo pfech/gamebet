@@ -38,7 +38,7 @@ public class Meeting extends Model {
 	@OneToMany(mappedBy="meeting")
 	public List<Gameday> gamedays = new ArrayList<Gameday>();
 
-	@ManyToMany(mappedBy="meetings")
+	@OneToMany(mappedBy="meeting")
 	public List<Team> teams = new ArrayList<Team>();
 	
 	@ManyToOne

@@ -6,9 +6,7 @@
 		import scala.collection.mutable.Queue
 		
 		var queue : Queue[Tuple3[String, String, Boolean]] = Queue()
-		queue.enqueue(("#", "Test1", false))
-		queue.enqueue(("#", "Test2", false))
-		queue.enqueue(("#", "Test3", true))
+		queue.enqueue(("#", Messages.get("views.meeting.label"), true))
 		
 		queue
 	}
@@ -26,18 +24,25 @@
 </legend>
 <div class="row-fluid">
 	<div class="span12">
-		<ul>
-		@for(item <- user.meetings) {
-			<li class="list-item">
-				<span>
-					<a href="@routes.Meetings.show(item.id)">@item.name</a>
-					@if(user.managerOfMeetings.contains(item)) {
-					<a class="btn btn-primary pull-right" href="@routes.Meetings.edit(item.id)">Edit</a>
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+			@for(item <- user.meetings) {
+				<tr>
+					<td><a href="@routes.Meetings.show(item.id)">@item.name</a></td>
+					<td>@if(user.managerOfMeetings.contains(item)) {
+						<a class="btn btn-primary" href="@routes.Meetings.edit(item.id)">Edit</a>
 					}
-				</span>
-			</li>
-		}
-		</ul>
+					</td>
+				</tr>
+			}
+			</tbody>
+		</table>
 	</div>
 </div>
 

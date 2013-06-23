@@ -2,15 +2,39 @@ views.application.name=Gamebet
 
 views.navbar.games.label=Spiele
 views.navbar.meetings.label=Veranstaltungen
-views.navbar.teams.label=Mannschaften
+views.navbar.teams.label=Teams
 views.navbar.login.label=Login
 views.navbar.logout.label=Logout
 views.navbar.index.label=Home
-views.navbar.settings.user.label=Benutzereinstellungen
-
-
+views.navbar.settings.user.label=Benutzer Einstellungen
 
 views.index.title=Gamebet
+
+views.save=Speichern
+views.create=Erstellen
+views.edit=Bearbeiten
+views.delete=Löschen
+views.more=Mehr
+views.remove=Entfernen
+views.add=Hinzufügen
+views.new=Neu
+
+views.game.edit=Spiel bearbeiten
+views.game.edit.breadcrumb.edit=Bearbeiten
+views.game.show.title=Spiel
+views.game.edit.legend=Spiel {0}
+views.game.home.label=Heim
+views.game.away.label=Gast
+views.game.startDate.label=Starttermin
+views.game.result.label=Ergebnis
+views.game.result.home.label=Heim
+views.game.result.away.label=Gast
+views.game.show.legend=Spiel {0}
+views.game.tip.label=Tipp
+views.game.tip.lastChange.label=Letzte Änderung
+views.game.myTip.label=Mein Tipp
+
+views.meeting.members.label=Mitglieder
 
 views.login.title=Login
 views.login.login.label=Email
@@ -20,6 +44,13 @@ views.login.badLogin=Email oder Passwort falsch
 views.login.form.notValid=Sie müssen eine gültige Email und ein gültiges Passwort eingeben
 
 # views.meeting pages
+views.standing.points.label=Punkte
+views.standing.member.label=Mitglied
+views.standing.place.label=Platz
+
+views.meeting.label=Veranstaltung
+
+
 views.meeting.create.title=Veranstaltung erstellen
 views.meeting.create.legend=Erstellen
 views.meeting.create.form.button.submit=Erstellen
@@ -29,11 +60,14 @@ views.meeting.edit.legend=Bearbeite {0}
 views.meeting.edit.form.button.submit=Speichern
 
 views.meeting.list.title=Veranstaltungen
+views.meeting.list.legend=Veranstaltungen
 
 views.meeting.show.title=Veranstaltung
 views.meeting.show.legend=Veranstaltung {0}
 
 views.meeting.name.label=Name
+views.meeting.manager.label=Manager
+views.meeting.member.label=Mitglied
 
 
 # views.gameday pages
@@ -51,3 +85,14 @@ views.gameday.show.title=Spieltag
 views.gameday.show.legend=Spieltag {0}
 
 views.gameday.name.label=Name
+
+views.tip.label=Tipp
+
+views.tip.create.title=Tipp
+views.tip.create.legend=Tipp
+
+views.tip.edit.title=Tipp
+views.tip.edit.legend=Tipp
+
+views.tip.home.label=Heim: {0}
+views.tip.away.label=Gast: {0}

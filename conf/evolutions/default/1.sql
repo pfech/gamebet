@@ -50,7 +50,18 @@ create table result (
 create table team (
   id                        bigint not null,
   name                      varchar(255),
+  meeting_id                bigint,
   constraint pk_team primary key (id))
+;
+
+create table tip (
+  id                        bigint not null,
+  owner_id                  bigint,
+  game_id                   bigint,
+  home                      integer,
+  away                      integer,
+  last_change               timestamp,
+  constraint pk_tip primary key (id))
 ;
 
 create table user (
@@ -65,12 +76,6 @@ create table meeting_user (
   meeting_id                     bigint not null,
   user_id                        bigint not null,
   constraint pk_meeting_user primary key (meeting_id, user_id))
-;
-
-create table team_meeting (
-  team_id                        bigint not null,
-  meeting_id                     bigint not null,
-  constraint pk_team_meeting primary key (team_id, meeting_id))
 ;
 
 create table user_group_role (
@@ -92,6 +97,8 @@ create sequence result_seq;
 
 create sequence team_seq;
 
+create sequence tip_seq;
+
 create sequence user_seq;
 
 alter table game add constraint fk_game_home_1 foreign key (home_id) references team (id) on delete restrict on update restrict;
@@ -108,16 +115,18 @@ alter table password add constraint fk_password_user_6 foreign key (user_id) ref
 create index ix_password_user_6 on password (user_id);
 alter table result add constraint fk_result_game_7 foreign key (game_id) references game (id) on delete restrict on update restrict;
 create index ix_result_game_7 on result (game_id);
+alter table team add constraint fk_team_meeting_8 foreign key (meeting_id) references meeting (id) on delete restrict on update restrict;
+create index ix_team_meeting_8 on team (meeting_id);
+alter table tip add constraint fk_tip_owner_9 foreign key (owner_id) references user (id) on delete restrict on update restrict;
+create index ix_tip_owner_9 on tip (owner_id);
+alter table tip add constraint fk_tip_game_10 foreign key (game_id) references game (id) on delete restrict on update restrict;
+create index ix_tip_game_10 on tip (game_id);
 
 
 
 alter table meeting_user add constraint fk_meeting_user_meeting_01 foreign key (meeting_id) references meeting (id) on delete restrict on update restrict;
 
 alter table meeting_user add constraint fk_meeting_user_user_02 foreign key (user_id) references user (id) on delete restrict on update restrict;
-
-alter table team_meeting add constraint fk_team_meeting_team_01 foreign key (team_id) references team (id) on delete restrict on update restrict;
-
-alter table team_meeting add constraint fk_team_meeting_meeting_02 foreign key (meeting_id) references meeting (id) on delete restrict on update restrict;
 
 alter table user_group_role add constraint fk_user_group_role_user_01 foreign key (user_id) references user (id) on delete restrict on update restrict;
 
@@ -135,8 +144,6 @@ drop table if exists group_role;
 
 drop table if exists meeting;
 
-drop table if exists team_meeting;
-
 drop table if exists meeting_user;
 
 drop table if exists password;
@@ -144,6 +151,8 @@ drop table if exists password;
 drop table if exists result;
 
 drop table if exists team;
+
+drop table if exists tip;
 
 drop table if exists user;
 
@@ -164,6 +173,8 @@ drop sequence if exists password_seq;
 drop sequence if exists result_seq;
 
 drop sequence if exists team_seq;
+
+drop sequence if exists tip_seq;
 
 drop sequence if exists user_seq;
 

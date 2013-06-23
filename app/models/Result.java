@@ -26,8 +26,9 @@ public class Result extends Model {
 	@Id
 	@GeneratedValue
 	public Long id;
-	
+	@Required
 	public Integer home;
+	@Required
 	public Integer away;
 	
 	@OneToOne
@@ -40,4 +41,11 @@ public class Result extends Model {
 	 */
 	public static Finder<Long, Result> find = 
 			new Finder<Long, Result>(Long.class, Result.class);
+
+	@Override
+	public String toString() {
+		return "Result [id=" + id + ", home=" + home + ", away=" + away + "]";
+	}
+
+
 }

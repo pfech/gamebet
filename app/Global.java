@@ -29,9 +29,7 @@ public class Global extends GlobalSettings {
 			Ebean.save(map.get("meetings"));
 			Ebean.save(map.get("teams"));
 			
-			for(Object o : map.get("teams")) {
-				Ebean.saveManyToManyAssociations(o, "meetings");
-			}
+			
 			Ebean.save(map.get("gamedays"));
 			Ebean.save(map.get("games"));
 			Ebean.save(map.get("results"));

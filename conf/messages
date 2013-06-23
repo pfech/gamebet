@@ -10,6 +10,32 @@ views.navbar.settings.user.label=User Settings
 
 views.index.title=Gamebet
 
+views.save=Save
+views.create=Create
+views.edit=Edit
+views.delete=Delete
+views.more=More
+views.remove=Remove
+views.add=Add
+views.new=New
+
+views.game.edit=Edit game
+views.game.edit.breadcrumb.edit=Edit
+views.game.show.title=Game
+views.game.edit.legend=Game {0}
+views.game.home.label=Home
+views.game.away.label=Away
+views.game.startDate.label=Start date
+views.game.result.label=Result
+views.game.result.home.label=Home
+views.game.result.away.label=Away
+views.game.show.legend=Game {0}
+views.game.tip.label=Tip
+views.game.tip.lastChange.label=Last change
+views.game.myTip.label=My tip
+
+views.meeting.members.label=Members
+
 views.login.title=Login
 views.login.login.label=Email
 views.login.password.label=Password
@@ -18,6 +44,13 @@ views.login.badLogin=Email or password wrong
 views.login.form.notValid=You need to enter a valid email and password
 
 # views.meeting pages
+views.standing.points.label=Points
+views.standing.member.label=Member
+views.standing.place.label=Place
+
+views.meeting.label=Meeting
+
+
 views.meeting.create.title=Create Meeting
 views.meeting.create.legend=Create
 views.meeting.create.form.button.submit=Create
@@ -27,11 +60,14 @@ views.meeting.edit.legend=Edit {0}
 views.meeting.edit.form.button.submit=Save
 
 views.meeting.list.title=Meetings
+views.meeting.list.legend=Meetings
 
 views.meeting.show.title=Meeting
 views.meeting.show.legend=Meeting {0}
 
 views.meeting.name.label=Name
+views.meeting.manager.label=Manager
+views.meeting.member.label=Member
 
 
 # views.gameday pages
@@ -49,3 +85,14 @@ views.gameday.show.title=Gameday
 views.gameday.show.legend=Gameday {0}
 
 views.gameday.name.label=Name
+
+views.tip.label=Tip
+
+views.tip.create.title=Tip
+views.tip.create.legend=Tip
+
+views.tip.edit.title=Tip
+views.tip.edit.legend=Tip
+
+views.tip.home.label=Home: {0}
+views.tip.away.label=Away: {0}

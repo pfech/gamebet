@@ -19,6 +19,8 @@ GET		/meeting/:id				controllers.Meetings.show(id:Long)
 POST	/meeting/create				controllers.Meetings.create()
 POST	/meeting/:id/update			controllers.Meetings.update(id:Long)
 POST	/meeting/:id/delete			controllers.Meetings.delete(id:Long)
+GET		/meeting/removeMember/:meetingId/:memberId		controllers.Meetings.removeMember(meetingId:Long, memberId: Long)
+POST	/meeting/addMember			controllers.Meetings.addMember(meetingId: Long)
 
 GET		/gameday/list				controllers.Gamedays.list()
 GET		/gameday/new				controllers.Gamedays.createNew()
@@ -28,13 +30,18 @@ POST	/gameday/create				controllers.Gamedays.create()
 POST	/gameday/createfm/:id		controllers.Gamedays.createFromMeeting(id:Long)
 POST	/gameday/:id/update			controllers.Gamedays.update(id:Long)
 POST	/gameday/:id/delete			controllers.Gamedays.delete(id:Long)
-
+GET		/gameday/delete/:meetingId/:gamedayId				controllers.Gamedays.deleteWithRedirect(meetingId:Long, gamedayId: Long)
+POST	/gameday/createGame/:gamedayId	controllers.Gamedays.createGame(gamedayId:Long)
+GET		/gameday/:dayId/deleteGame/:gameId 	controllers.Gamedays.deleteGame(dayId:Long, gameId:Long)
 
 GET		/game/list					controllers.Games.list()
 GET		/game/:id					controllers.Games.show(id:Long)
 POST	/game/new					controllers.Games.create()
 POST	/game/:id/update			controllers.Games.update(id:Long)
 POST	/game/:id/delete			controllers.Games.delete(id:Long)
+GET		/game/:id/edit				controllers.Games.edit(id:Long)
+POST 	/game/createResult			controllers.Games.createResult()
+POST	/game/:id/editResult		controllers.Games.editResult(id:Long)
 
 GET		/team/list					controllers.Teams.list()
 GET		/team/new					controllers.Teams.createNew()
@@ -43,3 +50,14 @@ GET		/team/:id					controllers.Teams.show(id:Long)
 POST	/team/create				controllers.Teams.create()
 POST	/team/:id/update			controllers.Teams.update(id:Long)
 POST	/team/:id/delete			controllers.Teams.delete(id:Long)
+
+GET		/results/createNew/:gameId		controllers.Results.create(gameId:Long)
+GET		/results/:id/edit			controllers.Results.edit(id:Long)
+
+GET		/users/:id					controllers.Users.show(id:Long)
+
+GET		/tips/:gameId/create		controllers.Tips.create(gameId:Long)
+GET		/tips/:tipId/edit			controllers.Tips.edit(tipId:Long)
+POST	/tips/new					controllers.Tips.createNew()
+POST	/tips/:id/update			controllers.Tips.update(id:Long)
+

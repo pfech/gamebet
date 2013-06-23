@@ -1,4 +1,4 @@
-@(user: User, item: Meeting, meetingForm: Form[Meeting], gamedayForm: Form[Gameday])
+@(user: User, item: Meeting, meetingForm: Form[Meeting], gamedayForm: Form[Gameday], userForm: Form[User])
 @import play.i18n._
 @import appPage._
 
@@ -6,11 +6,34 @@
 	import scala.collection.mutable.Queue
 	
 	var queue : Queue[Tuple3[String, String, Boolean]] = Queue()
-	queue.enqueue(("#", "Veranstaltungen", false))
-	queue.enqueue(("#", item.name, false))
-	queue.enqueue(("#", "Bearbeiten", true))
+	queue.enqueue((routes.Meetings.list().toString(), "Veranstaltungen", false))
+	queue.enqueue((routes.Meetings.show(item.id).toString(), item.name, false))
+	queue.enqueue(("#", Messages.get("views.edit"), true))
 	
 	queue
+}
+@managerSelectOptions = @{
+	import scala.collection.mutable.Map
+	
+	var map = Map[String, String]()
+
+	for(user <- User.find.all()) {
+		map += user.id.toString -> user.username
+	}
+	
+	map.toSeq
+}
+@memberSelectOptions = @{
+	import scala.collection.mutable.Map
+	
+	var map = Map[String, String]()
+
+	for(user <- User.find.all()) {
+		if(!item.members.contains(user))
+			map += user.id.toString -> user.username
+	}
+	
+	map.toSeq
 }
 @applicationPage(Messages.get("views.meeting.edit.title")) {
 	@* header *@
@@ -29,28 +52,70 @@
 	<div class="row-fluid">
 		<div class="span12">
 			@helper.inputText(meetingForm("name"), '_label -> Messages.get("views.meeting.name.label"))
+			@helper.select(meetingForm("manager.id"), options = managerSelectOptions,'_label -> Messages.get("views.meeting.manager.label"))
+			
+		}
 			<table>
 				<thead>
 					<tr>
-						<th>Name</th>
-						<th>Bearbeiten/Speichern</th>
+						<th>@Messages.get("views.meeting.member.label")</th>
+						<th>@Messages.get("views.edit")</th>
+					</tr>
+				</thead>
+				<tbody>
+				@for(member <- item.members) {
+					<tr>
+						<td>@member.username</td>
+						<td>
+							<a href="@routes.Meetings.removeMember(item.id, member.id)" class="btn btn-primary">@Messages.get("views.remove")</a>
+						</td>
+					</tr>
+				}
+				@helper.form(routes.Meetings.addMember(item.id)) {
+					<tr>
+						<td>
+							<select id="id_field" name="id" >
+        					@for(u <- memberSelectOptions) {
+								<option value="@u._1" >@u._2</option>
+							}
+							</select>
+						</td>
+						<td><button type="submit" class="btn btn-primary">@Messages.get("views.add")</button></td>
+					</tr>
+				}
+				</tbody>
+			</table>
+			<table>
+				<thead>
+					<tr>
+						<th>@Messages.get("views.gameday.name.label")</th>
+						<th>@Messages.get("views.edit")</th>
+						<th>@Messages.get("views.delete")</th>
 					</tr>
 				</thead>
 				<tbody>
 					@for(gameday <- item.gamedays) {
 					<tr>
 						<td>@gameday.name</td>
-						<td><a href="@routes.Gamedays.edit(gameday.id)" class="btn btn-primary">Bearbeiten</a></td>
+						<td><a href="@routes.Gamedays.edit(gameday.id)" class="btn btn-primary">@Messages.get("views.edit")</a></td>
+						<td><a href="@routes.Gamedays.deleteWithRedirect(item.id, gameday.id)" class="btn btn-danger">@Messages.get("views.delete")</a></td>
 					</tr>
 					}
-					
+					<tr>
 					@helper.form(routes.Gamedays.createFromMeeting(item.id)) {
-					<tr>@helper.inputText(gamedayForm("name"))</tr>
-					<tr><button type="submit" class="btn btn-primary">Neu</button></tr>
+						<td>
+							<input class="" type="text" id="name_field" name="name" value="" >
+							<input class="hidden" type="text" id="meeting_id_field" name="meeting.id" value="@item.id" >
+						</td>
+						<td><button type="submit" class="btn btn-primary">@Messages.get("views.new")</button></td>
+						<td></td>
 					}
+					</tr>
+					
 				</tbody>
 			</table>
+			
 		</div>
 	</div>
-	}
+	
 }

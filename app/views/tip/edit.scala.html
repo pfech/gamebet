@@ -1,0 +1,35 @@
+@(user: User, item: Tip, tipForm: Form[Tip])
+@import play.i18n._
+@import appPage._
+
+@q = @{
+	import scala.collection.mutable.Queue
+	
+	var queue : Queue[Tuple3[String, String, Boolean]] = Queue()
+	queue.enqueue((routes.Gamedays.show(item.game.gameday.id).toString(), item.game.gameday.name, false))
+	queue.enqueue((routes.Games.show(item.game.id).toString(), item.game.getViewName, false))
+	queue.enqueue(("#", Messages.get("views.tip.label"), true))
+	
+	queue
+}
+@applicationPage(Messages.get("views.tip.edit.title")) {
+	@*header*@
+	@header(q)
+} { 
+@* sidebar navigation *@
+@sidebar()
+} {
+@* main content for this page *@
+@helper.form(routes.Tips.update(item.id)) {
+<legend>
+	@Messages.get("views.tip.edit.legend")
+	<button type="submit" class="btn btn-primary pull-right">@Messages.get("views.save")</button>
+</legend>
+	@helper.inputText(tipForm("home"), '_label -> Messages.get("views.tip.home.label", item.game.home.name))
+	@helper.inputText(tipForm("away"), '_label -> Messages.get("views.tip.away.label", item.game.away.name))
+	<input type="text" class="hidden" name="owner.id" id="owner_id_field" value="@item.owner.id">
+	<input type="text" class="hidden" name="game.id" id="game_id_field" value="@item.game.id">
+	<input type="text" class="hidden" name="lastChange" id="lastChange_field" value="@item.lastChange.format("MM/dd/yyyy hh:mm:ss")" data-format="MM/dd/yyyy hh:mm:ss">
+}
+
+}

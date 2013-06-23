@@ -1,27 +1,96 @@
-@(edit: Boolean, item: Gameday, gamedayForm: Form[Gameday])
+@(user: User, item: Gameday, gamedayForm: Form[Gameday], gameForm: Form[Game])
 @import play.i18n._
-@title = @{
-	if(edit) Messages.get("views.gameday.edit.title")
-	else Messages.get("views.gameday.create.title")
-}
-@action = @{
-	if(edit) 	routes.Gamedays.update(item.id)
-	else		routes.Gamedays.create()
-}
-@main(title) {
-<div class="row">
+@import appPage._
 
-@helper.form(action) {
-	<div class="well well-small">
-		<legend>
-			@if(edit) { @Messages.get("views.gameday.edit.legend", item.name) 
-			} else { @Messages.get("views.gameday.create.legend") }
-			<button class="btn btn-success pull-right" type="submit">@if(edit) { @Messages.get("views.gameday.edit.form.button.submit") 
-			} else { @Messages.get("views.gameday.create.form.button.submit") }</button>
-		</legend>
-		@helper.inputText(gamedayForm("name"), '_label -> Messages.get("views.gameday.name.label"))
-	</div>
+@q = @{
+	import scala.collection.mutable.Queue
+	
+	var queue : Queue[Tuple3[String, String, Boolean]] = Queue()
+	queue.enqueue((routes.Meetings.show(item.meeting.id).toString(), item.meeting.name, false))
+	queue.enqueue((routes.Gamedays.show(item.id).toString(), item.name, false))
+	queue.enqueue(("#", Messages.get("views.edit"), true))
+	
+	queue
 }
+@applicationPage(Messages.get("views.gameday.edit.title")) {
+	@*header*@
+	@header(q)
+} { 
+@* sidebar navigation *@
+@sidebar()
+} {
+@* main content for this page *@
 
-</div>
+@helper.form(routes.Gamedays.update(item.id)) {
+<legend>
+	@Messages.get("views.gameday.edit.legend", item.name) 
+	<button class="btn btn-success pull-right" type="submit">@Messages.get("views.gameday.edit.form.button.submit")</button>
+</legend>
+@helper.inputText(gamedayForm("name"), '_label -> Messages.get("views.gameday.name.label"))
+<input type="text" class="hidden input-mini" id="meeting_id_field" name="meeting.id" value="@item.meeting.id">
+}
+<table>
+	<thead>
+		<tr>
+			<th>@Messages.get("views.game.home.label")</th>
+			<th></th>
+			<th>@Messages.get("views.game.away.label")</th>
+			<th>@Messages.get("views.game.result.label")</th>
+			<th></th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+	@for(game <- item.games) {
+		<tr>
+			<td>@game.home.name</td>
+			<td>:</td>
+			<td>@game.away.name</td>
+			<td>@if(game.result != null) { @game.result.home : @game.result.away } else {
+				- : -
+			}
+			</td>
+			<td><a class="btn btn-primary" href="@routes.Games.edit(game.id)">@Messages.get("views.edit")</a></td>
+			<td><a class="btn btn-danger" href="@routes.Gamedays.deleteGame(item.id, game.id)">@Messages.get("views.delete")</a></td>
+		</tr>
+	}
+	@helper.form(routes.Gamedays.createGame(item.id)) {
+		<tr>
+			<td>
+				<select id="home_id_field" name="home.id">
+				@for(team <- Team.findByMeeting(item.meeting.id)) {
+					<option value="@team.id" >@team.name</option>
+				}
+				</select>
+			</td>
+			<td>:</td>
+			<td>
+				<select id="away_id_field" name="away.id">
+				@for(team <- Team.findByMeeting(item.meeting.id)) {
+					<option value="@team.id" >@team.name</option>
+				}
+				</select>
+			</td>
+			<td>
+				<div id="datetimepicker1" class="input-append date">
+			    	<input class="input-mini" id="startDate_field" name="startDate" data-format="MM/dd/yyyy hh:mm:ss" type="text"></input>
+			    	<span class="add-on">
+			      		<i data-time-icon="icon-time" data-date-icon="icon-calendar">
+			      		</i>
+			    	</span>
+			  	</div>
+			</td>
+			<td><button class="btn btn-primary" type="submit">@Messages.get("views.save")</button></td>
+			<td><input class="hidden" type="text" id="gameday_id_field" name="gameday.id"></td>
+		</tr>
+	}
+	</tbody>
+</table>
+<script type="text/javascript">
+  $(function() {
+    $('#datetimepicker1').datetimepicker({
+      language: 'de'
+    });
+  });
+</script>
 }

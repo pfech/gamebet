@@ -6,10 +6,19 @@
 	import scala.collection.mutable.Queue
 	
 	var queue : Queue[Tuple3[String, String, Boolean]] = Queue()
-	queue.enqueue(("#", item.meeting.name, false))
+	queue.enqueue((routes.Meetings.show(item.meeting.id).toString(), item.meeting.name, false))
 	queue.enqueue(("#", item.name, true))
 	
 	queue
+}
+@tips = @{
+	import scala.collection.mutable.Map
+	var tipsMap = Map[Long, Tip]()
+	for(game <- item.games) {
+		tipsMap += game.id -> Tip.findTip(game.id, user.id) 
+	} 
+	
+	tipsMap
 }
 
 @applicationPage(Messages.get("views.meeting.show.title")) {
@@ -22,14 +31,59 @@
 @* main content for this page *@
 <legend>
 	@Messages.get("views.gameday.show.legend", item.name)
+	@if(item.meeting.manager.id.equals(user.id)) {
+	<a href="@routes.Gamedays.edit(item.id)" class="btn btn-primary pull-right">@Messages.get("views.edit")</a>
+	}
 </legend>
 <div class="row-fluid">
 	<div class="span12">
-		<ul>
-		@for(game <- item.games) {
-			<li><a href="@routes.Games.show(game.id)">@game.getEncounterString</a></li>
-		}
-		</ul>
+		<table>
+			<thead>
+				<tr>
+					<th>@Messages.get("views.game.home.label")</th>
+					<th></th>
+					<th>@Messages.get("views.game.away.label")</th>
+					<th>@Messages.get("views.game.result.label")</th>
+					<th>@Messages.get("views.game.myTip.label")</th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				@for(game <- item.games) {
+				<tr>
+					<td><a href="@routes.Teams.show(game.home.id)">@game.home.name</a></td>
+					<td>:</td>
+					<td><a href="@routes.Teams.show(game.away.id)">@game.away.name</a></td>
+					<td>@if(game.result == null) { 
+					- : -  
+					} else { 
+					@game.result.home : @game.result.away 
+					}
+					</td>
+					<td>@if(tips(game.id) != null) { @tips(game.id).home : @tips(game.id).away 
+						@if(game.startDate.after(util.Util.getNow())) {
+						<a href="@routes.Tips.edit(tips(game.id).id)" class="btn btn-primary">@Messages.get("views.edit")</a>
+						}
+					} else {
+						- : -
+						@if(game.startDate.after(util.Util.getNow())) {
+						<a href="@routes.Tips.create(game.id)" class="btn btn-primary">@Messages.get("views.create")</a>
+						}
+					}
+					</td>
+					<td><a href="@routes.Games.show(game.id)" class="btn btn-primary">@Messages.get("views.more")</a>
+					<td>@if(item.meeting.manager.id.equals(user.id)) { <a href="@routes.Games.edit(game.id)" class="btn btn-primary">@Messages.get("views.game.edit")</a>}</td>
+				</tr>
+				}
+			</tbody>
+		</table>
 	</div>
 </div>
 }
+
+@*
+@if(item.meeting.manager.id.equals(user.id)) {<a href="@routes.Results.create(game.id)" class="btn btn-primary">Ergebnis erstellen</a>}
+<a href="@routes.Results.edit(game.result.id)" class="btn btn-primary">Ergebnis bearbeiten</a>
+
+*@

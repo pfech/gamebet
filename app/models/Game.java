@@ -50,6 +50,14 @@ public class Game extends Model {
 	
 	public Date startDate;
 	
+	public String getViewName() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(home.name);
+		sb.append(" : ");
+		sb.append(away.name);
+		return sb.toString();
+	}
+	
 	public String getEncounterString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append(home.name);
@@ -72,4 +80,13 @@ public class Game extends Model {
 	 */
 	public static Finder<Long, Game> find = 
 			new Finder<Long, Game>(Long.class, Game.class);
+
+	@Override
+	public String toString() {
+		return "Game [id=" + id + ", home=" + home + ", away=" + away
+				+ ", result=" + result + ", gameday=" + gameday
+				+ ", startDate=" + startDate + "]";
+	}
+
+
 }

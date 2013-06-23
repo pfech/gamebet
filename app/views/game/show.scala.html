@@ -1,0 +1,83 @@
+@(user: User, item: Game)
+@import play.i18n._
+@import appPage._
+
+@q = @{
+	import scala.collection.mutable.Queue
+	
+	var queue : Queue[Tuple3[String, String, Boolean]] = Queue()
+	queue.enqueue((routes.Gamedays.show(item.gameday.id).toString(), item.gameday.name, false))
+	queue.enqueue(("#", item.getViewName, true))
+	
+	queue
+}
+@tips = @{
+	import scala.collection.mutable.Map
+	
+	var userMap = Map[User, Tip]()
+	
+	for(user <- item.gameday.meeting.members) {
+		userMap += user -> null
+	}
+	for(tip <- Tip.findByGame(item.id)) {
+		userMap(tip.owner) = tip
+	}
+	
+	userMap
+}
+@applicationPage(Messages.get("views.game.show.title")) {
+	@*header*@
+	@header(q)
+} { 
+@* sidebar navigation *@
+@sidebar()
+} {
+@* main content for this page *@
+<legend>
+	@Messages.get("views.game.show.legend", item.getViewName)
+	@if(item.gameday.meeting.manager.id.equals(user.id)) {
+	<a href="@routes.Games.edit(item.id)" class="btn btn-primary pull-right">@Messages.get("views.edit")</a>
+	}
+</legend>
+<table>
+	<thead>
+		<tr>
+			<th>@Messages.get("views.game.home.label")</th>
+			<th></th>
+			<th>@Messages.get("views.game.away.label")</th>
+			<th>@Messages.get("views.game.result.label")</th>
+			<th>@Messages.get("views.game.startDate.label")</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><a href="@routes.Teams.show(item.home.id)">@item.home.name</a></td>
+			<td>:</td>
+			<td><a href="@routes.Teams.show(item.away.id)">@item.away.name</a></td>
+			<td>@if(item.result != null) { @item.result.home : @item.result.away } else {
+				- : -
+			}
+			</td>
+			<td>@item.startDate.format("dd.MM.yyyy hh:mm")</td>
+		</tr>
+	</tbody>
+</table>
+<table>
+	<thead>
+		<tr>
+			<th>@Messages.get("views.meeting.members.label")</th>
+			<th>@Messages.get("views.game.tip.label")</th>
+			<th>@Messages.get("views.game.tip.lastChange.label")</th>
+		</tr>
+	</thead>
+	<tbody>
+		@for(kvTip <- tips) {
+		<tr>
+			<td><a href="@routes.Users.show(kvTip._1.id)">@kvTip._1.username</a></td>
+			<td>@if(kvTip._2 != null) { @kvTip._2.getTipString() } else { - : - }</td>
+			<td>@if(kvTip._2 != null) { @kvTip._2.lastChange.toString() } else { - }</td>
+		</tr>
+		}
+	</tbody>
+</table>
+}
