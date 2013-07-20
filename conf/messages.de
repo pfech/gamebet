@@ -96,3 +96,23 @@ views.tip.edit.legend=Tipp
 
 views.tip.home.label=Heim: {0}
 views.tip.away.label=Gast: {0}
+
+views.user.settings.title=Benutzer-Einstellungen
+views.user.settings.legend=Benutzer-Einstellugen
+views.user.settings.label=Benutzer-Einstellungen
+views.user.settings.username.label=Benutzername
+views.user.settings.email.label=Email
+views.user.settings.changePassword.button=Passwort ändern
+
+views.user.settings.changePassword.title=Passwort ändern
+views.user.settings.changePassword.legend=Passwort ändern
+views.user.settings.changePassword.label=Passwort ändern
+views.user.settings.passwordChange.old.label=Altes Passwort
+views.user.settings.passwordChange.new1.label=Neues Passwort
+views.user.settings.passwordChange.new2.label=Neues Passwort wiederholen
+
+views.user.show.title=Benutzer
+views.user.show.legend=Benutzer
+views.user.show.label=Benutzer
+views.user.show.username.label=Benutzername
+views.user.show.email.label=Email

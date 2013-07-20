@@ -17,7 +17,7 @@
 	@header(q)
 } { 
 @* sidebar navigation *@
-@sidebar()
+@sidebar(user)
 } {
 @* main content for this page *@
 <legend>
@@ -28,7 +28,7 @@
 </legend>
 <div class="row-fluid">
 	<div class="span12">
-		<table>
+		<table class="table-sizer">
 			<thead>
 				<tr>
 					<th>@Messages.get("views.standing.place.label")</th>

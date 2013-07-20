@@ -36,4 +36,13 @@ public class GroupRole extends Model implements Role {
 		return this.name;
 	}
 
+	public static Finder<Long, GroupRole> find = new Finder<Long, GroupRole>(Long.class, GroupRole.class);
+
+	public static GroupRole admins() {
+		return find.where().eq("name", "admins").findUnique();
+	}
+	
+	public static GroupRole users() {
+		return find.where().eq("name", "users").findUnique();
+	}
 }

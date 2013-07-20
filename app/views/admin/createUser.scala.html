@@ -1,0 +1,32 @@
+@(user: User, userForm: Form[models.web.NewUser])
+@import play.i18n._
+@import appPage._
+
+	@q = @{
+		import scala.collection.mutable.Queue
+		
+		var queue : Queue[Tuple3[String, String, Boolean]] = Queue()
+		queue.enqueue(("", "Admin Create User", true))
+		
+		queue
+	}
+
+@applicationPage(Messages.get("views.admin.createUser.title")) {
+	@*header*@
+	@header(q)
+} { 
+@* sidebar navigation *@
+@sidebar(user)
+} {
+@* main content for this page *@
+@helper.form(routes.Admin.createUser()) {
+
+<legend>
+	@Messages.get("views.admin.createUser.legend")
+	<button type="submit" class="btn btn-primary pull-right">@Messages.get("views.save")</button>
+</legend>
+@helper.inputText(userForm("username"), '_label -> Messages.get("views.admin.createUser.username.label"))
+@helper.inputText(userForm("email"), '_label -> Messages.get("views.admin.createUser.email.label"))
+@helper.inputText(userForm("password"), '_label -> Messages.get("views.admin.createUser.password.label"))
+}
+}

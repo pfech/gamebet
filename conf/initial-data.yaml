@@ -73,6 +73,14 @@ users:
             - *user
             - *meetingManager
 
+    - !!models.User &userPascal
+        email: pascal@gamebet.foo
+        username: Pascal
+        roles:
+            - *user
+            - *meetingManager
+            - *admin
+
 
 passwords:
     - !!models.Password
@@ -111,22 +119,28 @@ passwords:
         user: *user8
         password: 1234
 
+    - !!models.Password
+        user: *userPascal
+        password: 1234
+
 
 meetings:
     - !!models.Meeting &m1
         name: Bundesliga 2012/2013
-        manager: *user1
+        manager: *userPascal
         members:
             - *user1
             - *adminUser
+            - *userPascal
 
     - !!models.Meeting &m2
         name: Bundesliga 2013/2014
-        manager: *user1
+        manager: *userPascal
         members:
             - *user1
             - *user2
             - *adminUser
+            - *userPascal
 
     - !!models.Meeting &m3
         name: Bundesliga m3

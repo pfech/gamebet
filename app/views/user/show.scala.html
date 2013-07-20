@@ -1,0 +1,34 @@
+@(user: User)
+@import play.i18n._
+@import appPage._
+
+@q = @{
+	import scala.collection.mutable.Queue
+	
+	var queue : Queue[Tuple3[String, String, Boolean]] = Queue()
+	//queue.enqueue((routes.Gamedays.show(item.game.gameday.id).toString(), item.game.gameday.name, false))*@
+	//queue.enqueue((routes.Games.show(item.game.id).toString(), item.game.getViewName, false))*@
+	queue.enqueue(("#", Messages.get("views.user.show.label"), true))
+	
+	queue
+}
+@applicationPage(Messages.get("views.user.show.title")) {
+	@*header*@
+	@header(q)
+} { 
+@* sidebar navigation *@
+@sidebar(user)
+} {
+@* main content for this page *@
+<legend>
+@Messages.get("views.user.show.legend")
+</legend>
+<div class="row-fluid">
+	<span class="span2">@Messages.get("views.user.show.username.label")</span>
+	<span class="span3">@user.username</span>
+</div>
+<div class="row-fluid">
+	<span class="span2">@Messages.get("views.user.show.email.label")</span>
+	<span class="span3">@user.email</span>
+</div>
+}

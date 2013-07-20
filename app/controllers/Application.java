@@ -1,5 +1,6 @@
 package controllers;
 
+import models.User;
 import models.web.LoginData;
 import play.*;
 import play.data.Form;
@@ -7,7 +8,6 @@ import play.i18n.Messages;
 import play.mvc.*;
 import play.mvc.Http.Context;
 import security.Authenticator;
-
 import views.html.*;
 
 public class Application extends Controller {
@@ -17,7 +17,8 @@ public class Application extends Controller {
 	 * @return
 	 */
     public static Result index() {
-        return ok(index.render("Your new application is ready."));
+    	User user = getLoggedInUser();
+        return ok(index.render(user, "Your new application is ready."));
     }
   
     
@@ -60,4 +61,15 @@ public class Application extends Controller {
     		return badRequest(views.html.login.render(newForm)); 
     	}
     }
+    
+    public static User getLoggedInUser() {
+		Context context = Context.current();
+		if(context.session().containsKey("user")) {
+			User user = User.findByLogin(context.session().get("user"));
+			if(user == null) return null; //throw new UserNotFoundException("Could not find user " + context.session().get("user"));
+			return user;
+		}
+		return null;
+//		throw new UserNotFoundException("No user logged in in session or session is empty");
+	}
 }

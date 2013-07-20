@@ -1,4 +1,4 @@
-@(message: String)
+@(user: User, message: String)
 @import play.i18n._
 @import be.objectify.deadbolt.java.views.html._
 @import appPage._
@@ -8,7 +8,7 @@
 		@header(scala.collection.mutable.Queue(("#", "Home", true)))
 	} {
 		@* sidebar *@
-		@sidebar()
+		@sidebar(user)
 	} {
 		@* content *@
 		<p>Welcome to your index page</p>
