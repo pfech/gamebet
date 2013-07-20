@@ -59,7 +59,7 @@ public class User extends Model implements Subject {
 
 	@Override
 	public List<? extends Permission> getPermissions() {
-		return new ArrayList<>();
+		return new ArrayList<Permission>();
 	}
 
 	@Override
