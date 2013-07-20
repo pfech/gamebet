@@ -9,7 +9,7 @@ groupRoles:
         name: users
 
 users:
-    - !!models.User &adminUser
+    - !!models.GamebetUser &adminUser
         email: admin
         username: admin
         roles:
@@ -17,63 +17,63 @@ users:
             - *meetingManager
             - *user
 
-    - !!models.User &user1
+    - !!models.GamebetUser &user1
         email: user1@foo.bar
         username: user1
         roles:
             - *meetingManager
             - *user
 
-    - !!models.User &user2
+    - !!models.GamebetUser &user2
         email: user2@foo.bar
         username: user2
         roles:
             - *meetingManager
             - *user
 
-    - !!models.User &user3
+    - !!models.GamebetUser &user3
         email: user3@foo.bar
         username: user3
         roles:
             - *user
             - *meetingManager
 
-    - !!models.User &user4
+    - !!models.GamebetUser &user4
         email: user4@foo.bar
         username: user4
         roles:
             - *user
             - *meetingManager
 
-    - !!models.User &user5
+    - !!models.GamebetUser &user5
         email: user5@foo.bar
         username: user5
         roles:
             - *user
             - *meetingManager
 
-    - !!models.User &user6
+    - !!models.GamebetUser &user6
         email: user6@foo.bar
         username: user6
         roles:
             - *user
             - *meetingManager
 
-    - !!models.User &user7
+    - !!models.GamebetUser &user7
         email: user7@foo.bar
         username: user7
         roles:
             - *user
             - *meetingManager
 
-    - !!models.User &user8
+    - !!models.GamebetUser &user8
         email: user8@foo.bar
         username: user8
         roles:
             - *user
             - *meetingManager
 
-    - !!models.User &userPascal
+    - !!models.GamebetUser &userPascal
         email: pascal@gamebet.foo
         username: Pascal
         roles:
