@@ -5,7 +5,7 @@ package security;
 
 import play.mvc.Http.Context;
 import models.Password;
-import models.User;
+import models.GamebetUser;
 
 /**
  * @author pfechner
@@ -19,7 +19,7 @@ public class Authenticator {
 		if(login == null || login.length() == 0 || password == null || password.length() == 0)
 			return false;
 		
-		User user = User.findByLogin(login); 
+		GamebetUser user = GamebetUser.findByLogin(login); 
 		if(user == null)
 			return false;
 		

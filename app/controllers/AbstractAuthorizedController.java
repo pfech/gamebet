@@ -5,7 +5,7 @@ package controllers;
 
 import exceptions.UserNotFoundException;
 import be.objectify.deadbolt.java.actions.SubjectPresent;
-import models.User;
+import models.GamebetUser;
 import play.mvc.Controller;
 import play.mvc.Http.Context;
 
@@ -17,10 +17,10 @@ import play.mvc.Http.Context;
 public class AbstractAuthorizedController extends Controller {
 
 	//public static User getLoggedInUser() throws UserNotFoundException {
-	public static User getLoggedInUser() {
+	public static GamebetUser getLoggedInUser() {
 		Context context = Context.current();
 		if(context.session().containsKey("user")) {
-			User user = User.findByLogin(context.session().get("user"));
+			GamebetUser user = GamebetUser.findByLogin(context.session().get("user"));
 			if(user == null) return null; //throw new UserNotFoundException("Could not find user " + context.session().get("user"));
 			return user;
 		}

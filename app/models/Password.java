@@ -29,7 +29,7 @@ public class Password extends Model {
 	
 	@Required
 	@OneToOne
-	public User user;
+	public GamebetUser user;
 	
 	@Required
 	public String password;

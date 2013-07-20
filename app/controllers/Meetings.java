@@ -14,7 +14,7 @@ import models.Game;
 import models.Gameday;
 import models.Meeting;
 import models.Tip;
-import models.User;
+import models.GamebetUser;
 import play.Logger;
 import play.data.Form;
 import play.mvc.Result;
@@ -26,23 +26,23 @@ import play.mvc.Result;
 public class Meetings extends AbstractAuthorizedController {
 
 	public static Result list() {
-		User user = getLoggedInUser();
+		GamebetUser user = getLoggedInUser();
 		return ok(views.html.meeting.list.render(user));
 	}
 	
 	public static Result show(Long id) {
 		Meeting item = Meeting.find.byId(id);
-		User user = getLoggedInUser();
+		GamebetUser user = getLoggedInUser();
 		return ok(views.html.meeting.show.render(user, item));
 	}
 	
 	public static Result update(Long id) {
 		Meeting item = Meeting.find.byId(id);
-		User user = getLoggedInUser();
+		GamebetUser user = getLoggedInUser();
 		
 		Form<Meeting> form = Form.form(Meeting.class).bindFromRequest();
 		Form<Gameday> gForm = Form.form(Gameday.class);
-		Form<User> uForm = Form.form(User.class);
+		Form<GamebetUser> uForm = Form.form(GamebetUser.class);
 		if(form.hasErrors()) {
 			return badRequest(views.html.meeting.edit.render(user, item, form, gForm, uForm));
 		}
@@ -63,13 +63,13 @@ public class Meetings extends AbstractAuthorizedController {
 	
 	public static Result edit(Long id) {
 		Meeting item = Meeting.find.byId(id);
-		User user = getLoggedInUser();
+		GamebetUser user = getLoggedInUser();
 		
 		Form<Meeting> form = Form.form(Meeting.class).fill(item);
 		Gameday g = new Gameday();
 		g.meeting = item;
 		Form<Gameday> gForm = Form.form(Gameday.class).fill(g);
-		Form<User> uForm = Form.form(User.class);
+		Form<GamebetUser> uForm = Form.form(GamebetUser.class);
 		return ok(views.html.meeting.edit.render(user, item, form, gForm, uForm));
 	}
 
@@ -82,12 +82,12 @@ public class Meetings extends AbstractAuthorizedController {
 	public static Result addMember(Long meetingId) {
 		Meeting item = Meeting.fndById(meetingId);
 		
-		Form<User> uForm = Form.form(User.class).bindFromRequest();
+		Form<GamebetUser> uForm = Form.form(GamebetUser.class).bindFromRequest();
 		if(uForm.hasErrors()) {
 			Logger.of(Meeting.class).info("Could not add user");
 			return redirect(routes.Meetings.edit(meetingId));
 		}
-		User newMember = uForm.get();
+		GamebetUser newMember = uForm.get();
 		
 		newMember.refresh();
 		
@@ -100,7 +100,7 @@ public class Meetings extends AbstractAuthorizedController {
 	public static Result removeMember(Long meetingId, Long memberId) {
 		Meeting item = Meeting.fndById(meetingId);
 		
-		User toRemove = User.find.byId(memberId);
+		GamebetUser toRemove = GamebetUser.find.byId(memberId);
 		item.members.remove(toRemove);
 		item.update();
 	
@@ -110,7 +110,7 @@ public class Meetings extends AbstractAuthorizedController {
 	public static class Standing {
 		public Integer place;
 		
-		public User user;
+		public GamebetUser user;
 		
 		public int points = 0;
 	}
@@ -119,15 +119,15 @@ public class Meetings extends AbstractAuthorizedController {
 		Meeting meeting = Meeting.find.byId(meetingId);
 		
 		Map<Long, Standing> standings = new HashMap<Long, Standing>();
-		for(User user : meeting.members) {
+		for(GamebetUser user : meeting.members) {
 			Standing tmp = new Standing();
 			tmp.user = user;
 			standings.put(user.id, tmp);
 		}
-		List<User> members = meeting.members;
+		List<GamebetUser> members = meeting.members;
 		for(Gameday day : meeting.gamedays) {
 			for(Game game : day.games) {
-				for(User user : members) {
+				for(GamebetUser user : members) {
 					Tip tip = Tip.findTip(game.id, user.id);
 					if(tip != null) {
 						standings.get(user.id).points += tip.getPoints(game.result);

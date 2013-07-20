@@ -24,7 +24,7 @@ import be.objectify.deadbolt.core.models.Subject;
  *
  */
 @Entity
-public class User extends Model implements Subject {
+public class GamebetUser extends Model implements Subject {
 
 	/**
 	 * Generated serial version uid
@@ -68,10 +68,10 @@ public class User extends Model implements Subject {
 	}
 
 	
-	public static Finder<Long, User> find = 
-			new Finder<Long, User>(Long.class, User.class);
+	public static Finder<Long, GamebetUser> find = 
+			new Finder<Long, GamebetUser>(Long.class, GamebetUser.class);
 	
-	public static User findByLogin(String login) {
+	public static GamebetUser findByLogin(String login) {
 		return find.where().eq("email", login).findUnique();
 	}
 

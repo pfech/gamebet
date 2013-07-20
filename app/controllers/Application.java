@@ -1,6 +1,6 @@
 package controllers;
 
-import models.User;
+import models.GamebetUser;
 import models.web.LoginData;
 import play.*;
 import play.data.Form;
@@ -17,7 +17,7 @@ public class Application extends Controller {
 	 * @return
 	 */
     public static Result index() {
-    	User user = getLoggedInUser();
+    	GamebetUser user = getLoggedInUser();
         return ok(index.render(user, "Your new application is ready."));
     }
   
@@ -62,10 +62,10 @@ public class Application extends Controller {
     	}
     }
     
-    public static User getLoggedInUser() {
+    public static GamebetUser getLoggedInUser() {
 		Context context = Context.current();
 		if(context.session().containsKey("user")) {
-			User user = User.findByLogin(context.session().get("user"));
+			GamebetUser user = GamebetUser.findByLogin(context.session().get("user"));
 			if(user == null) return null; //throw new UserNotFoundException("Could not find user " + context.session().get("user"));
 			return user;
 		}

@@ -3,7 +3,7 @@
  */
 package controllers;
 
-import models.User;
+import models.GamebetUser;
 import models.web.Password;
 import play.data.Form;
 import play.mvc.Result;
@@ -15,17 +15,17 @@ import play.mvc.Result;
 public class Users extends AbstractAuthorizedController {
 
 	public static Result show(Long id) {
-		User user = getLoggedInUser();
+		GamebetUser user = getLoggedInUser();
 		return ok(views.html.user.show.render(user));
 	}
 	
 	public static Result settings(Long id) {
-		User user = getLoggedInUser();
+		GamebetUser user = getLoggedInUser();
 		return ok(views.html.user.settings.render(user));
 	}
 	
 	public static Result showChangePassword(Long id) {
-		User user = getLoggedInUser();
+		GamebetUser user = getLoggedInUser();
 		Password pwd = new Password();
 		Form<Password> form = Form.form(Password.class).fill(pwd);
 		return ok(views.html.user.changePassword.render(user, form));

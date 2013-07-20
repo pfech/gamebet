@@ -1,4 +1,4 @@
-@(user: User, item: Meeting, meetingForm: Form[Meeting], gamedayForm: Form[Gameday], userForm: Form[User])
+@(user: GamebetUser, item: Meeting, meetingForm: Form[Meeting], gamedayForm: Form[Gameday], userForm: Form[GamebetUser])
 @import play.i18n._
 @import appPage._
 
@@ -17,7 +17,7 @@
 	
 	var map = Map[String, String]()
 
-	for(user <- User.find.all()) {
+	for(user <- GamebetUser.find.all()) {
 		map += user.id.toString -> user.username
 	}
 	
@@ -28,7 +28,7 @@
 	
 	var map = Map[String, String]()
 
-	for(user <- User.find.all()) {
+	for(user <- GamebetUser.find.all()) {
 		if(!item.members.contains(user))
 			map += user.id.toString -> user.username
 	}

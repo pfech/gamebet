@@ -42,10 +42,10 @@ public class Meeting extends Model {
 	public List<Team> teams = new ArrayList<Team>();
 	
 	@ManyToOne
-	public User manager;
+	public GamebetUser manager;
 	
 	@ManyToMany
-	public List<User> members = new ArrayList<User>();
+	public List<GamebetUser> members = new ArrayList<GamebetUser>();
 	
 	/**
 	 * Finder object to search database for game

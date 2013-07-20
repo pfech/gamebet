@@ -33,7 +33,7 @@ public class Tip extends Model {
 	
 	@OneToOne
 	@Required
-	public User owner;
+	public GamebetUser owner;
 	
 	@OneToOne
 	@Required

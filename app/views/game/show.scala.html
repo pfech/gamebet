@@ -1,4 +1,4 @@
-@(user: User, item: Game)
+@(user: GamebetUser, item: Game)
 @import play.i18n._
 @import appPage._
 
@@ -14,7 +14,7 @@
 @tips = @{
 	import scala.collection.mutable.Map
 	
-	var userMap = Map[User, Tip]()
+	var userMap = Map[GamebetUser, Tip]()
 	
 	for(user <- item.gameday.meeting.members) {
 		userMap += user -> null

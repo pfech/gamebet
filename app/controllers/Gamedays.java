@@ -8,7 +8,7 @@ import java.util.List;
 import models.Game;
 import models.Gameday;
 import models.Meeting;
-import models.User;
+import models.GamebetUser;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -27,7 +27,7 @@ public class Gamedays extends AbstractAuthorizedController {
 	
 	public static Result show(Long id) {
 		Gameday item = Gameday.find.byId(id);
-		User user = getLoggedInUser();
+		GamebetUser user = getLoggedInUser();
 		return ok(views.html.gameday.show.render(user, item));
 	}
 	
@@ -61,7 +61,7 @@ public class Gamedays extends AbstractAuthorizedController {
 	}
 	
 	public static Result edit(Long id) {
-		User user = getLoggedInUser();
+		GamebetUser user = getLoggedInUser();
 		Gameday item = Gameday.find.byId(id);
 		Form<Gameday> form = Form.form(Gameday.class).fill(item);
 		Game g = new Game();

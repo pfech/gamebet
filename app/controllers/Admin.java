@@ -10,7 +10,7 @@ import play.i18n.Messages;
 import play.mvc.Result;
 import models.GroupRole;
 import models.Password;
-import models.User;
+import models.GamebetUser;
 import models.web.NewUser;
 
 /**
@@ -21,7 +21,7 @@ public class Admin extends AbstractAuthorizedController {
 
 	@Restrict(@Group({"admins"}))
 	public static Result showCreateUser() {
-		User user = getLoggedInUser();
+		GamebetUser user = getLoggedInUser();
 		
 		Form<NewUser> userForm = Form.form(NewUser.class);
 		
@@ -47,13 +47,13 @@ public class Admin extends AbstractAuthorizedController {
 			flash("Error", Messages.get("views.admin.createUser.error.noPassword"));
 			return redirect(routes.Admin.showCreateUser());
 		}
-		if(User.findByLogin(newUser.email) != null) {
+		if(GamebetUser.findByLogin(newUser.email) != null) {
 			play.Logger.info("a user with email '" + newUser.email + "' already exists, cannot add new user");
 			flash("Error", Messages.get("views.admin.createUser.error.userAlreadyExists"));
 			return redirect(routes.Admin.showCreateUser());
 		}
 		
-		User user = new User();
+		GamebetUser user = new GamebetUser();
 		user.email = newUser.email;
 		user.username = newUser.username;
 		user.roles.add(GroupRole.users());

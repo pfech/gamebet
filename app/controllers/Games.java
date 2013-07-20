@@ -4,7 +4,7 @@
 package controllers;
 
 import models.Game;
-import models.User;
+import models.GamebetUser;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -20,7 +20,7 @@ public class Games extends AbstractAuthorizedController {
 	}
 	
 	public static Result show(Long id) {
-		User user = getLoggedInUser();
+		GamebetUser user = getLoggedInUser();
 		Game item = Game.find.byId(id);
 		
 		return ok(views.html.game.show.render(user, item));
@@ -50,7 +50,7 @@ public class Games extends AbstractAuthorizedController {
 	}
 	
 	public static Result edit(Long id) {
-		User user = getLoggedInUser();
+		GamebetUser user = getLoggedInUser();
 		Game item = Game.find.byId(id);
 		Form<Game> gameForm = Form.form(Game.class).fill(item);
 		models.Result result = item.result;

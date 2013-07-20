@@ -3,7 +3,7 @@
  */
 package security;
 
-import models.User;
+import models.GamebetUser;
 import play.mvc.Controller;
 import play.mvc.Http.Context;
 import play.mvc.Result;
@@ -23,7 +23,7 @@ public class MyDeadboltHandler implements DeadboltHandler {
 
 	@Override
 	public Subject getSubject(Context context) {
-		return User.findByLogin(context.session().get("user"));
+		return GamebetUser.findByLogin(context.session().get("user"));
 	}
 
 	@Override

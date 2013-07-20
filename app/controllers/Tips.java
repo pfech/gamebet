@@ -5,7 +5,7 @@ package controllers;
 
 import models.Game;
 import models.Tip;
-import models.User;
+import models.GamebetUser;
 import play.data.Form;
 import play.mvc.Result;
 import util.Util;
@@ -17,7 +17,7 @@ import util.Util;
 public class Tips extends AbstractAuthorizedController {
 
 	public static Result edit(Long tipId) {
-		User user = getLoggedInUser();
+		GamebetUser user = getLoggedInUser();
 		Tip item = Tip.find.byId(tipId);
 		item.game.refresh();
 		Form<Tip> tipForm = Form.form(Tip.class).fill(item);
@@ -26,7 +26,7 @@ public class Tips extends AbstractAuthorizedController {
 	}
 	
 	public static Result create(Long gameId) {
-		User user = getLoggedInUser();
+		GamebetUser user = getLoggedInUser();
 		Game game = Game.find.byId(gameId);
 		Tip item = new Tip();
 		item.owner = user;
