@@ -37,31 +37,31 @@
 </legend>
 <div class="row-fluid">
 	<div class="span12">
-		<table>
+		<table class="table table-striped table-hover ">
 			<thead>
 				<tr>
-					<th>@Messages.get("views.game.home.label")</th>
-					<th></th>
-					<th>@Messages.get("views.game.away.label")</th>
-					<th>@Messages.get("views.game.result.label")</th>
-					<th>@Messages.get("views.game.myTip.label")</th>
-					<th></th>
-					<th></th>
+					<th class="span2" style="text-align:center;">@Messages.get("views.game.home.label")</th>
+					<th class="span1" style="text-align:center;"></th>
+					<th class="span2" style="text-align:center;">@Messages.get("views.game.away.label")</th>
+					<th class="span1" style="text-align:center;">@Messages.get("views.game.result.label")</th>
+					<th class="span2" style="text-align:center;">@Messages.get("views.game.myTip.label")</th>
+					<th class="span2" style="text-align:center;"></th>
+					<th class="span2" style="text-align:center;"></th>
 				</tr>
 			</thead>
 			<tbody>
 				@for(game <- item.games) {
 				<tr>
-					<td><a href="@routes.Teams.show(game.home.id)">@game.home.name</a></td>
-					<td>:</td>
-					<td><a href="@routes.Teams.show(game.away.id)">@game.away.name</a></td>
-					<td>@if(game.result == null) { 
+					<td class="span2" style="text-align:center;"><a href="@routes.Teams.show(game.home.id)">@game.home.name</a></td>
+					<td class="span1" style="text-align:center;">:</td>
+					<td class="span2" style="text-align:center;"><a href="@routes.Teams.show(game.away.id)">@game.away.name</a></td>
+					<td class="span1" style="text-align:center;">@if(game.result == null) { 
 					- : -  
 					} else { 
 					@game.result.home : @game.result.away 
 					}
 					</td>
-					<td>@if(tips(game.id) != null) { @tips(game.id).home : @tips(game.id).away 
+					<td class="span2" style="text-align:center;">@if(tips(game.id) != null) { @tips(game.id).home : @tips(game.id).away 
 						@if(game.startDate.after(util.Util.getNow())) {
 						<a href="@routes.Tips.edit(tips(game.id).id)" class="btn btn-primary">@Messages.get("views.edit")</a>
 						}
@@ -72,8 +72,8 @@
 						}
 					}
 					</td>
-					<td><a href="@routes.Games.show(game.id)" class="btn btn-primary">@Messages.get("views.more")</a>
-					<td>@if(item.meeting.manager.id.equals(user.id)) { <a href="@routes.Games.edit(game.id)" class="btn btn-primary">@Messages.get("views.game.edit")</a>}</td>
+					<td class="span2" style="text-align:center;"><a href="@routes.Games.show(game.id)" class="btn btn-primary">@Messages.get("views.more")</a>
+					<td class="span2" style="text-align:center;">@if(item.meeting.manager.id.equals(user.id)) { <a href="@routes.Games.edit(game.id)" class="btn btn-primary">@Messages.get("views.game.edit")</a>}</td>
 				</tr>
 				}
 			</tbody>

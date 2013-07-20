@@ -24,19 +24,19 @@
 </legend>
 <div class="row-fluid">
 	<div class="span12">
-		<table>
+		<table class="table table-striped table-hover">
 			<thead>
 				<tr>
-					<th>Name</th>
-					<th></th>
+					<th class="span4" style="text-align:center;">Name</th>
+					<th class="span2" style="text-align:center;"></th>
 				</tr>
 			</thead>
 			<tbody>
 			@for(item <- user.meetings) {
 				<tr>
-					<td><a href="@routes.Meetings.show(item.id)">@item.name</a></td>
-					<td>@if(user.managerOfMeetings.contains(item)) {
-						<a class="btn btn-primary" href="@routes.Meetings.edit(item.id)">Edit</a>
+					<td class="span4" style="text-align:center;"><a href="@routes.Meetings.show(item.id)">@item.name</a></td>
+					<td class="span2" style="text-align:center;">@if(user.managerOfMeetings.contains(item)) {
+						<a class="btn btn-primary" href="@routes.Meetings.edit(item.id)">@Messages.get("views.edit")</a>
 					}
 					</td>
 				</tr>

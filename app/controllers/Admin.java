@@ -28,6 +28,7 @@ public class Admin extends AbstractAuthorizedController {
 		return ok(views.html.admin.createUser.render(user, userForm));
 	}
 	
+	@Restrict(@Group({"admins"}))
 	public static Result createUser() {
 		
 		Form<NewUser> userForm = Form.form(NewUser.class).bindFromRequest();
@@ -67,5 +68,11 @@ public class Admin extends AbstractAuthorizedController {
 		
 		pwd.save();
 		return redirect(routes.Application.index());
+	}
+	
+	@Restrict(@Group({"admins"}))
+	public static Result listUsers() {
+		GamebetUser user = getLoggedInUser();
+		return ok(views.html.admin.listUsers.render(user));
 	}
 }

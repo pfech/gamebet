@@ -6,6 +6,7 @@ package models;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -14,7 +15,6 @@ import javax.persistence.OneToMany;
 
 import play.db.ebean.Model;
 import play.db.ebean.Model.Finder;
-
 import be.objectify.deadbolt.core.models.Permission;
 import be.objectify.deadbolt.core.models.Role;
 import be.objectify.deadbolt.core.models.Subject;
@@ -39,7 +39,7 @@ public class GamebetUser extends Model implements Subject {
 	
 	public String email;
 	
-	@ManyToMany
+	@ManyToMany(cascade=CascadeType.ALL)
 	public List<GroupRole> roles = new ArrayList<GroupRole>();
 	
 	@OneToMany(mappedBy="manager")
@@ -73,6 +73,14 @@ public class GamebetUser extends Model implements Subject {
 	
 	public static GamebetUser findByLogin(String login) {
 		return find.where().eq("email", login).findUnique();
+	}
+
+	public boolean hasRole(String string) {
+		for(GroupRole role : roles) {
+			if(role.name.equals(string))
+				return true;
+		}
+		return false;
 	}
 
 }

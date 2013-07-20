@@ -39,43 +39,43 @@
 	<a href="@routes.Games.edit(item.id)" class="btn btn-primary pull-right">@Messages.get("views.edit")</a>
 	}
 </legend>
-<table>
+<table class="table table-striped table-hover">
 	<thead>
 		<tr>
-			<th>@Messages.get("views.game.home.label")</th>
-			<th></th>
-			<th>@Messages.get("views.game.away.label")</th>
-			<th>@Messages.get("views.game.result.label")</th>
-			<th>@Messages.get("views.game.startDate.label")</th>
+			<th class="span2" style="text-align:center;">@Messages.get("views.game.home.label")</th>
+			<th class="span1" style="text-align:center;"></th>
+			<th class="span2" style="text-align:center;">@Messages.get("views.game.away.label")</th>
+			<th class="span1" style="text-align:center;">@Messages.get("views.game.result.label")</th>
+			<th class="span4" style="text-align:center;">@Messages.get("views.game.startDate.label")</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
-			<td><a href="@routes.Teams.show(item.home.id)">@item.home.name</a></td>
-			<td>:</td>
-			<td><a href="@routes.Teams.show(item.away.id)">@item.away.name</a></td>
-			<td>@if(item.result != null) { @item.result.home : @item.result.away } else {
+			<td class="span2" style="text-align:center;"><a href="@routes.Teams.show(item.home.id)">@item.home.name</a></td>
+			<td class="span1" style="text-align:center;">:</td>
+			<td class="span2" style="text-align:center;"><a href="@routes.Teams.show(item.away.id)">@item.away.name</a></td>
+			<td class="span1" style="text-align:center;">@if(item.result != null) { @item.result.home : @item.result.away } else {
 				- : -
 			}
 			</td>
-			<td>@item.startDate.format("dd.MM.yyyy hh:mm")</td>
+			<td class="span4" style="text-align:center;">@item.startDate.format("dd.MM.yyyy hh:mm")</td>
 		</tr>
 	</tbody>
 </table>
-<table>
+<table class="table table-striped table-hover">
 	<thead>
 		<tr>
-			<th>@Messages.get("views.meeting.members.label")</th>
-			<th>@Messages.get("views.game.tip.label")</th>
-			<th>@Messages.get("views.game.tip.lastChange.label")</th>
+			<th class="span2" style="text-align:center;">@Messages.get("views.meeting.members.label")</th>
+			<th class="span2" style="text-align:center;">@Messages.get("views.game.tip.label")</th>
+			<th class="span4" style="text-align:center;">@Messages.get("views.game.tip.lastChange.label")</th>
 		</tr>
 	</thead>
 	<tbody>
 		@for(kvTip <- tips) {
 		<tr>
-			<td><a href="@routes.Users.show(kvTip._1.id)">@kvTip._1.username</a></td>
-			<td>@if(kvTip._2 != null) { @kvTip._2.getTipString() } else { - : - }</td>
-			<td>@if(kvTip._2 != null) { @kvTip._2.lastChange.toString() } else { - }</td>
+			<td class="span2" style="text-align:center;"><a href="@routes.Users.show(kvTip._1.id)">@kvTip._1.username</a></td>
+			<td class="span2" style="text-align:center;">@if(kvTip._2 != null) { @kvTip._2.getTipString() } else { - : - }</td>
+			<td class="span4" style="text-align:center;">@if(kvTip._2 != null) { @kvTip._2.lastChange.toString() } else { - }</td>
 		</tr>
 		}
 	</tbody>

@@ -9,6 +9,8 @@ views.navbar.index.label=Home
 views.navbar.settings.user.label=User Settings
 
 views.index.title=Gamebet
+views.index.textWithoutLogin=Please Login to use this app
+views.index.text=<div id="help"><p>To view the meetings in which you are participating use the navigationbar on the left</p><p></p><p></p><p></p></div><div id="news"><h1>News</h1><p>First release of this app, on encountering errors please mail me at pascal.fechner(at)gmail.com with subject "Gamebet"</p></div>
 
 views.save=Save
 views.create=Create
@@ -18,6 +20,7 @@ views.more=More
 views.remove=Remove
 views.add=Add
 views.new=New
+views.resetPassword=Reset Password
 
 views.game.edit=Edit game
 views.game.edit.breadcrumb.edit=Edit
@@ -116,3 +119,23 @@ views.user.show.legend=User
 views.user.show.label=User
 views.user.show.username.label=Username
 views.user.show.email.label=Email
+
+
+views.navbar.settingsHeadline.label=My Settings
+views.navbar.adminHeadline.label=Admin Settings
+views.navbar.admin.label=Admin Main
+views.navbar.admin.createUser.label=Create User
+views.navbar.admin.listUsers.label=List Users
+
+views.admin.createUser.title=Create User
+views.admin.createUser.legend=Create new User
+views.admin.createUser.label=Create User
+views.admin.createUser.username.label=Username
+views.admin.createUser.email.label=Email
+views.admin.createUser.password.label=Password
+
+views.admin.listUser.title=List User
+views.admin.listUser.label=List User
+views.admin.listUser.legend=List User
+views.admin.listUser.username.label=User
+

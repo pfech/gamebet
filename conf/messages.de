@@ -9,6 +9,8 @@ views.navbar.index.label=Home
 views.navbar.settings.user.label=Benutzer Einstellungen
 
 views.index.title=Gamebet
+views.index.textWithoutLogin=Bitte loggen Sie sich ein um diese App zu benutzen
+views.index.text=<div id="help"><h1>Hilfe</h1><p>Um die Veranstaltungen zu sehen an denen Sie mitwirken benutzen Sie bitte die Navigation auf der linken Seite.</p><p></p><p></p><p></p></div><div id="news"><h1>News</h1><p>Erstes Release dieser App.</p><p>Bei Fehlern oder Fragen können Sie mich unter pascal.fechner(at)gmail.com mit dem Betreff "Gamebet" erreichen.</p></div>
 
 views.save=Speichern
 views.create=Erstellen
@@ -18,6 +20,7 @@ views.more=Mehr
 views.remove=Entfernen
 views.add=Hinzufügen
 views.new=Neu
+views.resetPassword=Passwort zurücksetzen
 
 views.game.edit=Spiel bearbeiten
 views.game.edit.breadcrumb.edit=Bearbeiten
@@ -116,3 +119,25 @@ views.user.show.legend=Benutzer
 views.user.show.label=Benutzer
 views.user.show.username.label=Benutzername
 views.user.show.email.label=Email
+
+
+
+views.navbar.settingsHeadline.label=Meine Einstellungen
+views.navbar.adminHeadline.label=Admin Einstellungen
+views.navbar.admin.label=Admin Hauptseite
+views.navbar.admin.createUser.label=Benutzer erstellen
+views.navbar.admin.listUsers.label=Benutzer anzeigen
+
+views.admin.createUser.title=Benutzer erstellen
+views.admin.createUser.legend=Neuen Benutzer erstellen
+views.admin.createUser.label=Benutzer erstellen
+views.admin.createUser.username.label=Benutzername
+views.admin.createUser.email.label=Email
+views.admin.createUser.password.label=Passwort
+
+views.admin.listUser.title=Benutzer anzeigen
+views.admin.listUser.label=Benutzer anzeigen
+views.admin.listUser.legend=Benutzer anzeigen
+views.admin.listUser.username.label=Benutzername
+
+

@@ -84,5 +84,9 @@ public class Tip extends Model {
 			return 1;
 		return 0;
 	}
+
+	public static List<Tip> findTipByUserId(Long id) {
+		return find.where().eq("owner.id", id).findList();
+	}
 	
 }

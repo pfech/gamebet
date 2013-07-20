@@ -54,7 +54,9 @@ POST	/team/:id/delete			controllers.Teams.delete(id:Long)
 GET		/results/createNew/:gameId		controllers.Results.create(gameId:Long)
 GET		/results/:id/edit			controllers.Results.edit(id:Long)
 
-GET		/users/:id					controllers.Users.show(id:Long)
+GET		/user/:id					controllers.Users.show(id:Long)
+GET		/user/:id/delete			controllers.Users.delete(id:Long)
+GET		/user/:id/resetPassword		controllers.Users.resetPassword(id:Long)
 
 GET		/tips/:gameId/create		controllers.Tips.create(gameId:Long)
 GET		/tips/:tipId/edit			controllers.Tips.edit(tipId:Long)
@@ -67,6 +69,7 @@ POST	/user/:id/settings/changePassword	controllers.Users.changePassword(id:Long)
 
 GET		/admin/createUser			controllers.Admin.showCreateUser()
 POST	/admin/createUser			controllers.Admin.createUser()
+GET		/admin/listUsers			controllers.Admin.listUsers()
 
 
 

@@ -3,7 +3,12 @@
  */
 package controllers;
 
+import be.objectify.deadbolt.java.actions.Group;
+import be.objectify.deadbolt.java.actions.Restrict;
 import models.GamebetUser;
+import models.GroupRole;
+import models.Meeting;
+import models.Tip;
 import models.web.Password;
 import play.data.Form;
 import play.mvc.Result;
@@ -60,5 +65,51 @@ public class Users extends AbstractAuthorizedController {
 		}
 		play.Logger.info("Success to change password");
 		return settings(id);
+	}
+	
+	@Restrict(@Group({"admins"}))
+	public static Result delete(Long id) {
+		GamebetUser user = GamebetUser.find.byId(id);
+		models.Password.findByUserId(id).delete();
+		
+		user.roles.clear();
+		user.update();
+		user.refresh();
+		
+		for(Meeting m : user.managerOfMeetings) {
+			m.manager = null;
+			m.members.remove(user);
+			m.update();
+		}
+		
+		for(Meeting m : user.meetings) {
+			m.members.remove(user);
+			m.update();
+		}
+		
+		user.meetings.clear();
+		
+		user.managerOfMeetings.clear();
+		
+		for(Tip tip : Tip.findTipByUserId(user.id)) {
+			tip.delete();
+		}
+		
+		user.delete();
+		
+		return redirect(routes.Admin.listUsers());
+	}
+	
+	public static Result resetPassword(Long id) {
+		GamebetUser user = GamebetUser.find.byId(id);
+		if(user.id.equals(getLoggedInUser().id) || getLoggedInUser().hasRole("admins")) {
+			models.Password password = models.Password.findByUserId(id);
+			password.password = "1234";
+			password.update();
+			play.Logger.info("Password changed for User [" + user.username + "(" + user.id + ")]");
+		} else {
+			play.Logger.info("Password could not be changed for User [" + user.username + "(" + user.id + ")]");
+		}
+		return redirect(routes.Application.index());
 	}
 }

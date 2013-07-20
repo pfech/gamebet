@@ -1,15 +1,24 @@
 @(user: GamebetUser, active: String = "")
 @import play.i18n._
+@import be.objectify.deadbolt.java.views.html._
+@import be.objectify.deadbolt.core.utils.TemplateUtils._
 <div class="well well-small ">
 	<ul class="nav nav-list fill">
 		<li class="nav-header">Links</li>
-		<li class="active"><a href="@routes.Application.index()">@Messages.get("views.navbar.index.label")</a></li>
+		<li @*class="active"*@><a href="@routes.Application.index()">@Messages.get("views.navbar.index.label")</a></li>
 		<li><a href="@routes.Meetings.list()">@Messages.get("views.navbar.meetings.label")</a></li>
 		<li class="empty-space-height-20"></li>
 		<li class="empty-space-height-20"></li>
 		<li class="empty-space-height-20"></li>
 		<li class="divider"></li>
-		<li class="nav-header">My Settings</li>
+		<li class="nav-header">@Messages.get("views.navbar.settingsHeadline.label")</li>
 		<li><a href="@routes.Users.settings(user.id)">@Messages.get("views.navbar.settings.user.label")</a></li>
+		@restrict(la(as("admins"))) {
+		<li class="divider"></li>
+		<li class="nav-header">@Messages.get("views.navbar.adminHeadline.label")</li>
+		<li><a href="#">@Messages.get("views.navbar.admin.label")</a></li>
+		<li><a href="@routes.Admin.showCreateUser()">@Messages.get("views.navbar.admin.createUser.label")</a></li>
+		<li><a href="@routes.Admin.listUsers()">@Messages.get("views.navbar.admin.listUsers.label")</a></li>
+		}
 	</ul>
 </div>

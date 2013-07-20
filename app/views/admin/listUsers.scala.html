@@ -1,0 +1,46 @@
+@(user: GamebetUser)
+@import play.i18n._
+@import appPage._
+
+	@q = @{
+		import scala.collection.mutable.Queue
+		
+		var queue : Queue[Tuple3[String, String, Boolean]] = Queue()
+		queue.enqueue(("", Messages.get("views.admin.listUser.label"), true))
+		
+		queue
+	}
+
+@applicationPage(Messages.get("views.admin.listUser.title")) {
+	@*header*@
+	@header(q)
+} { 
+@* sidebar navigation *@
+@sidebar(user)
+} {
+@* main content for this page *@
+<legend>
+	@Messages.get("views.admin.listUser.legend")
+	<a class="btn btn-primary pull-right" href="@routes.Admin.showCreateUser()">@Messages.get("views.create")</a>
+</legend>
+
+<table class="table table-striped table-hover">
+	<thead>
+		<tr>
+			<th class="span4" style="text-align:center;">@Messages.get("views.admin.listUser.username.label")</th>
+			<th class="span2" style="text-align:center;"></th>
+			<th class="span2" style="text-align:center;"></th>
+		</tr>
+	</thead>
+	<tbody>
+		@for(u <- GamebetUser.find.all()) {
+		<tr>
+			<td class="span4" style="text-align:center;"><a href="@routes.Users.show(u.id)">@u.username</a></td>
+			<td class="span2" style="text-align:center;"><a href="@routes.Users.resetPassword(u.id)" class="btn btn-primary">@Messages.get("views.resetPassword")</a></td>
+			<td class="span2" style="text-align:center;"><a href="@routes.Users.delete(u.id)" class="btn btn-danger">@Messages.get("views.delete")</a></td>
+		</tr>
+		}
+	</tbody>
+</table>
+
+}

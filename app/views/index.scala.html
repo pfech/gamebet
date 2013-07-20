@@ -11,10 +11,10 @@
 		@sidebar(user)
 	} {
 		@* content *@
-		<p>Welcome to your index page</p>
+		<p>@Html(Messages.get("views.index.text"))</p>
 	}
 } { 
 	@main(Messages.get("views.index.title")) {
-	<p>Index test page</p>
+	<p>@Messages.get("views.index.textWithoutLogin")</p>
 	}
 }
