@@ -12,7 +12,8 @@ object ApplicationBuild extends Build {
     javaCore,
     javaJdbc,
     javaEbean,
-    "be.objectify" %% "deadbolt-java" % "2.1-RC2"
+    "be.objectify" %% "deadbolt-java" % "2.1-RC2",
+    "postgresql" % "postgresql" % "9.1-901-1.jdbc4"
   )
 
   val main = play.Project(appName, appVersion, appDependencies)
