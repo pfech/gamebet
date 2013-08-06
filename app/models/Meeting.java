@@ -4,6 +4,8 @@
 package models;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -56,6 +58,19 @@ public class Meeting extends Model {
 
 	public static Meeting fndById(Long meetingId) {
 		return find.byId(meetingId);
+	}
+	
+	public List<Gameday> getSortedGamedays() {
+		Collections.sort(gamedays, new Comparator<Gameday>() {
+
+			@Override
+			public int compare(Gameday o1, Gameday o2) {
+				// TODO Auto-generated method stub
+				return o1.startDate.compareTo(o2.startDate);
+			}
+			
+		});
+		return gamedays;
 	}
 
 }

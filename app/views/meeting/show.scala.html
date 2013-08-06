@@ -51,7 +51,7 @@
 <div class="row-fluid">
 	<div class="span12">
 		<ul>
-			@for(gameday <- item.gamedays) {
+			@for(gameday <- item.getSortedGamedays()) {
 				<li><a href="@routes.Gamedays.show(gameday.id)">@gameday.name</a></li>
 			}
 		</ul>
