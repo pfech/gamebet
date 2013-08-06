@@ -16,7 +16,7 @@
 		</div>
 		<div class="row">
 			<div class="span6 offset1"> 
-		@inputText(loginForm("password"), '_label -> Messages.get("views.login.password.label"))
+		@inputPassword(loginForm("password"), '_label -> Messages.get("views.login.password.label"))
 			</div>
 		</div>
 		@if(loginForm.hasGlobalErrors) {

@@ -4,6 +4,7 @@
 package models;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -40,6 +41,8 @@ public class Gameday extends Model {
 	@Required
 	@ManyToOne
 	public Meeting meeting;
+	
+	public Date startDate;
 	
 	/**
 	 * Finder object to search database for game

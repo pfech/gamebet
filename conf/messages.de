@@ -36,6 +36,7 @@ views.game.show.legend=Spiel {0}
 views.game.tip.label=Tipp
 views.game.tip.lastChange.label=Letzte Änderung
 views.game.myTip.label=Mein Tipp
+views.game.show.tiptable=Tipps werden erst angezeigt wenn das Zeitfenster zum Tippen verstrichen ist.
 
 views.meeting.members.label=Mitglieder
 
@@ -85,7 +86,7 @@ views.gameday.edit.form.button.submit=Speichern
 views.gameday.list.title=Spieltage
 
 views.gameday.show.title=Spieltag
-views.gameday.show.legend=Spieltag {0}
+views.gameday.show.legend=Spieltag {0} Möglichkeit zu Tippen endet: {1}
 
 views.gameday.name.label=Name
 

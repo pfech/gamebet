@@ -27,6 +27,6 @@
 </legend>
 @helper.inputText(userForm("username"), '_label -> Messages.get("views.admin.createUser.username.label"))
 @helper.inputText(userForm("email"), '_label -> Messages.get("views.admin.createUser.email.label"))
-@helper.inputText(userForm("password"), '_label -> Messages.get("views.admin.createUser.password.label"))
+@helper.inputPassword(userForm("password"), '_label -> Messages.get("views.admin.createUser.password.label"))
 }
 }

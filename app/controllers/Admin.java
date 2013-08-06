@@ -3,11 +3,15 @@
  */
 package controllers;
 
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
+
 import be.objectify.deadbolt.java.actions.Group;
 import be.objectify.deadbolt.java.actions.Restrict;
 import play.data.Form;
 import play.i18n.Messages;
 import play.mvc.Result;
+import security.Authenticator;
 import models.GroupRole;
 import models.Password;
 import models.GamebetUser;
@@ -52,6 +56,16 @@ public class Admin extends AbstractAuthorizedController {
 			play.Logger.info("a user with email '" + newUser.email + "' already exists, cannot add new user");
 			flash("Error", Messages.get("views.admin.createUser.error.userAlreadyExists"));
 			return redirect(routes.Admin.showCreateUser());
+		}
+		
+		try {
+			newUser.password = Authenticator.createHash(newUser.password);
+		} catch (NoSuchAlgorithmException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InvalidKeySpecException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		
 		GamebetUser user = new GamebetUser();

@@ -10,7 +10,7 @@ views.navbar.settings.user.label=User Settings
 
 views.index.title=Gamebet
 views.index.textWithoutLogin=Please Login to use this app
-views.index.text=<div id="help"><p>To view the meetings in which you are participating use the navigationbar on the left</p><p></p><p></p><p></p></div><div id="news"><h1>News</h1><p>First release of this app, on encountering errors please mail me at pascal.fechner(at)gmail.com with subject "Gamebet"</p></div>
+views.index.text=<div id="help"><h1>Help</h1><p>To view the meetings in which you are participating use the navigationbar on the left</p><p></p><p></p><p></p></div><div id="news"><h1>News</h1><p>First release of this app, on encountering errors please mail me at pascal.fechner(at)gmail.com with subject "Gamebet"</p></div>
 
 views.save=Save
 views.create=Create
@@ -36,6 +36,7 @@ views.game.show.legend=Game {0}
 views.game.tip.label=Tip
 views.game.tip.lastChange.label=Last change
 views.game.myTip.label=My tip
+views.game.show.tiptable=Tips will we shown after tipping has ended
 
 views.meeting.members.label=Members
 
@@ -85,7 +86,7 @@ views.gameday.edit.form.button.submit=Save
 views.gameday.list.title=Gamedays
 
 views.gameday.show.title=Gameday
-views.gameday.show.legend=Gameday {0}
+views.gameday.show.legend=Gameday {0} Ability to Tip ends: {1}
 
 views.gameday.name.label=Name
 

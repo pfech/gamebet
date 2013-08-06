@@ -30,7 +30,7 @@
 } {
 @* main content for this page *@
 <legend>
-	@Messages.get("views.gameday.show.legend", item.name)
+	@Messages.get("views.gameday.show.legend", item.name, item.startDate)
 	@if(item.meeting.manager.id.equals(user.id)) {
 	<a href="@routes.Gamedays.edit(item.id)" class="btn btn-primary pull-right">@Messages.get("views.edit")</a>
 	}
@@ -62,12 +62,12 @@
 					}
 					</td>
 					<td class="span2" style="text-align:center;">@if(tips(game.id) != null) { @tips(game.id).home : @tips(game.id).away 
-						@if(game.startDate.after(util.Util.getNow())) {
+						@if(item.startDate != null && item.startDate.after(util.Util.getNow())) {
 						<a href="@routes.Tips.edit(tips(game.id).id)" class="btn btn-primary">@Messages.get("views.edit")</a>
 						}
 					} else {
 						- : -
-						@if(game.startDate.after(util.Util.getNow())) {
+						@if(item.startDate != null && item.startDate.after(util.Util.getNow())) {
 						<a href="@routes.Tips.create(game.id)" class="btn btn-primary">@Messages.get("views.create")</a>
 						}
 					}

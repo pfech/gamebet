@@ -28,6 +28,14 @@
 </legend>
 @helper.inputText(gamedayForm("name"), '_label -> Messages.get("views.gameday.name.label"))
 <input type="text" class="hidden input-mini" id="meeting_id_field" name="meeting.id" value="@item.meeting.id">
+
+<div id="datetimepicker2" class="input-append date">
+ 	<input class="input-mini" id="startDate_field" name="startDate" data-format="MM/dd/yyyy hh:mm:ss" type="text"></input>
+ 	<span class="add-on">
+   		<i data-time-icon="icon-time" data-date-icon="icon-calendar">
+   		</i>
+ 	</span>
+</div>
 }
 <table>
 	<thead>
@@ -91,6 +99,9 @@
     $('#datetimepicker1').datetimepicker({
       language: 'de'
     });
+    $('#datetimepicker2').datetimepicker({
+        language: 'de'
+      });
   });
 </script>
 }

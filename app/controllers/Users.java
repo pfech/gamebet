@@ -3,6 +3,9 @@
  */
 package controllers;
 
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
+
 import be.objectify.deadbolt.java.actions.Group;
 import be.objectify.deadbolt.java.actions.Restrict;
 import models.GamebetUser;
@@ -12,6 +15,7 @@ import models.Tip;
 import models.web.Password;
 import play.data.Form;
 import play.mvc.Result;
+import security.Authenticator;
 
 /**
  * @author pascal
@@ -44,14 +48,40 @@ public class Users extends AbstractAuthorizedController {
 		}
 		Password newPwd = form.get();
 		models.Password password = models.Password.findByUserId(id);
-		if(newPwd.old.equals(password.password)) {
-			if(!newPwd.new1.equals(newPwd.old) && 
-					newPwd.new1 != null && 
+		
+		boolean valid = false;
+		
+		try {
+			valid = Authenticator.validatePassword(newPwd.old, password.password);
+		} catch (NoSuchAlgorithmException e) {
+			play.Logger.error(e.getMessage());
+		} catch (InvalidKeySpecException e) {
+			play.Logger.error(e.getMessage());
+		}
+		
+		if(valid) {
+			if(newPwd.new1 != null && 
 					newPwd.new1.length() > 0 
 					&& newPwd.new1.equals(newPwd.new2)) {
 				
-				password.password = newPwd.new1;
-				password.update();
+				String hash = "";
+				
+				try {
+					hash = Authenticator.createHash(newPwd.new1);
+				} catch (NoSuchAlgorithmException e) {
+					play.Logger.error(e.getMessage());
+				} catch (InvalidKeySpecException e) {
+					play.Logger.error(e.getMessage());
+				}
+				
+				if(hash.length() == 0) {
+					play.Logger.error("Could not create hash");
+					flash("Error", "Could not change password, internal error");
+					return redirect(routes.Users.showChangePassword(id));
+				} else {
+					password.password = hash;
+					password.update();
+				}
 			} else {
 				play.Logger.info("New Passwords do not match");
 				flash("Error", "New passwords do not match");
@@ -104,9 +134,25 @@ public class Users extends AbstractAuthorizedController {
 		GamebetUser user = GamebetUser.find.byId(id);
 		if(user.id.equals(getLoggedInUser().id) || getLoggedInUser().hasRole("admins")) {
 			models.Password password = models.Password.findByUserId(id);
-			password.password = "1234";
-			password.update();
-			play.Logger.info("Password changed for User [" + user.username + "(" + user.id + ")]");
+			
+			String hash = "";
+			
+			try {
+				hash = Authenticator.createHash("1234");
+			} catch (NoSuchAlgorithmException e) {
+				play.Logger.error(e.getMessage());
+			} catch (InvalidKeySpecException e) {
+				play.Logger.error(e.getMessage());
+			}
+			
+			if(hash.length() == 0) {
+				play.Logger.info("Password could not be changed for User [" + user.username + "(" + user.id + ")]");
+				flash("Error", "Could not reset password for user");
+			} else {
+				password.password = hash;
+				password.update();
+				play.Logger.info("Password changed for User [" + user.username + "(" + user.id + ")]");
+			}
 		} else {
 			play.Logger.info("Password could not be changed for User [" + user.username + "(" + user.id + ")]");
 		}
