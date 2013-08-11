@@ -80,6 +80,8 @@ public class Tip extends Model {
 			return 3;
 		int tendenz = result.home.intValue() - result.away.intValue();
 		int tipTendenz = home.intValue() - away.intValue();
+		if(tendenz == tipTendenz)
+			return 2;
 		if(tendenz * tipTendenz > 0)
 			return 1;
 		return 0;

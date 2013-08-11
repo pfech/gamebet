@@ -142,7 +142,7 @@ public class Meetings extends AbstractAuthorizedController {
 
 			@Override
 			public int compare(Standing arg0, Standing arg1) {
-				return new Integer(arg0.points).compareTo(new Integer(arg1.points));
+				return -1 * (new Integer(arg0.points).compareTo(new Integer(arg1.points)));
 //				return Integer.compare(arg1.points, arg0.points);
 			}
 		});
