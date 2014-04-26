@@ -1,0 +1,34 @@
+@(user: GamebetUser, item: Meeting, meetingForm: Form[Meeting])
+@import play.i18n._
+@import appPage._
+
+	@q = @{
+		import scala.collection.mutable.Queue
+		
+		var queue : Queue[Tuple3[String, String, Boolean]] = Queue()
+		queue.enqueue(("#", Messages.get("views.meeting.label"), true))
+		
+		queue
+	}
+
+@applicationPage("Create new meeting") {
+	@*header*@
+	@header(q)
+} { 
+@* sidebar navigation *@
+@sidebar(user)
+} {
+@* main content for this page *@
+@helper.form(routes.Meetings.create()) {
+<legend>
+	Create new meeting
+	<button type="submit" class="btn btn-primary pull-right">@Messages.get("views.create")</button>
+</legend>
+<div class="row-fluid">
+	<div class="span12">
+		@helper.inputText(meetingForm("name"), '_label -> Messages.get("views.meeting.name.label"))
+	</div>
+</div>
+}
+
+}

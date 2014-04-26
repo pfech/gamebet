@@ -1,6 +1,9 @@
 @(user: GamebetUser)
 @import play.i18n._
 @import appPage._
+@import be.objectify.deadbolt.java.views.html._
+@import be.objectify.deadbolt.core.utils.TemplateUtils._
+
 
 	@q = @{
 		import scala.collection.mutable.Queue
@@ -21,6 +24,11 @@
 @* main content for this page *@
 <legend>
 	@Messages.get("views.meeting.list.legend")
+	@restrict(la(as("admins"))) {
+		@helper.form(routes.Meetings.createNew()) {
+	<a class="btn btn-primary pull-right" href="@routes.Meetings.createNew">@Messages.get("views.create")</a>
+		}
+	}
 </legend>
 <div class="row-fluid">
 	<div class="span12">

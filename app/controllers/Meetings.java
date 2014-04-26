@@ -18,6 +18,7 @@ import models.GamebetUser;
 import play.Logger;
 import play.data.Form;
 import play.mvc.Result;
+import util.Util;
 
 /**
  * @author pascal
@@ -54,7 +55,18 @@ public class Meetings extends AbstractAuthorizedController {
 	}
 		
 	public static Result create() {
-		return TODO;
+		Form<Meeting> form = Form.form(Meeting.class).bindFromRequest();
+		if(form.hasErrors()) {
+			play.Logger.info(form.toString());
+			return redirect(routes.Meetings.createNew());
+		}
+		Meeting m = form.get();
+		GamebetUser user = getLoggedInUser();
+		m.manager = user;
+		m.members.add(user);
+		m.save();
+		m.refresh();
+		return redirect(routes.Meetings.show(m.id));
 	}
 	
 	public static Result delete(Long id) {
@@ -74,9 +86,13 @@ public class Meetings extends AbstractAuthorizedController {
 	}
 
 	public static Result createNew() {
-//		Form<Meeting> form = Form.form(Meeting.class);
+		GamebetUser user = getLoggedInUser();
+		Meeting m = new Meeting();
+		m.manager = user;
+		m.members.add(user);
+		Form<Meeting> form = Form.form(Meeting.class);
 //		return ok(views.html.meeting.edit.render(false, null, form));
-		return TODO;
+		return ok(views.html.meeting.admin.create.render(user, m, form));
 	}
 	
 	public static Result addMember(Long meetingId) {

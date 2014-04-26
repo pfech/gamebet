@@ -88,6 +88,36 @@
 			<table>
 				<thead>
 					<tr>
+						<th>Teamname</th>
+						<th>@Messages.get("views.edit")</th>
+						<th>@Messages.get("views.delete")</th>
+					</tr>
+				</thead>
+				<tbody>
+					@for(team <- item.teams) {
+					<tr>
+						<td>@team.name</td>
+						<td><a href="@routes.Teams.edit(team.id)" class="btn btn-primary">@Messages.get("views.edit")</a></td>
+						<td>TODO: DELTE</td>
+					</tr>
+					}
+					<tr>
+					@helper.form(routes.Teams.createFromMeeting(item.id)) {
+						<td>
+							<input class="" type="text" id="name_field" name="name" value="" >
+							<input class="hidden" type="text" id="meeting_id_field" name="meeting.id" value="@item.id" >
+						</td>
+						<td><button type="submit" class="btn btn-primary">@Messages.get("views.new")</button></td>
+						<td></td>
+					}
+					</tr>
+					
+				</tbody>
+			</table>
+					
+			<table>
+				<thead>
+					<tr>
 						<th>@Messages.get("views.gameday.name.label")</th>
 						<th>@Messages.get("views.edit")</th>
 						<th>@Messages.get("views.delete")</th>
