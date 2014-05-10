@@ -79,9 +79,9 @@
 						<td class="span1" style="text-align:center;">@s.onlyCorrectGoalDifferenceTipsPoints</td>
 						<td class="span1" style="text-align:center;">@s.correctTendenceTips</td>
 						<td class="span1" style="text-align:center;">@s.onlyCorrectTendenceTipsPoints</td>
-						<td class="span1" style="text-align:center;">@s.homeTeamWins</td>
-						<td class="span1" style="text-align:center;">@s.awayTeamWins</td>
-						<td class="span1" style="text-align:center;">@s.tieWins</td>
+						<td class="span1" style="text-align:center;">@s.homeTeamWins / @s.homeTeamWinsTips</td>
+						<td class="span1" style="text-align:center;">@s.awayTeamWins / @s.awayTeamWinsTips</td>
+						<td class="span1" style="text-align:center;">@s.tieWins / @s.tieWinsTips</td>
 						<td class="span1" style="text-align:center;">@if(t == null) { - } else { @s.getPointsForTeamId(t.id) }</td>
 						<td class="span1" style="text-align:center;">@{s.onlyCorrectTipsPoints+s.onlyCorrectGoalDifferenceTipsPoints+s.onlyCorrectTendenceTipsPoints}</td>
 						<td class="span1" style="text-align:center;">@{s.onlyCorrectTipsPoints+s.onlyCorrectTendenceTipsPoints}</td>

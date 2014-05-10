@@ -30,9 +30,15 @@ public class UserStatistics {
 	
 	public Integer homeTeamWins = 0;
 	
+	public Integer homeTeamWinsTips = 0;
+	
 	public Integer awayTeamWins = 0;
 	
+	public Integer awayTeamWinsTips = 0;
+	
 	public Integer tieWins = 0;
+	
+	public Integer tieWinsTips = 0;
 	
 	public List<Integer> pointsPerGameday = new ArrayList<Integer>();
 	

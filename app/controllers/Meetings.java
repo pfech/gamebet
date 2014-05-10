@@ -209,6 +209,15 @@ public class Meetings extends AbstractAuthorizedController {
 						if(gameTip != null) {
 							Integer winner = gameResult.home - gameResult.away; 
 							Integer tipWinner = gameTip.home - gameTip.away;
+							if(tipWinner > 0) {
+								stat.homeTeamWinsTips += 1;
+							} else {
+								if(tipWinner < 0) {
+									stat.awayTeamWinsTips += 1;
+								} else {
+									stat.tieWinsTips += 1;
+								}
+							}
 							
 							Integer pointsForGame = gameTip.getPoints(gameResult);
 							stat.points += pointsForGame;
