@@ -66,6 +66,7 @@ public class Tip extends Model {
 			new Finder<Long, Tip>(Long.class, Tip.class);
 	
 	public static Tip findTip(Long gameId, Long userId) {
+		//System.out.println("gameId=" + gameId + " ownerId=" + userId);
 		return find.where().eq("game.id", gameId).eq("owner.id", userId).findUnique();
 	}
 	

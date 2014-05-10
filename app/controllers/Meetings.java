@@ -13,8 +13,10 @@ import java.util.Map;
 import models.Game;
 import models.Gameday;
 import models.Meeting;
+import models.Team;
 import models.Tip;
 import models.GamebetUser;
+import models.UserStatistics;
 import play.Logger;
 import play.data.Form;
 import play.mvc.Result;
@@ -36,7 +38,13 @@ public class Meetings extends AbstractAuthorizedController {
 		GamebetUser user = getLoggedInUser();
 		return ok(views.html.meeting.show.render(user, item));
 	}
-	
+
+	public static Result showStatistics(Long id) {
+		Meeting item = Meeting.find.byId(id);
+		GamebetUser user = getLoggedInUser();
+		return ok(views.html.meeting.statistics.render(user, item, null));
+	}
+
 	public static Result update(Long id) {
 		Meeting item = Meeting.find.byId(id);
 		GamebetUser user = getLoggedInUser();
@@ -164,6 +172,93 @@ public class Meetings extends AbstractAuthorizedController {
 		});
 		
 		return list;
+	}
+	
+	public static Result showStatisticsForTeam(Long meetingId) {
+		Form<Team> teamForm = Form.form(Team.class).bindFromRequest();
+		Team t = teamForm.get();
+		Team team = Team.find.byId(t.id);
+		System.out.println("t.id=" + t.id);
+		System.out.println("t.name=" + t.name);
+		System.out.println("team=" + team.toString());
+		System.out.println("team.id=" + team.id);
+		System.out.println("team.name=" + team.name);
+		
+		Meeting item = Meeting.find.byId(meetingId);
+		GamebetUser user = getLoggedInUser();
+		return ok(views.html.meeting.statistics.render(user, item, team));
+	}
+	
+	public static Map<GamebetUser, UserStatistics> getStatistics(Long meetingId) {
+		Meeting meeting = Meeting.find.byId(meetingId);
+		
+		Map<GamebetUser, UserStatistics> statistics = new HashMap<GamebetUser, UserStatistics>();
+		for(GamebetUser u : meeting.members) {
+			statistics.put(u, new UserStatistics());
+		}
+		
+		for(GamebetUser user : meeting.members) {
+			UserStatistics stat = statistics.get(user); 
+			for(Gameday day : meeting.getSortedGamedays()) {
+				Integer gamedayPoints = 0;
+				
+				for(Game game : day.games) {
+					models.Result gameResult = game.result;
+					if(gameResult != null) {
+						Tip gameTip = Tip.findTip(game.id, user.id);
+						if(gameTip != null) {
+							Integer winner = gameResult.home - gameResult.away; 
+							Integer tipWinner = gameTip.home - gameTip.away;
+							
+							Integer pointsForGame = gameTip.getPoints(gameResult);
+							stat.points += pointsForGame;
+							switch(pointsForGame) {
+							case 3:
+									stat.correctTips += 1;
+									stat.correctGoalDifferenceTips += 1;
+									stat.correctTendenceTips += 1;
+									stat.onlyCorrectTipsPoints += 1;
+									stat.onlyCorrectGoalDifferenceTipsPoints += 1;
+									stat.onlyCorrectTendenceTipsPoints += 1;
+								break;
+							case 2:
+									stat.correctGoalDifferenceTips += 1;
+									stat.correctTendenceTips += 1;
+									stat.onlyCorrectGoalDifferenceTipsPoints += 1;
+									stat.onlyCorrectTendenceTipsPoints += 1;
+								break;
+							case 1:
+									stat.correctTendenceTips += 1;
+									stat.onlyCorrectTendenceTipsPoints += 1;
+								break;
+							default:
+								break;
+							}
+							if(pointsForGame > 0) {
+								if(winner > 0 && tipWinner > 0) {
+									stat.homeTeamWins += 1;
+									stat.addPointsForTeam(game.home.id, pointsForGame);
+								} else {
+									if(winner < 0 && tipWinner < 0) {
+										stat.awayTeamWins += 1;
+										stat.addPointsForTeam(game.away.id, pointsForGame);
+									} else {
+										stat.tieWins += 1;
+										stat.addPointsForTeam(game.home.id, pointsForGame);
+										stat.addPointsForTeam(game.away.id, pointsForGame);
+									}
+								}
+							}
+							gamedayPoints += pointsForGame;
+						}
+					}
+					
+				}
+				stat.pointsPerGameday.add(gamedayPoints);
+			}
+			statistics.put(user, stat);
+		}
+		return statistics;
 	}
 }
  

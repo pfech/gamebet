@@ -1,0 +1,95 @@
+@(user: GamebetUser, item: Meeting, t: Team)
+@import play.i18n._
+@import appPage._
+@import java.math.BigInteger; var counter=0
+	
+	@q = @{
+		import scala.collection.mutable.Queue
+		
+		var queue : Queue[Tuple3[String, String, Boolean]] = Queue()
+		queue.enqueue((routes.Meetings.list().toString(), Messages.get("views.meeting.label"), false))
+		queue.enqueue((routes.Meetings.show(item.id).toString(), item.name, true))
+		
+		queue
+	}
+
+@applicationPage(Messages.get("views.meeting.show.title")) {
+	@*header*@
+	@header(q)
+} { 
+@* sidebar navigation *@
+@sidebar(user)
+} {
+@* main content for this page *@
+<legend>
+	Statistics
+</legend>
+<div class="row-fluid">
+	<div>
+		Ausgew&#228;hlte Mannschaft: 
+	@if(t == null) {
+		-
+	} else {
+		@t.name
+	}
+	</div>
+	<div>
+	@helper.form(routes.Meetings.showStatisticsForTeam(item.id)) {
+		<select id="id_field" name="id">
+		@for(team <- item.teams) {
+			<option value="@team.id" >@team.name</option>
+		}
+		</select>
+		<button class="btn btn-primary" type="submit">Zeige Punkte f&#252;r Mannschaft</button>
+	}
+	</div>
+	<div class="span12">
+		<table class="table table-striped table-hover">
+			<thead>
+				<tr>
+					<th class="span1" style="text-align:center;">Position</th>
+					<th class="span1" style="text-align:center;">Name</th>
+					<th class="span1" style="text-align:center;">Punkte</th>
+					<th class="span1" style="text-align:center;">Korrektes Ergebnis getippt</th>
+					<th class="span1" style="text-align:center;">Punkte f&#252;r korrektes Ergebnis</th>
+					<th class="span1" style="text-align:center;">Korrekte Tordifferenz getippt</th>
+					<th class="span1" style="text-align:center;">Punkte f&#252;r korrekte Tordifferenz</th>
+					<th class="span1" style="text-align:center;">Korrekte Tendenz getippt</th>
+					<th class="span1" style="text-align:center;">Punkte f&#252;r korrekte Tendenz</th>
+					<th class="span1" style="text-align:center;">Heimsige getippt</th>
+					<th class="span1" style="text-align:center;">Ausw&#228;rtssiege getippt</th>
+					<th class="span1" style="text-align:center;">Unentschieden getippt</th>
+					<th class="span1" style="text-align:center;">Punkte f&#252;r Team</th>
+					<th class="span1" style="text-align:center;">Punkte f&#252;r Modus 1</th>
+					<th class="span1" style="text-align:center;">Punkte f&#252;r Modus 2</th>
+					<th class="span1" style="text-align:center;">Punkte f&#252;r Modus 3</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+				@for((u, s) <- Meetings.getStatistics(item.id)) {
+					@(counter+=1)
+					<tr>
+						<td class="span1" style="text-align:center;">@counter</td>
+						<td class="span1" style="text-align:center;">@u.username</td>
+						<td class="span1" style="text-align:center;">@s.points</td>
+						<td class="span1" style="text-align:center;">@s.correctTips</td>
+						<td class="span1" style="text-align:center;">@s.onlyCorrectTipsPoints</td>
+						<td class="span1" style="text-align:center;">@s.correctGoalDifferenceTips</td>
+						<td class="span1" style="text-align:center;">@s.onlyCorrectGoalDifferenceTipsPoints</td>
+						<td class="span1" style="text-align:center;">@s.correctTendenceTips</td>
+						<td class="span1" style="text-align:center;">@s.onlyCorrectTendenceTipsPoints</td>
+						<td class="span1" style="text-align:center;">@s.homeTeamWins</td>
+						<td class="span1" style="text-align:center;">@s.awayTeamWins</td>
+						<td class="span1" style="text-align:center;">@s.tieWins</td>
+						<td class="span1" style="text-align:center;">@if(t == null) { - } else { @s.getPointsForTeamId(t.id) }</td>
+						<td class="span1" style="text-align:center;">@{s.onlyCorrectTipsPoints+s.onlyCorrectGoalDifferenceTipsPoints+s.onlyCorrectTendenceTipsPoints}</td>
+						<td class="span1" style="text-align:center;">@{s.onlyCorrectTipsPoints+s.onlyCorrectTendenceTipsPoints}</td>
+						<td class="span1" style="text-align:center;">@{(2*s.onlyCorrectTipsPoints)+s.onlyCorrectGoalDifferenceTipsPoints+s.onlyCorrectTendenceTipsPoints}</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+</div>
+} 
