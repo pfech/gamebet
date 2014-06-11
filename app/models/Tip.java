@@ -67,7 +67,19 @@ public class Tip extends Model {
 	
 	public static Tip findTip(Long gameId, Long userId) {
 		//System.out.println("gameId=" + gameId + " ownerId=" + userId);
-		return find.where().eq("game.id", gameId).eq("owner.id", userId).findUnique();
+		Tip tip = null;
+		try {
+			tip = find.where().eq("game.id", gameId).eq("owner.id", userId).findUnique();
+		} catch(Throwable t) {
+			List<Tip> tipList = find.where().eq("game.id", gameId).eq("owner.id", userId).findList();
+			if(tipList.size() > 0) {
+				tip = tipList.get(0);
+			}
+			for(int i = 1; i < tipList.size(); ++i) {
+				tipList.get(i).delete();
+			}
+		}
+		return tip;
 	}
 	
 	public static List<Tip> findByGame(Long gameId) {

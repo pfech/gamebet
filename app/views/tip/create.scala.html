@@ -23,10 +23,22 @@
 @helper.form(routes.Tips.createNew()) {
 <legend>
 	@Messages.get("views.tip.create.legend")
-	<button type="submit" class="btn btn-primary pull-right">@Messages.get("views.save")</button>
+	<button type="submit" class="btn btn-primary pull-right" tabindex="3">@Messages.get("views.save")</button>
 </legend>
-	@helper.inputText(tipForm("home"), '_label -> Messages.get("views.tip.home.label", item.game.home.name))
-	@helper.inputText(tipForm("away"), '_label -> Messages.get("views.tip.away.label", item.game.away.name))
+	<dl class=" " id="home_field">
+	    <dt><label for="home">@Messages.get("views.tip.home.label", item.game.home.name)</label></dt>
+	    <dd>
+	    <input type="text" id="home" name="home" value="" tabindex="1">
+	</dd>
+	        <dd class="info">Required</dd>
+	</dl>
+	<dl class=" " id="away_field">
+	    <dt><label for="away">@Messages.get("views.tip.away.label", item.game.away.name)</label></dt>
+	    <dd>
+	    <input type="text" id="away" name="away" value="" tabindex="2">
+	</dd>
+	        <dd class="info">Required</dd>
+	</dl>
 	<input type="text" class="hidden" name="owner.id" id="owner_id_field" value="@item.owner.id">
 	<input type="text" class="hidden" name="game.id" id="game_id_field" value="@item.game.id">
 	<input type="text" class="hidden" name="lastChange" id="lastChange_field" value="@item.lastChange.format("MM/dd/yyyy hh:mm:ss")" data-format="MM/dd/yyyy hh:mm:ss">
